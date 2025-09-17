@@ -60,11 +60,14 @@ markdown_extensions:
   - md_in_html
 
 extra_css:
+  - stylesheets/page.css
   - stylesheets/network.css
+  - stylesheets/gallery.css
 
 extra_javascript:
   - javascripts/vis-network.min.js
   - javascripts/network.js
+  - javascripts/gallery.js
 
 extra:
   generator: false

@@ -15,6 +15,9 @@ entities:
         url: "https://www.imdb.com/name/nm0634240/"
       - name: "Wikipedia"
         url: "https://en.wikipedia.org/wiki/Christopher_Nolan"
+    image_links:
+      - "https://upload.wikimedia.org/wikipedia/commons/9/95/Christopher_Nolan_Cannes_2018.jpg"
+      - "https://upload.wikimedia.org/wikipedia/commons/7/71/Christopher_Nolan_by_Gage_Skidmore.jpg"
 
   - id: "inception"
     type: "movie"
@@ -28,6 +31,9 @@ entities:
     external_links:
       - name: "IMDb"
         url: "https://www.imdb.com/title/tt1375666/"
+    image_links:
+      - "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg"
+      - "https://images.unsplash.com/photo-1489599731893-01b6b3a30c7a?w=800"
 
   - id: "interstellar"
     type: "movie"
