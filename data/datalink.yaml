@@ -1,0 +1,149 @@
+# DataLink - Linked Data Configuration
+# This file contains entities and their relationships for visualization
+
+entities:
+  - id: "christopher_nolan"
+    type: "person"
+    name: "Christopher Nolan"
+    description: "British-American film director, producer, and screenwriter"
+    properties:
+      birth_year: 1970
+      nationality: "British-American"
+      occupation: "Director, Producer, Screenwriter"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0634240/"
+      - name: "Wikipedia"
+        url: "https://en.wikipedia.org/wiki/Christopher_Nolan"
+
+  - id: "inception"
+    type: "movie"
+    name: "Inception"
+    description: "A thief who steals corporate secrets through dream-sharing technology"
+    properties:
+      release_year: 2010
+      genre: ["Science Fiction", "Action", "Thriller"]
+      duration: 148
+      rating: 8.8
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt1375666/"
+
+  - id: "interstellar"
+    type: "movie"
+    name: "Interstellar"
+    description: "A team of explorers travel through a wormhole in space"
+    properties:
+      release_year: 2014
+      genre: ["Science Fiction", "Drama", "Adventure"]
+      duration: 169
+      rating: 8.6
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt0816692/"
+
+  - id: "the_dark_knight"
+    type: "movie"
+    name: "The Dark Knight"
+    description: "Batman faces the Joker in Gotham City"
+    properties:
+      release_year: 2008
+      genre: ["Action", "Crime", "Drama"]
+      duration: 152
+      rating: 9.0
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt0468569/"
+
+  - id: "hans_zimmer"
+    type: "person"
+    name: "Hans Zimmer"
+    description: "German film score composer and music producer"
+    properties:
+      birth_year: 1957
+      nationality: "German"
+      occupation: "Composer, Music Producer"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0001877/"
+
+  - id: "batman_begins"
+    type: "movie"
+    name: "Batman Begins"
+    description: "The origin story of Batman"
+    properties:
+      release_year: 2005
+      genre: ["Action", "Adventure"]
+      duration: 140
+      rating: 8.2
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt0372784/"
+
+  - id: "science_fiction"
+    type: "genre"
+    name: "Science Fiction"
+    description: "A genre dealing with futuristic concepts and advanced technology"
+    properties:
+      category: "Film Genre"
+
+relationships:
+  - from: "christopher_nolan"
+    to: "inception"
+    type: "directed"
+    properties:
+      year: 2010
+
+  - from: "christopher_nolan"
+    to: "interstellar"
+    type: "directed"
+    properties:
+      year: 2014
+
+  - from: "christopher_nolan"
+    to: "the_dark_knight"
+    type: "directed"
+    properties:
+      year: 2008
+
+  - from: "christopher_nolan"
+    to: "batman_begins"
+    type: "directed"
+    properties:
+      year: 2005
+
+  - from: "hans_zimmer"
+    to: "inception"
+    type: "composed"
+    properties:
+      role: "Music Score"
+
+  - from: "hans_zimmer"
+    to: "interstellar"
+    type: "composed"
+    properties:
+      role: "Music Score"
+
+  - from: "hans_zimmer"
+    to: "the_dark_knight"
+    type: "composed"
+    properties:
+      role: "Music Score"
+
+  - from: "hans_zimmer"
+    to: "batman_begins"
+    type: "composed"
+    properties:
+      role: "Music Score"
+
+  - from: "inception"
+    to: "science_fiction"
+    type: "belongs_to"
+    properties:
+      primary: true
+
+  - from: "interstellar"
+    to: "science_fiction"
+    type: "belongs_to"
+    properties:
+      primary: true
