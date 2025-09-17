@@ -5,8 +5,10 @@ hide:
   - footer
 ---
 
+# Data Link
+
 {% set data = load_datalink() %}
-<p class="stats-summary">총 {{ data.entities | length }}개 엔터티, {{ data.relationships | length }}개 관계 | 유형별: {% for entity_type in data.entities | map(attribute='type') | unique %}{{ entity_type.title() }} {{ data.entities | selectattr('type', 'equalto', entity_type) | list | length }}개{% if not loop.last %}, {% endif %}{% endfor %}</p>
+<p class="stats-summary">Entities: {{ data.entities | length }} | Relations: {{ data.relationships | length }} | {% for entity_type in data.entities | map(attribute='type') | unique %}{{ entity_type.title() }} {{ data.entities | selectattr('type', 'equalto', entity_type) | list | length }}개{% if not loop.last %}, {% endif %}{% endfor %}</p>
 
 <div id="network-container">
     <div id="network-graph"></div>
