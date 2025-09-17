@@ -13,6 +13,10 @@ entities:
     external_links:
       - name: "IMDb"
         url: "https://www.imdb.com/title/tt1790885/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/제로%20다크%20서티"
+    image_links:
+      - "https://upload.wikimedia.org/wikipedia/en/6/61/Zero_Dark_Thirty_poster.jpg"
 
   - id: "jessica_chastain"
     type: "인물"
@@ -25,6 +29,11 @@ entities:
     external_links:
       - name: "IMDb"
         url: "https://www.imdb.com/name/nm1567113/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/제시카%20차스테인"
+    image_links:
+      - "https://upload.wikimedia.org/wikipedia/commons/4/45/Jessica_Chastain_2013_%28cropped%29.jpg"
+      - "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Jessica_Chastain_by_Gage_Skidmore.jpg/800px-Jessica_Chastain_by_Gage_Skidmore.jpg"
 
   - id: "the_whale"
     type: "영화"
@@ -38,6 +47,10 @@ entities:
     external_links:
       - name: "IMDb"
         url: "https://www.imdb.com/title/tt13833688/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EB%8D%94%20%EC%9B%A8%EC%9D%BC"
+    image_links:
+      - "https://upload.wikimedia.org/wikipedia/en/9/9c/The_Whale_2022_poster.jpg"
 
   - id: "brendan_fraser"
     type: "인물"
@@ -50,6 +63,11 @@ entities:
     external_links:
       - name: "IMDb"
         url: "https://www.imdb.com/name/nm0000409/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/브랜든%20프레이저"
+    image_links:
+      - "https://upload.wikimedia.org/wikipedia/commons/4/42/Brendan_Fraser_2018.jpg"
+      - "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Brendan_Fraser_2009.jpg/800px-Brendan_Fraser_2009.jpg"
 
   - id: "sadie_sink"
     type: "인물"
@@ -62,6 +80,11 @@ entities:
     external_links:
       - name: "IMDb"
         url: "https://www.imdb.com/name/nm7039607/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/세이디%20싱크"
+    image_links:
+      - "https://upload.wikimedia.org/wikipedia/commons/3/38/Sadie_Sink_2017.jpg"
+      - "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Sadie_Sink_2019.jpg/800px-Sadie_Sink_2019.jpg"
 
   - id: "kathryn_bigelow"
     type: "인물"
@@ -74,6 +97,11 @@ entities:
     external_links:
       - name: "IMDb"
         url: "https://www.imdb.com/name/nm0000941/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/캐스린%20비글로"
+    image_links:
+      - "https://upload.wikimedia.org/wikipedia/commons/8/8e/Kathryn_Bigelow_2010.jpg"
+      - "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Kathryn_Bigelow_2008.jpg/800px-Kathryn_Bigelow_2008.jpg"
 
   - id: "darren_aronofsky"
     type: "인물"
@@ -86,6 +114,11 @@ entities:
     external_links:
       - name: "IMDb"
         url: "https://www.imdb.com/name/nm0004716/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/대런%20애러노프스키"
+    image_links:
+      - "https://upload.wikimedia.org/wikipedia/commons/0/0a/Darren_Aronofsky_2010.jpg"
+      - "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Darren_Aronofsky_2017.jpg/800px-Darren_Aronofsky_2017.jpg"
 
 relationships:
   - from: "kathryn_bigelow"

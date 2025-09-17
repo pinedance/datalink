@@ -14,6 +14,8 @@ entities:
         url: "https://www.imdb.com/name/nm0634240/"
       - name: "Wikipedia"
         url: "https://en.wikipedia.org/wiki/Christopher_Nolan"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/크리스토퍼%20놀란"
     image_links:
       - "https://upload.wikimedia.org/wikipedia/commons/9/95/Christopher_Nolan_Cannes_2018.jpg"
       - "https://upload.wikimedia.org/wikipedia/commons/7/71/Christopher_Nolan_by_Gage_Skidmore.jpg"
@@ -30,9 +32,10 @@ entities:
     external_links:
       - name: "IMDb"
         url: "https://www.imdb.com/title/tt1375666/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/인셉션"
     image_links:
       - "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg"
-      - "https://images.unsplash.com/photo-1489599731893-01b6b3a30c7a?w=800"
 
   - id: "interstellar"
     type: "영화"
@@ -46,6 +49,10 @@ entities:
     external_links:
       - name: "IMDb"
         url: "https://www.imdb.com/title/tt0816692/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/인터스텔라"
+    image_links:
+      - "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg"
 
   - id: "the_dark_knight"
     type: "영화"
@@ -59,6 +66,10 @@ entities:
     external_links:
       - name: "IMDb"
         url: "https://www.imdb.com/title/tt0468569/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/다크%20나이트(영화)"
+    image_links:
+      - "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg"
 
   - id: "batman_begins"
     type: "영화"
@@ -72,6 +83,10 @@ entities:
     external_links:
       - name: "IMDb"
         url: "https://www.imdb.com/title/tt0372784/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/배트맨%20비긴즈"
+    image_links:
+      - "https://upload.wikimedia.org/wikipedia/en/a/af/Batman_Begins_Poster.jpg"
 
   - id: "hans_zimmer"
     type: "인물"
@@ -84,6 +99,11 @@ entities:
     external_links:
       - name: "IMDb"
         url: "https://www.imdb.com/name/nm0001877/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/한스%20짐머"
+    image_links:
+      - "https://upload.wikimedia.org/wikipedia/commons/2/28/Hans_Zimmer_2014.jpg"
+      - "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Hans_Zimmer_2016.jpg/800px-Hans_Zimmer_2016.jpg"
 
 relationships:
   - from: "christopher_nolan"
