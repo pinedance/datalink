@@ -2,6 +2,7 @@
 /* Network Graph Container Styles */
 #network-container {
     width: 100%;
+    height: calc(100vh - 320px);
     flex-grow: 1;
     margin: 0;
     border: none;
