@@ -93,6 +93,118 @@ entities:
     properties:
       category: "Film Genre"
 
+  - id: "zero_dark_thirty"
+    type: "movie"
+    name: "Zero Dark Thirty"
+    description: "A chronicle of the decade-long hunt for al-Qaeda terrorist leader Osama bin Laden"
+    properties:
+      release_year: 2012
+      genre: ["Drama", "History", "Thriller"]
+      duration: 157
+      rating: 7.4
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt1790885/"
+
+  - id: "jessica_chastain"
+    type: "person"
+    name: "Jessica Chastain"
+    description: "American actress and film producer"
+    properties:
+      birth_year: 1977
+      nationality: "American"
+      occupation: "Actress, Producer"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm1567113/"
+
+  - id: "the_whale"
+    type: "movie"
+    name: "The Whale"
+    description: "A reclusive English teacher tries to restore his relationship with his estranged teenage daughter"
+    properties:
+      release_year: 2022
+      genre: ["Drama"]
+      duration: 117
+      rating: 7.6
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt13833688/"
+
+  - id: "brendan_fraser"
+    type: "person"
+    name: "Brendan Fraser"
+    description: "American-Canadian actor"
+    properties:
+      birth_year: 1968
+      nationality: "American-Canadian"
+      occupation: "Actor"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0000409/"
+
+  - id: "sadie_sink"
+    type: "person"
+    name: "Sadie Sink"
+    description: "American actress known for Stranger Things and The Whale"
+    properties:
+      birth_year: 2002
+      nationality: "American"
+      occupation: "Actress"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm7039607/"
+
+  - id: "homeland"
+    type: "tv_series"
+    name: "Homeland"
+    description: "An American espionage thriller television series about CIA officer Carrie Mathison"
+    properties:
+      start_year: 2011
+      end_year: 2020
+      seasons: 8
+      genre: ["Drama", "Thriller", "Espionage"]
+      network: "Showtime"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt1796960/"
+
+  - id: "claire_danes"
+    type: "person"
+    name: "Claire Danes"
+    description: "American actress known for My So-Called Life and Homeland"
+    properties:
+      birth_year: 1979
+      nationality: "American"
+      occupation: "Actress"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0000132/"
+
+  - id: "kathryn_bigelow"
+    type: "person"
+    name: "Kathryn Bigelow"
+    description: "American film director, producer, and screenwriter"
+    properties:
+      birth_year: 1951
+      nationality: "American"
+      occupation: "Director, Producer, Screenwriter"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0000941/"
+
+  - id: "darren_aronofsky"
+    type: "person"
+    name: "Darren Aronofsky"
+    description: "American film director, producer, and screenwriter"
+    properties:
+      birth_year: 1969
+      nationality: "American"
+      occupation: "Director, Producer, Screenwriter"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0004716/"
+
 relationships:
   - from: "christopher_nolan"
     to: "inception"
@@ -153,3 +265,44 @@ relationships:
     type: "belongs_to"
     properties:
       primary: true
+
+  - from: "kathryn_bigelow"
+    to: "zero_dark_thirty"
+    type: "directed"
+    properties:
+      year: 2012
+
+  - from: "jessica_chastain"
+    to: "zero_dark_thirty"
+    type: "starred_in"
+    properties:
+      role: "Maya"
+      character: "CIA Analyst"
+
+  - from: "darren_aronofsky"
+    to: "the_whale"
+    type: "directed"
+    properties:
+      year: 2022
+
+  - from: "brendan_fraser"
+    to: "the_whale"
+    type: "starred_in"
+    properties:
+      role: "Charlie"
+      character: "English Teacher"
+
+  - from: "sadie_sink"
+    to: "the_whale"
+    type: "starred_in"
+    properties:
+      role: "Ellie"
+      character: "Charlie's Daughter"
+
+  - from: "claire_danes"
+    to: "homeland"
+    type: "starred_in"
+    properties:
+      role: "Carrie Mathison"
+      character: "CIA Officer"
+      seasons: "1-8"

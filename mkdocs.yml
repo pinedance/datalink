@@ -5,12 +5,12 @@ use_directory_urls: false
 
 theme:
   name: material
-  custom_dir: docs/overrides
+  custom_dir: overrides
   features:
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.sections
-    - navigation.expand
+    # - navigation.sections
+    # - navigation.expand
     - navigation.footer
     - header.autohide
     - search.highlight
