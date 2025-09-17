@@ -1,22 +1,16 @@
-import yaml
 import json
 import os
-from pathlib import Path
 
 def define_env(env):
     """
     This is the hook for the mkdocs-macros-plugin
     """
-    
+
     @env.macro
     def load_datalink():
-        """Load and parse the datalink.yaml file"""
-        datalink_path = Path("data/datalink.yaml")
-        if not datalink_path.exists():
-            return {"entities": [], "relationships": []}
-        
-        with open(datalink_path, 'r', encoding='utf-8') as file:
-            return yaml.safe_load(file)
+        """Load and parse all YAML files from data/datalink/ directory"""
+        from core_datalink import load_datalink as core_load_datalink
+        return core_load_datalink()
     
     @env.macro
     def generate_network_data():
@@ -26,11 +20,19 @@ def define_env(env):
         # Create nodes
         nodes = []
         entity_colors = {
-            "person": "#ff7675",
-            "movie": "#74b9ff", 
-            "genre": "#00b894",
-            "book": "#fdcb6e",
-            "music": "#a29bfe"
+            "인물": "hsla(356, 100%, 73%, 0.9)",      # 빨간색 계열 (person)
+            "영화": "hsla(217, 92%, 73%, 0.9)",       # 파란색 계열 (movie)
+            "장르": "hsla(162, 73%, 46%, 0.9)",       # 초록색 계열 (genre)
+            "도서": "hsla(45, 93%, 70%, 0.9)",        # 노란색 계열 (book)
+            "음악": "hsla(250, 85%, 75%, 0.9)",       # 보라색 계열 (music)
+            "TV시리즈": "hsla(210, 11%, 45%, 0.9)",   # 회색 계열 (tv_series)
+            # 영어 키 호환성 유지 (기존 데이터 지원)
+            "person": "hsla(356, 100%, 73%, 0.9)",
+            "movie": "hsla(217, 92%, 73%, 0.9)",
+            "genre": "hsla(162, 73%, 46%, 0.9)",
+            "book": "hsla(45, 93%, 70%, 0.9)",
+            "music": "hsla(250, 85%, 75%, 0.9)",
+            "tv_series": "hsla(210, 11%, 45%, 0.9)"
         }
         
         for entity in data.get("entities", []):
@@ -49,9 +51,10 @@ def define_env(env):
         edges = []
         edge_colors = {
             "directed": "#e84393",
-            "composed": "#00cec9", 
+            "composed": "#00cec9",
             "belongs_to": "#6c5ce7",
-            "related_to": "#fd79a8"
+            "related_to": "#fd79a8",
+            "starred_in": "#636e72"
         }
         
         for rel in data.get("relationships", []):
@@ -72,34 +75,28 @@ def define_env(env):
     @env.macro
     def get_entity_by_id(entity_id):
         """Get a specific entity by ID"""
-        data = load_datalink()
-        for entity in data.get("entities", []):
-            if entity["id"] == entity_id:
-                return entity
-        return None
-    
+        from core_datalink import load_datalink as core_load_datalink, get_entity_by_id as core_get_entity_by_id
+        data = core_load_datalink()
+        return core_get_entity_by_id(data, entity_id)
+
     @env.macro
     def get_entity_relationships(entity_id):
         """Get all relationships for a specific entity"""
-        data = load_datalink()
-        relationships = []
-        
-        for rel in data.get("relationships", []):
-            if rel["from"] == entity_id or rel["to"] == entity_id:
-                relationships.append(rel)
-        
-        return relationships
+        from core_datalink import load_datalink as core_load_datalink, get_entity_relationships as core_get_entity_relationships
+        data = core_load_datalink()
+        return core_get_entity_relationships(data, entity_id)
     
     @env.macro
     def generate_entity_pages():
         """Generate markdown content for entity detail pages"""
-        data = load_datalink()
+        from core_datalink import load_datalink as core_load_datalink, get_entity_relationships as core_get_entity_relationships, get_entity_by_id as core_get_entity_by_id
+        data = core_load_datalink()
         pages = {}
-        
+
         for entity in data.get("entities", []):
             entity_id = entity["id"]
-            relationships = get_entity_relationships(entity_id)
-            
+            relationships = core_get_entity_relationships(data, entity_id)
+
             # Build relationships section
             incoming = [r for r in relationships if r["to"] == entity_id]
             outgoing = [r for r in relationships if r["from"] == entity_id]
@@ -131,14 +128,14 @@ def define_env(env):
                 if incoming:
                     content += "\n### Incoming Relationships\n"
                     for rel in incoming:
-                        from_entity = get_entity_by_id(rel["from"])
+                        from_entity = core_get_entity_by_id(data, rel["from"])
                         if from_entity:
                             content += f"- **{from_entity['name']}** {rel['type']} this entity\n"
-                
+
                 if outgoing:
-                    content += "\n### Outgoing Relationships\n" 
+                    content += "\n### Outgoing Relationships\n"
                     for rel in outgoing:
-                        to_entity = get_entity_by_id(rel["to"])
+                        to_entity = core_get_entity_by_id(data, rel["to"])
                         if to_entity:
                             content += f"- This entity {rel['type']} **{to_entity['name']}**\n"
             

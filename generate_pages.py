@@ -1,36 +1,13 @@
 #!/usr/bin/env python3
 """Generate entity pages dynamically during MkDocs build"""
 
-import yaml
 import mkdocs_gen_files
 from pathlib import Path
 import os
+import sys
 
-def load_datalink():
-    """Load and parse the datalink.yaml file"""
-    datalink_path = Path("data/datalink.yaml")
-    if not datalink_path.exists():
-        return {"entities": [], "relationships": []}
-    
-    with open(datalink_path, 'r', encoding='utf-8') as file:
-        return yaml.safe_load(file)
-
-def get_entity_by_id(data, entity_id):
-    """Get a specific entity by ID"""
-    for entity in data.get("entities", []):
-        if entity["id"] == entity_id:
-            return entity
-    return None
-
-def get_entity_relationships(data, entity_id):
-    """Get all relationships for a specific entity"""
-    relationships = []
-    
-    for rel in data.get("relationships", []):
-        if rel["from"] == entity_id or rel["to"] == entity_id:
-            relationships.append(rel)
-    
-    return relationships
+sys.path.append('.')
+from core_datalink import load_datalink, get_entity_by_id, get_entity_relationships
 
 def collect_entity_images(entity_id, entity_data):
     """Collect images from both datalink.yaml and local images folder"""

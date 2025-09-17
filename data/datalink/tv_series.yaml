@@ -1,0 +1,37 @@
+# TV Series and Related Entities
+
+entities:
+  - id: "homeland"
+    type: "TV시리즈"
+    name: "Homeland"
+    description: "CIA 요원 캐리 매니슨에 관한 미국 스파이 스릴러 텔레비전 시리즈"
+    properties:
+      시작년도: 2011
+      종료년도: 2020
+      시즌수: 8
+      장르: ["드라마", "스릴러", "스파이"]
+      방송사: "Showtime"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt1796960/"
+
+  - id: "claire_danes"
+    type: "인물"
+    name: "Claire Danes"
+    description: "마이 소-콜드 라이프와 홈럜드로 유명한 미국 배우"
+    properties:
+      출생년도: 1979
+      국적: "미국"
+      직업: "배우"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0000132/"
+
+relationships:
+  - from: "claire_danes"
+    to: "homeland"
+    type: "starred_in"
+    properties:
+      역할: "Carrie Mathison"
+      캐릭터: "CIA 요원"
+      시즌: "1-8"

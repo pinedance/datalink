@@ -1,0 +1,122 @@
+# Recent Movies and Directors
+
+entities:
+  - id: "zero_dark_thirty"
+    type: "영화"
+    name: "Zero Dark Thirty"
+    description: "알카에다 테러리스트 지도자 오사마 빈 라덴을 10년간 추적한 연대기"
+    properties:
+      개봉년도: 2012
+      장르: ["드라마", "역사", "스릴러"]
+      상영시간: 157
+      평점: 7.4
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt1790885/"
+
+  - id: "jessica_chastain"
+    type: "인물"
+    name: "Jessica Chastain"
+    description: "미국 배우이자 영화 제작자"
+    properties:
+      출생년도: 1977
+      국적: "미국"
+      직업: "배우, 제작자"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm1567113/"
+
+  - id: "the_whale"
+    type: "영화"
+    name: "The Whale"
+    description: "은둔하는 영어 교사가 소원해진 십대 딸과의 관계를 회복하려는 이야기"
+    properties:
+      개봉년도: 2022
+      장르: ["드라마"]
+      상영시간: 117
+      평점: 7.6
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt13833688/"
+
+  - id: "brendan_fraser"
+    type: "인물"
+    name: "Brendan Fraser"
+    description: "미국-캐나다 배우"
+    properties:
+      출생년도: 1968
+      국적: "미국-캐나다"
+      직업: "배우"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0000409/"
+
+  - id: "sadie_sink"
+    type: "인물"
+    name: "Sadie Sink"
+    description: "스트레인저 씨즈와 더 웨일로 유명한 미국 배우"
+    properties:
+      출생년도: 2002
+      국적: "미국"
+      직업: "배우"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm7039607/"
+
+  - id: "kathryn_bigelow"
+    type: "인물"
+    name: "Kathryn Bigelow"
+    description: "미국 영화감독, 제작자, 시나리오 작가"
+    properties:
+      출생년도: 1951
+      국적: "미국"
+      직업: "감독, 제작자, 시나리오 작가"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0000941/"
+
+  - id: "darren_aronofsky"
+    type: "인물"
+    name: "Darren Aronofsky"
+    description: "미국 영화감독, 제작자, 시나리오 작가"
+    properties:
+      출생년도: 1969
+      국적: "미국"
+      직업: "감독, 제작자, 시나리오 작가"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0004716/"
+
+relationships:
+  - from: "kathryn_bigelow"
+    to: "zero_dark_thirty"
+    type: "directed"
+    properties:
+      년도: 2012
+
+  - from: "jessica_chastain"
+    to: "zero_dark_thirty"
+    type: "starred_in"
+    properties:
+      역할: "Maya"
+      캐릭터: "CIA 분석관"
+
+  - from: "darren_aronofsky"
+    to: "the_whale"
+    type: "directed"
+    properties:
+      년도: 2022
+
+  - from: "brendan_fraser"
+    to: "the_whale"
+    type: "starred_in"
+    properties:
+      역할: "Charlie"
+      캐릭터: "영어 교사"
+
+  - from: "sadie_sink"
+    to: "the_whale"
+    type: "starred_in"
+    properties:
+      역할: "Ellie"
+      캐릭터: "Charlie의 딸"
