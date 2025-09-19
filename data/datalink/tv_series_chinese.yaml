@@ -20,13 +20,13 @@ entities:
       - name: "바이두 바이커"
         url: "https://baike.baidu.com/item/张婧仪/22992855"
     image_links:
-      - url: "https://bkimg.cdn.bcebos.com/pic/cefc1e178a82b901a4848cf1563ef79ed72aa05ba09a"
+      - url: "https://bkimg.cdn.bcebos.com/pic/95eef01f3a292df5e0fedea38b6a4b6034a85edfd548"
         source: "바이두 바이커"
         description: "Zhang Jingyi profile photo"
-      - url: "https://bkimg.cdn.bcebos.com/pic/8435e5dde71190ef76c6e7219c6b62e9f2d3572c889b"
+      - url: "https://bkimg.cdn.bcebos.com/pic/2e2eb9389b504fc2d56294e6be85f01190ef77c6c782"
         source: "바이두 바이커"
         description: "Zhang Jingyi headshot"
-      - url: "https://bkimg.cdn.bcebos.com/pic/91529822720e0cf3d7ca9010361ee51fbe096a63c39b"
+      - url: "https://bkimg.cdn.bcebos.com/pic/8435e5dde71190ef76c6b13c95438a16fdfaae51ca82"
         source: "바이두 바이커"
         description: "Zhang Jingyi promotional photo"
 
@@ -50,15 +50,10 @@ entities:
       - name: "바이두 바이커"
         url: "https://baike.baidu.com/item/周也/4291399"
     image_links:
-      - url: "https://bkimg.cdn.bcebos.com/pic/e824b899a9014c08d8d0c69f3d6c67a17e8d3e065f09"
+      - url: "https://bkimg.cdn.bcebos.com/pic/1e30e924b899a9014c0858e4d3cd1d7b02087af45f92"
         source: "바이두 바이커"
-        description: "Zhou Ye profile photo"
-      - url: "https://bkimg.cdn.bcebos.com/pic/b8014a90f603738da977d64dc7d60a9dd51b3e05189b"
+      - url: "https://bkimg.cdn.bcebos.com/pic/0eb30f2442a7d933c89572b08010c61373f08302abe7"
         source: "바이두 바이커"
-        description: "Zhou Ye headshot"
-      - url: "https://bkimg.cdn.bcebos.com/pic/f31fbe096b63f6246b6093e68e44ebf81a4ca3ec6d09"
-        source: "바이두 바이커"
-        description: "Zhou Ye from Better Days"
 
   - id: "xiang_hanzhi"
     type: "인물"
@@ -75,16 +70,16 @@ entities:
         url: "https://namu.wiki/w/%EC%83%81%ED%95%A8%EC%A7%80"
       - name: "바이두 바이커"
         url: "https://baike.baidu.com/item/向涵之"
-    image_links:
-      - url: "https://bkimg.cdn.bcebos.com/pic/4610b912c8fcc3cec3fd666b851dc188d43f87948a69"
-        source: "바이두 바이커"
-        description: "Xiang Hanzhi concept album cover"
-      - url: "https://bkimg.cdn.bcebos.com/pic/8435e5dde71190ef76c6b8239c438a16fdfaae51ca8d"
-        source: "바이두 바이커"
-        description: "Xiang Hanzhi early career photo"
-      - url: "https://bkimg.cdn.bcebos.com/pic/d058ccbf6c81800a19d8c756a66d24fa828ba61ee969"
-        source: "바이두 바이커"
-        description: "Xiang Hanzhi headshot"
+    # image_links:
+    #   - url: "https://bkimg.cdn.bcebos.com/pic/4610b912c8fcc3cec3fd666b851dc188d43f87948a69"
+    #     source: "바이두 바이커"
+    #     description: "Xiang Hanzhi concept album cover"
+    #   - url: "https://bkimg.cdn.bcebos.com/pic/8435e5dde71190ef76c6b8239c438a16fdfaae51ca8d"
+    #     source: "바이두 바이커"
+    #     description: "Xiang Hanzhi early career photo"
+    #   - url: "https://bkimg.cdn.bcebos.com/pic/d058ccbf6c81800a19d8c756a66d24fa828ba61ee969"
+    #     source: "바이두 바이커"
+    #     description: "Xiang Hanzhi headshot"
 
   - id: "liu_haocun"
     type: "인물"
@@ -104,16 +99,12 @@ entities:
         url: "https://namu.wiki/w/%EB%A5%98%ED%98%B8%EC%A1%B4"
       - name: "바이두 바이커"
         url: "https://baike.baidu.com/item/刘浩存"
+      - name: "바이두 바이커 포토앨범"
+        url: "https://baike.baidu.com/pic/%E5%88%98%E6%B5%A9%E5%AD%98/23284525"
     image_links:
-      - url: "https://bkimg.cdn.bcebos.com/pic/a044ad345982b2b7d0a2162e0df5dcef76094a362d9b"
+      - url: "https://bkimg.cdn.bcebos.com/pic/4d086e061d950a7b020879ec0c8b75d9f2d3572c63db"
         source: "바이두 바이커"
         description: "Liu Haocun BOBOSNAP magazine cover"
-      - url: "https://bkimg.cdn.bcebos.com/pic/91529822720e0cf3d7ca9010361ee51fbe096a637c9d"
-        source: "바이두 바이커"
-        description: "Liu Haocun GRAZIA magazine cover"
-      - url: "https://bkimg.cdn.bcebos.com/pic/d000baa1cd11728b4710c8cef4a4d4cec3fdfd03869d"
-        source: "바이두 바이커"
-        description: "Liu Haocun Glass Vision magazine cover"
 
   - id: "bai_lu"
     type: "인물"
@@ -192,16 +183,33 @@ entities:
         url: "https://namu.wiki/w/%EC%9E%A5%EC%95%BD%EB%82%A8"
       - name: "바이두 바이커"
         url: "https://baike.baidu.com/item/章若楠"
+      - name: "바이두 바이커 포토앨범"
+        url: "https://baike.baidu.com/pic/%E7%AB%A0%E8%8B%A5%E6%A5%A0/22729850"
     image_links:
-      - url: "https://bkimg.cdn.bcebos.com/pic/4d086e061d950a7b0208fa688d8b75d9f2d3572c635e"
+      - url: "https://bkimg.cdn.bcebos.com/pic/dc54564e9258d109b3de41117e01dbbf6c81800ae744"
         source: "바이두 바이커"
         description: "Zhang Ruonan abstract album photo"
-      - url: "https://bkimg.cdn.bcebos.com/pic/060828381f30e924b89972b86b5d79061d950b7b59a6"
+      - url: "https://bkimg.cdn.bcebos.com/pic/faedab64034f78f0f7364f1084681d55b319eac4b684"
         source: "바이두 바이커"
         description: "Zhang Ruonan promotional photo"
-      - url: "https://bkimg.cdn.bcebos.com/pic/f7246b600c338744ebf8331b5956cef9d72a60590a19"
+
+  - id: "legend_of_the_female_general"
+    type: "TV시리즈"
+    name: "锦月如歌 (금월여가)"
+    description: "2023년 방영된 중국 고장 로맨스 드라마."
+    properties:
+      방영년도: 2023
+      총회수: 36
+      장르: ["로맨스", "고장극", "사극"]
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EA%B8%88%EC%9B%94%EC%97%AC%EA%B0%80"
+      - name: "바이두 바이커"
+        url: "https://baike.baidu.com/item/%E9%94%A6%E6%9C%88%E5%A6%82%E6%AD%8C"
+    image_links:
+      - url: "https://bkimg.cdn.bcebos.com/pic/500fd9f9d72a6059252dc6590d6f239b033b5bb50c67"
         source: "바이두 바이커"
-        description: "Zhang Ruonan photoshoot"
+        description: "Official Drama Poster"
 
   - id: "blossoms_in_adversity"
     type: "TV시리즈"
@@ -231,6 +239,20 @@ relationships:
     properties:
       역할: "화지"
       캐릭터설명: "몰락한 가문의 장녀"
+
+  - from: "zhang_miaoyi"
+    to: "legend_of_the_female_general"
+    type: "starred_in"
+    properties:
+      역할: "송도도"
+      캐릭터설명: "약재상 명문가 출신"
+
+  - from: "zhou_ye"
+    to: "legend_of_the_female_general"
+    type: "starred_in"
+    properties:
+      역할: "화안"
+      캐릭터설명: "가문의 작위를 지키기 위해 어쩔 수 없이 가문의 적장자 하여비로 위장한 하가(家)의 의붓딸"
 
   - from: "zhou_ye"
     to: "better_days"
