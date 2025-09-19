@@ -1,20 +1,14 @@
 
+/* Main page styles */
 h1 {
     text-align: center;
     margin-bottom: 1.0rem !important;
-    flex-shrink: 0;
 }
 
 /* Statistics Summary */
 .stats-summary {
     text-align: center;
     font-size: 0.9rem;
-    /* color: var(--md-default-fg-color--light, #666); */
-    margin-bottom: 0rem;
+    margin-bottom: 0;
     margin-top: 0;
-    flex-shrink: 0;
-}
-
-.md-header__title {
-    width: 10%;
 }

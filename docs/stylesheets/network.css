@@ -27,7 +27,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--md-default-fg-color--light, #666);
+    color: var(--md-default-fg-color--light, hsla(0, 0%, 40%, 1));
     font-size: 1.1rem;
     z-index: 1;
     pointer-events: none;
@@ -51,55 +51,12 @@
 }
 
 /* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
-    #network-container {
-        border: none;
-    }
-    
-    #network-graph {
-        background: rgba(255, 255, 255, 0.02);
-    }
-    
-    .legend {
-        background: #2d3748;
-        border-color: #4a5568;
-        color: #e2e8f0;
-    }
-    
-    .legend-color {
-        border-color: #4a5568;
-    }
-    
-    #network-graph::before {
-        color: #a0aec0;
-    }
-}
-
-/* Material Theme Dark Mode */
-[data-md-color-scheme="slate"] #network-container {
-    border: none;
-}
-
 [data-md-color-scheme="slate"] #network-graph {
-    background: rgba(255, 255, 255, 0.02);
-}
-
-[data-md-color-scheme="slate"] .legend {
-    background: var(--md-code-bg-color, #2d3748);
-    border-color: var(--md-default-fg-color--lightest, #4a5568);
-    color: var(--md-default-fg-color, #e2e8f0);
-}
-
-[data-md-color-scheme="slate"] .legend-item {
-    color: var(--md-default-fg-color, #e2e8f0);
-}
-
-[data-md-color-scheme="slate"] .legend-color {
-    border-color: var(--md-default-fg-color--lightest, #4a5568);
+    background: hsla(0, 0%, 100%, 0.02);
 }
 
 [data-md-color-scheme="slate"] #network-graph::before {
-    color: var(--md-default-fg-color--light, #a0aec0);
+    color: var(--md-default-fg-color--light, hsla(208, 25%, 69%, 1));
 }
 
 /* Animation for network stabilization */

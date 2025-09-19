@@ -65,6 +65,7 @@ extra_css:
   - stylesheets/gallery.css
 
 # extra_javascript:
+#   - javascripts/gallery.js
 
 extra:
   generator: false

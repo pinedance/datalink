@@ -1,13 +1,24 @@
 /**
  * Image Gallery with Lazy Loading and Lightbox
+ *
+ * This class manages image galleries throughout the DataLink application with
+ * lazy loading for performance and a lightbox modal for enhanced viewing.
+ *
+ * Features:
+ * - Lazy loading using Intersection Observer API
+ * - Full-screen lightbox modal with navigation
+ * - Touch/swipe support for mobile devices
+ * - Keyboard navigation and accessibility support
+ * - Dynamic content support for entity pages
+ * - Error handling for failed image loads
  */
 class ImageGallery {
     constructor() {
-        this.currentImageIndex = 0;
-        this.images = [];
-        this.lightbox = null;
-        this.observer = null;
-        
+        this.currentImageIndex = 0;  // Current image index in lightbox
+        this.images = [];            // Array of image data for navigation
+        this.lightbox = null;        // Lightbox DOM element
+        this.observer = null;        // Intersection Observer instance
+
         this.init();
     }
     
@@ -74,7 +85,7 @@ class ImageGallery {
         imageLoader.onerror = () => {
             // Image failed to load
             placeholder.innerHTML = '<div class="error-message">Image failed to load</div>';
-            placeholder.style.background = '#f0f0f0';
+            placeholder.style.background = 'hsla(0, 0%, 94%, 1)';
             this.observer.unobserve(galleryItem);
         };
         

@@ -1,7 +1,7 @@
 ---
 hide:
-  - navigation
-  - toc
+#   - navigation
+#   - toc
   - footer
 ---
 
@@ -12,12 +12,12 @@ hide:
 .loading {
     text-align: center;
     padding: 2rem;
-    color: #666;
+    color: hsla(0, 0%, 40%, 1);
 }
 .error {
     text-align: center;
     padding: 2rem;
-    color: #d32f2f;
+    color: hsla(0, 73%, 50%, 1);
 }
 </style>
 
