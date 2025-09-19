@@ -1,0 +1,24 @@
+{
+  "id": "denis_villeneuve",
+  "type": "인물",
+  "name": "Denis Villeneuve (드니 빌뇌브)",
+  "description": "캐나다 출신 영화감독, '컨택트', '블레이드 러너 2049', '듄' 시리즈로 유명",
+  "properties": {
+    "출생년도": 1967,
+    "출생지": "캐나다 퀘벡",
+    "국적": "캐나다",
+    "직업": "영화감독, 시나리오 작가",
+    "대표작": [
+      "컨택트",
+      "블레이드 러너 2049",
+      "듄 시리즈"
+    ]
+  },
+  "external_links": [
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/name/nm0898288/"
+    }
+  ],
+  "local_images": []
+}

@@ -1,0 +1,39 @@
+{
+  "id": "dune_2021",
+  "type": "영화",
+  "name": "Dune (듄)",
+  "description": "드니 빌뇌브 감독의 2021년 SF 영화, 프랭크 허버트의 소설을 원작으로 한 대작",
+  "properties": {
+    "개봉년도": 2021,
+    "감독": "드니 빌뇌브",
+    "장르": [
+      "SF",
+      "액션",
+      "어드벤처",
+      "드라마",
+      "판타지"
+    ],
+    "원작": "프랭크 허버트 소설 '듄'",
+    "제작국가": "미국",
+    "상영시간": "155분",
+    "속편": true
+  },
+  "external_links": [
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/%EB%93%84(2021)"
+    },
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/title/tt1160419/"
+    }
+  ],
+  "image_links": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg",
+      "source": "Wikipedia",
+      "description": "Official Dune (2021) movie poster"
+    }
+  ],
+  "local_images": []
+}

@@ -1,0 +1,38 @@
+{
+  "id": "batman_begins",
+  "type": "영화",
+  "name": "Batman Begins (배트맨 비긴즈)",
+  "description": "배트맨의 기원 이야기",
+  "properties": {
+    "개봉년도": 2005,
+    "장르": [
+      "액션",
+      "모험"
+    ],
+    "상영시간": 140,
+    "평점": 8.2
+  },
+  "external_links": [
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/title/tt0372784/"
+    },
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/배트맨%20비긴즈"
+    }
+  ],
+  "image_links": [
+    {
+      "url": "https://image.tmdb.org/t/p/w500/8RW2runSEc34n2dAM8NWOzxtOTz.jpg",
+      "source": "TMDB",
+      "description": "Official Batman Begins movie poster"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/en/a/af/Batman_Begins_Poster.jpg",
+      "source": "Wikipedia",
+      "description": "Batman Begins theatrical poster"
+    }
+  ],
+  "local_images": []
+}

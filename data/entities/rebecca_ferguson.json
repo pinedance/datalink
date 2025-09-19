@@ -1,0 +1,26 @@
+{
+  "id": "rebecca_ferguson",
+  "type": "인물",
+  "name": "Rebecca Ferguson (레베카 페르구손)",
+  "description": "스웨덴 출신의 배우, '미션 임파서블' 시리즈와 '듄' 시리즈로 유명",
+  "properties": {
+    "출생년도": 1983,
+    "출생일": "10월 19일",
+    "출생지": "스웨덴 스톡홀름",
+    "국적": "스웨덴",
+    "데뷔년도": 1999,
+    "직업": "배우",
+    "수상": "골든 글로브 후보"
+  },
+  "external_links": [
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/%EB%A0%88%EB%B2%A0%EC%B9%B4%20%ED%8E%98%EB%A5%B4%EA%B5%AC%EC%86%90"
+    },
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/name/nm0272581/"
+    }
+  ],
+  "local_images": []
+}

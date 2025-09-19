@@ -1,0 +1,22 @@
+{
+  "id": "sadie_sink",
+  "type": "인물",
+  "name": "Sadie Sink (세이디 싱크)",
+  "description": "스트레인저 씨즈와 더 웨일로 유명한 미국 배우",
+  "properties": {
+    "출생년도": 2002,
+    "국적": "미국",
+    "직업": "배우"
+  },
+  "external_links": [
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/name/nm7039607/"
+    },
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/세이디%20싱크"
+    }
+  ],
+  "local_images": []
+}

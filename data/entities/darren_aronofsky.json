@@ -1,0 +1,22 @@
+{
+  "id": "darren_aronofsky",
+  "type": "인물",
+  "name": "Darren Aronofsky (대런 애러노프스키)",
+  "description": "미국 영화감독, 제작자, 시나리오 작가",
+  "properties": {
+    "출생년도": 1969,
+    "국적": "미국",
+    "직업": "감독, 제작자, 시나리오 작가"
+  },
+  "external_links": [
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/name/nm0004716/"
+    },
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/대런%20애러노프스키"
+    }
+  ],
+  "local_images": []
+}

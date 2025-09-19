@@ -1,0 +1,37 @@
+{
+  "id": "the_whale",
+  "type": "영화",
+  "name": "The Whale (더 웨일)",
+  "description": "은둔하는 영어 교사가 소원해진 십대 딸과의 관계를 회복하려는 이야기",
+  "properties": {
+    "개봉년도": 2022,
+    "장르": [
+      "드라마"
+    ],
+    "상영시간": 117,
+    "평점": 7.6
+  },
+  "external_links": [
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/title/tt13833688/"
+    },
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/%EB%8D%94%20%EC%9B%A8%EC%9D%BC"
+    }
+  ],
+  "image_links": [
+    {
+      "url": "https://image.tmdb.org/t/p/w500/jQ0gylJMxWSb6hJRyPfvBBSlQE7.jpg",
+      "source": "TMDB",
+      "description": "Official The Whale movie poster"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/en/9/9c/The_Whale_2022_poster.jpg",
+      "source": "Wikipedia",
+      "description": "The Whale theatrical poster"
+    }
+  ],
+  "local_images": []
+}

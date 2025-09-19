@@ -1,0 +1,49 @@
+{
+  "id": "christopher_nolan",
+  "type": "인물",
+  "name": "Christopher Nolan (크리스토퍼 놀란)",
+  "description": "영국계 미국인 영화감독, 제작자, 시나리오 작가",
+  "properties": {
+    "출생년도": 1970,
+    "국적": "영국계 미국인",
+    "직업": "감독, 제작자, 시나리오 작가"
+  },
+  "external_links": [
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/name/nm0634240/"
+    },
+    {
+      "name": "Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Christopher_Nolan"
+    },
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/크리스토퍼%20놀란"
+    }
+  ],
+  "image_links": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/95/Christopher_Nolan_Cannes_2018.jpg",
+      "source": "Wikimedia Commons",
+      "description": "Christopher Nolan at Cannes (2018)"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/71/Christopher_Nolan_by_Gage_Skidmore.jpg",
+      "source": "Wikimedia Commons",
+      "description": "Christopher Nolan by Gage Skidmore"
+    }
+  ],
+  "local_images": [
+    {
+      "filename": "portrait_1.jpg",
+      "path": "/images/christopher_nolan/portrait_1.jpg",
+      "alt": "Christopher Nolan (크리스토퍼 놀란) - portrait_1"
+    },
+    {
+      "filename": "directing.jpg",
+      "path": "/images/christopher_nolan/directing.jpg",
+      "alt": "Christopher Nolan (크리스토퍼 놀란) - directing"
+    }
+  ]
+}

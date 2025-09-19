@@ -1,0 +1,40 @@
+{
+  "id": "homeland",
+  "type": "TV시리즈",
+  "name": "Homeland (홈랜드)",
+  "description": "CIA 요원 캐리 매니슨에 관한 미국 스파이 스릴러 텔레비전 시리즈",
+  "properties": {
+    "시작년도": 2011,
+    "종료년도": 2020,
+    "시즌수": 8,
+    "장르": [
+      "드라마",
+      "스릴러",
+      "스파이"
+    ],
+    "방송사": "Showtime"
+  },
+  "external_links": [
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/title/tt1796960/"
+    },
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/홈랜드"
+    }
+  ],
+  "image_links": [
+    {
+      "url": "https://image.tmdb.org/t/p/w500/lORmqpToHFAn58LjxPPy6JSXzlz.jpg",
+      "source": "TMDB",
+      "description": "Official Homeland TV series poster"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/en/3/34/Homeland_TV_series_logo.png",
+      "source": "Wikipedia",
+      "description": "Homeland series logo"
+    }
+  ],
+  "local_images": []
+}

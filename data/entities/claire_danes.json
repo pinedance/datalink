@@ -1,0 +1,22 @@
+{
+  "id": "claire_danes",
+  "type": "인물",
+  "name": "Claire Danes (클레어 데인즈)",
+  "description": "마이 소-콜드 라이프와 홈럜드로 유명한 미국 배우",
+  "properties": {
+    "출생년도": 1979,
+    "국적": "미국",
+    "직업": "배우"
+  },
+  "external_links": [
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/name/nm0000132/"
+    },
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/클레어%20데인즈"
+    }
+  ],
+  "local_images": []
+}

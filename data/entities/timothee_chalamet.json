@@ -1,0 +1,27 @@
+{
+  "id": "timothee_chalamet",
+  "type": "인물",
+  "name": "Timothée Chalamet (티모시 샬라메)",
+  "description": "미국-프랑스 이중 국적의 배우, '콜 미 바이 유어 네임'과 '듄' 시리즈로 유명",
+  "properties": {
+    "출생년도": 1995,
+    "출생일": "12월 27일",
+    "출생지": "미국 뉴욕",
+    "국적": "미국, 프랑스",
+    "데뷔년도": 2008,
+    "직업": "배우",
+    "학력": "컬럼비아대학교, 뉴욕대학교",
+    "수상": "오스카 최우수남주연상 후보"
+  },
+  "external_links": [
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/%ED%8B%B0%EB%AA%A8%EC%8B%9C%20%EC%83%AC%EB%9D%BC%EB%A9%94"
+    },
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/name/nm3154303/"
+    }
+  ],
+  "local_images": []
+}

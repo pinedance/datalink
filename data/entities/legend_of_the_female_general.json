@@ -1,0 +1,33 @@
+{
+  "id": "legend_of_the_female_general",
+  "type": "TV시리즈",
+  "name": "锦月如歌 (금월여가)",
+  "description": "2023년 방영된 중국 고장 로맨스 드라마.",
+  "properties": {
+    "방영년도": 2023,
+    "총회수": 36,
+    "장르": [
+      "로맨스",
+      "고장극",
+      "사극"
+    ]
+  },
+  "external_links": [
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/%EA%B8%88%EC%9B%94%EC%97%AC%EA%B0%80"
+    },
+    {
+      "name": "바이두 바이커",
+      "url": "https://baike.baidu.com/item/%E9%94%A6%E6%9C%88%E5%A6%82%E6%AD%8C"
+    }
+  ],
+  "image_links": [
+    {
+      "url": "https://bkimg.cdn.bcebos.com/pic/500fd9f9d72a6059252dc6590d6f239b033b5bb50c67",
+      "source": "바이두 바이커",
+      "description": "Official Drama Poster"
+    }
+  ],
+  "local_images": []
+}

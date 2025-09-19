@@ -1,0 +1,38 @@
+{
+  "id": "liu_haocun",
+  "type": "인물",
+  "name": "刘浩存 (류호존)",
+  "description": "베이징무용학원 출신, 장이머우 감독 작품 '일초'로 데뷔한 중국 여배우",
+  "properties": {
+    "출생년도": 2000,
+    "출생일": "5월 20일",
+    "출생지": "중국 길림성 통화시",
+    "국적": "중국",
+    "신장": "165cm",
+    "학력": "베이징무용학원",
+    "데뷔년도": 2020,
+    "직업": "배우"
+  },
+  "external_links": [
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/%EB%A5%98%ED%98%B8%EC%A1%B4"
+    },
+    {
+      "name": "바이두 바이커",
+      "url": "https://baike.baidu.com/item/刘浩存"
+    },
+    {
+      "name": "바이두 바이커 포토앨범",
+      "url": "https://baike.baidu.com/pic/%E5%88%98%E6%B5%A9%E5%AD%98/23284525"
+    }
+  ],
+  "image_links": [
+    {
+      "url": "https://bkimg.cdn.bcebos.com/pic/4d086e061d950a7b020879ec0c8b75d9f2d3572c63db",
+      "source": "바이두 바이커",
+      "description": "Liu Haocun BOBOSNAP magazine cover"
+    }
+  ],
+  "local_images": []
+}

@@ -1,0 +1,50 @@
+{
+  "id": "inception",
+  "type": "영화",
+  "name": "Inception (인셉션)",
+  "description": "꿈 공유 기술을 통해 기업 기밀을 훔치는 도둑의 이야기",
+  "properties": {
+    "개봉년도": 2010,
+    "장르": [
+      "공상과학",
+      "액션",
+      "스릴러"
+    ],
+    "상영시간": 148,
+    "평점": 8.8
+  },
+  "external_links": [
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/title/tt1375666/"
+    },
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/인셉션"
+    }
+  ],
+  "image_links": [
+    {
+      "url": "https://image.tmdb.org/t/p/w500/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg",
+      "source": "TMDB",
+      "description": "Official Inception movie poster"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg",
+      "source": "Wikipedia",
+      "description": "Inception theatrical poster"
+    }
+  ],
+  "local_images": [
+    {
+      "filename": "city_dreams.jpg",
+      "path": "/images/inception/city_dreams.jpg",
+      "alt": "Inception (인셉션) - city_dreams"
+    },
+    {
+      "filename": "spinning_top.jpg",
+      "path": "/images/inception/spinning_top.jpg",
+      "alt": "Inception (인셉션) - spinning_top"
+    }
+  ]
+}

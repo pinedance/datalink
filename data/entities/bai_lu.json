@@ -1,0 +1,45 @@
+{
+  "id": "bai_lu",
+  "type": "인물",
+  "name": "白鹿 (백록)",
+  "description": "중국의 인기 여배우, 다수의 로맨스 드라마 출연",
+  "properties": {
+    "출생년도": 1994,
+    "출생일": "9월 23일",
+    "출생지": "중국 장쑤성 창저우시",
+    "국적": "중국",
+    "신장": "165cm",
+    "데뷔년도": 2016,
+    "직업": "배우, 모델",
+    "소속사": "환우엔터테인먼트",
+    "팬덤명": "鹿茸 (Deer Antler)"
+  },
+  "external_links": [
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/%EB%B0%B1%EB%A1%9D"
+    },
+    {
+      "name": "바이두 바이커",
+      "url": "https://baike.baidu.com/item/白鹿/19866592"
+    }
+  ],
+  "image_links": [
+    {
+      "url": "https://bkimg.cdn.bcebos.com/pic/bd3eb13533fa828ba61e8de8a4c7a21e972b5a8a0b09",
+      "source": "바이두 바이커",
+      "description": "Bai Lu profile photo"
+    },
+    {
+      "url": "https://bkimg.cdn.bcebos.com/pic/7aec54e736d12f2eb9389ad0646c2d529822721e8b09",
+      "source": "바이두 바이커",
+      "description": "Bai Lu promotional photo"
+    },
+    {
+      "url": "https://bkimg.cdn.bcebos.com/pic/14ce36d3d539b600c338d2c4e050352ac65cb7508b09",
+      "source": "바이두 바이커",
+      "description": "Bai Lu headshot"
+    }
+  ],
+  "local_images": []
+}

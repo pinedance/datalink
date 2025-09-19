@@ -1,0 +1,22 @@
+{
+  "id": "brendan_fraser",
+  "type": "인물",
+  "name": "Brendan Fraser (브렌던 프레이저)",
+  "description": "미국-캐나다 배우",
+  "properties": {
+    "출생년도": 1968,
+    "국적": "미국-캐나다",
+    "직업": "배우"
+  },
+  "external_links": [
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/name/nm0000409/"
+    },
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/브랜든%20프레이저"
+    }
+  ],
+  "local_images": []
+}

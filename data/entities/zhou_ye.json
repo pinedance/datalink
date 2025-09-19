@@ -1,0 +1,38 @@
+{
+  "id": "zhou_ye",
+  "type": "인물",
+  "name": "周也 (저우예)",
+  "description": "베이징영화학원 출신의 중국 여배우, '소년시절의 너' 출연으로 주목받음",
+  "properties": {
+    "출생년도": 1998,
+    "출생일": "5월 20일",
+    "출생지": "중국 충칭",
+    "국적": "중국",
+    "학력": "베이징영화학원",
+    "데뷔년도": 2019,
+    "직업": "배우",
+    "별명": "椰子 (Coconut)",
+    "MBTI": "ISTP"
+  },
+  "external_links": [
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/%EC%A0%80%EC%9A%B0%EC%98%88"
+    },
+    {
+      "name": "바이두 바이커",
+      "url": "https://baike.baidu.com/item/周也/4291399"
+    }
+  ],
+  "image_links": [
+    {
+      "url": "https://bkimg.cdn.bcebos.com/pic/1e30e924b899a9014c0858e4d3cd1d7b02087af45f92",
+      "source": "바이두 바이커"
+    },
+    {
+      "url": "https://bkimg.cdn.bcebos.com/pic/0eb30f2442a7d933c89572b08010c61373f08302abe7",
+      "source": "바이두 바이커"
+    }
+  ],
+  "local_images": []
+}

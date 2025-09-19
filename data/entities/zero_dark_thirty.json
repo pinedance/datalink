@@ -1,0 +1,39 @@
+{
+  "id": "zero_dark_thirty",
+  "type": "영화",
+  "name": "Zero Dark Thirty (제로 다크 써티)",
+  "description": "알카에다 테러리스트 지도자 오사마 빈 라덴을 10년간 추적한 연대기",
+  "properties": {
+    "개봉년도": 2012,
+    "장르": [
+      "드라마",
+      "역사",
+      "스릴러"
+    ],
+    "상영시간": 157,
+    "평점": 7.4
+  },
+  "external_links": [
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/title/tt1790885/"
+    },
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/제로%20다크%20서티"
+    }
+  ],
+  "image_links": [
+    {
+      "url": "https://image.tmdb.org/t/p/w500/coeTvXKAYZlrcIfsCfYV5Hw1mN9.jpg",
+      "source": "TMDB",
+      "description": "Official Zero Dark Thirty movie poster"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/en/6/61/Zero_Dark_Thirty_poster.jpg",
+      "source": "Wikipedia",
+      "description": "Zero Dark Thirty theatrical poster"
+    }
+  ],
+  "local_images": []
+}

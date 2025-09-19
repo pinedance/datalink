@@ -1,0 +1,24 @@
+{
+  "id": "xiang_hanzhi",
+  "type": "인물",
+  "name": "向涵之 (상함지)",
+  "description": "중국계 미국인 배우, 중국 드라마계에서 활동",
+  "properties": {
+    "출생년도": 2002,
+    "출생일": "5월 4일",
+    "국적": "미국",
+    "민족": "한족",
+    "직업": "배우"
+  },
+  "external_links": [
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/%EC%83%81%ED%95%A8%EC%A7%80"
+    },
+    {
+      "name": "바이두 바이커",
+      "url": "https://baike.baidu.com/item/向涵之"
+    }
+  ],
+  "local_images": []
+}

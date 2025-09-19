@@ -1,0 +1,22 @@
+{
+  "id": "jessica_chastain",
+  "type": "인물",
+  "name": "Jessica Chastain (제시카 차스테인)",
+  "description": "미국 배우이자 영화 제작자",
+  "properties": {
+    "출생년도": 1977,
+    "국적": "미국",
+    "직업": "배우, 제작자"
+  },
+  "external_links": [
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/name/nm1567113/"
+    },
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/제시카%20차스테인"
+    }
+  ],
+  "local_images": []
+}

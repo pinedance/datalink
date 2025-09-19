@@ -1,0 +1,270 @@
+[
+  {
+    "from": "timothee_chalamet",
+    "to": "dune_2021",
+    "type": "starred_in",
+    "properties": {
+      "역할": "폴 아트레이데스",
+      "캐릭터설명": "아트레이데스 가문의 후계자, 예언된 구원자"
+    }
+  },
+  {
+    "from": "timothee_chalamet",
+    "to": "dune_part_two_2024",
+    "type": "starred_in",
+    "properties": {
+      "역할": "폴 아트레이데스",
+      "캐릭터설명": "무아디브로 불리는 프레멘의 지도자"
+    }
+  },
+  {
+    "from": "rebecca_ferguson",
+    "to": "dune_2021",
+    "type": "starred_in",
+    "properties": {
+      "역할": "레이디 제시카",
+      "캐릭터설명": "베네 게세리트 자매회 출신, 폴의 어머니"
+    }
+  },
+  {
+    "from": "rebecca_ferguson",
+    "to": "dune_part_two_2024",
+    "type": "starred_in",
+    "properties": {
+      "역할": "레이디 제시카",
+      "캐릭터설명": "리버런드 마더가 된 제시카"
+    }
+  },
+  {
+    "from": "denis_villeneuve",
+    "to": "dune_2021",
+    "type": "directed",
+    "properties": {
+      "역할": "감독"
+    }
+  },
+  {
+    "from": "denis_villeneuve",
+    "to": "dune_part_two_2024",
+    "type": "directed",
+    "properties": {
+      "역할": "감독"
+    }
+  },
+  {
+    "from": "dune_2021",
+    "to": "dune_part_two_2024",
+    "type": "sequel",
+    "properties": {
+      "관계": "전편-속편",
+      "연속성": "직접적 연결"
+    }
+  },
+  {
+    "from": "timothee_chalamet",
+    "to": "call_me_by_your_name",
+    "type": "starred_in",
+    "properties": {
+      "역할": "엘리오",
+      "수상": "오스카 남우주연상 후보"
+    }
+  },
+  {
+    "from": "rebecca_ferguson",
+    "to": "mission_impossible_series",
+    "type": "starred_in",
+    "properties": {
+      "역할": "일사 파우스트",
+      "시리즈": "미션 임파서블"
+    }
+  },
+  {
+    "from": "christopher_nolan",
+    "to": "inception",
+    "type": "directed",
+    "properties": {
+      "년도": 2010
+    }
+  },
+  {
+    "from": "christopher_nolan",
+    "to": "interstellar",
+    "type": "directed",
+    "properties": {
+      "년도": 2014
+    }
+  },
+  {
+    "from": "christopher_nolan",
+    "to": "the_dark_knight",
+    "type": "directed",
+    "properties": {
+      "년도": 2008
+    }
+  },
+  {
+    "from": "christopher_nolan",
+    "to": "batman_begins",
+    "type": "directed",
+    "properties": {
+      "년도": 2005
+    }
+  },
+  {
+    "from": "hans_zimmer",
+    "to": "inception",
+    "type": "composed",
+    "properties": {
+      "역할": "영화 음악"
+    }
+  },
+  {
+    "from": "hans_zimmer",
+    "to": "interstellar",
+    "type": "composed",
+    "properties": {
+      "역할": "영화 음악"
+    }
+  },
+  {
+    "from": "hans_zimmer",
+    "to": "the_dark_knight",
+    "type": "composed",
+    "properties": {
+      "역할": "영화 음악"
+    }
+  },
+  {
+    "from": "hans_zimmer",
+    "to": "batman_begins",
+    "type": "composed",
+    "properties": {
+      "역할": "영화 음악"
+    }
+  },
+  {
+    "from": "kathryn_bigelow",
+    "to": "zero_dark_thirty",
+    "type": "directed",
+    "properties": {
+      "년도": 2012
+    }
+  },
+  {
+    "from": "jessica_chastain",
+    "to": "zero_dark_thirty",
+    "type": "starred_in",
+    "properties": {
+      "역할": "Maya",
+      "캐릭터": "CIA 분석관"
+    }
+  },
+  {
+    "from": "darren_aronofsky",
+    "to": "the_whale",
+    "type": "directed",
+    "properties": {
+      "년도": 2022
+    }
+  },
+  {
+    "from": "brendan_fraser",
+    "to": "the_whale",
+    "type": "starred_in",
+    "properties": {
+      "역할": "Charlie",
+      "캐릭터": "영어 교사"
+    }
+  },
+  {
+    "from": "sadie_sink",
+    "to": "the_whale",
+    "type": "starred_in",
+    "properties": {
+      "역할": "Ellie",
+      "캐릭터": "Charlie의 딸"
+    }
+  },
+  {
+    "from": "claire_danes",
+    "to": "homeland",
+    "type": "starred_in",
+    "properties": {
+      "역할": "Carrie Mathison",
+      "캐릭터": "CIA 요원",
+      "시즌": "1-8"
+    }
+  },
+  {
+    "from": "zhang_jingyi",
+    "to": "blossoms_in_adversity",
+    "type": "starred_in",
+    "properties": {
+      "역할": "화지",
+      "캐릭터설명": "몰락한 가문의 장녀"
+    }
+  },
+  {
+    "from": "zhang_miaoyi",
+    "to": "legend_of_the_female_general",
+    "type": "starred_in",
+    "properties": {
+      "역할": "송도도",
+      "캐릭터설명": "약재상 명문가 출신"
+    }
+  },
+  {
+    "from": "zhou_ye",
+    "to": "legend_of_the_female_general",
+    "type": "starred_in",
+    "properties": {
+      "역할": "화안",
+      "캐릭터설명": "가문의 작위를 지키기 위해 어쩔 수 없이 가문의 적장자 하여비로 위장한 하가(家)의 의붓딸"
+    }
+  },
+  {
+    "from": "zhou_ye",
+    "to": "better_days",
+    "type": "starred_in",
+    "properties": {
+      "역할": "조소북",
+      "캐릭터설명": "왕따당하는 고등학생"
+    }
+  },
+  {
+    "from": "liu_haocun",
+    "to": "one_second",
+    "type": "starred_in",
+    "properties": {
+      "역할": "류한민",
+      "데뷔작": true
+    }
+  },
+  {
+    "from": "bai_lu",
+    "to": "zhao_yao",
+    "type": "starred_in",
+    "properties": {
+      "역할": "초요",
+      "장르": "판타지 로맨스"
+    }
+  },
+  {
+    "from": "zhang_miaoyi",
+    "to": "when_i_fly_towards_you",
+    "type": "starred_in",
+    "properties": {
+      "역할": "주연",
+      "방영년도": 2023
+    }
+  },
+  {
+    "from": "zhang_ruonan",
+    "to": "our_summer",
+    "type": "starred_in",
+    "properties": {
+      "역할": "주연",
+      "방영년도": 2021
+    }
+  }
+]

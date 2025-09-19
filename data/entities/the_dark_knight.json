@@ -1,0 +1,39 @@
+{
+  "id": "the_dark_knight",
+  "type": "영화",
+  "name": "The Dark Knight (다크 나이트)",
+  "description": "고담시에서 조커와 맞서는 배트맨의 이야기",
+  "properties": {
+    "개봉년도": 2008,
+    "장르": [
+      "액션",
+      "범죄",
+      "드라마"
+    ],
+    "상영시간": 152,
+    "평점": 9.0
+  },
+  "external_links": [
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/title/tt0468569/"
+    },
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/다크%20나이트(영화)"
+    }
+  ],
+  "image_links": [
+    {
+      "url": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+      "source": "TMDB",
+      "description": "Official The Dark Knight movie poster"
+    },
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg",
+      "source": "Wikipedia",
+      "description": "The Dark Knight theatrical poster"
+    }
+  ],
+  "local_images": []
+}

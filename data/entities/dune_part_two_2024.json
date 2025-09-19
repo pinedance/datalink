@@ -1,0 +1,38 @@
+{
+  "id": "dune_part_two_2024",
+  "type": "영화",
+  "name": "Dune: Part Two (듄: 파트 2)",
+  "description": "2024년 개봉한 듄의 속편, 폴 아트레이데스의 복수와 예언된 자로서의 운명을 다룬 작품",
+  "properties": {
+    "개봉년도": 2024,
+    "감독": "드니 빌뇌브",
+    "장르": [
+      "SF",
+      "액션",
+      "어드벤처",
+      "드라마",
+      "판타지"
+    ],
+    "전편": "Dune (2021)",
+    "제작국가": "미국",
+    "상영시간": "165분"
+  },
+  "external_links": [
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/%EB%93%84:%20%ED%8C%8C%ED%8A%B8%202"
+    },
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/title/tt15239678/"
+    }
+  ],
+  "image_links": [
+    {
+      "url": "https://upload.wikimedia.org/wikipedia/en/5/52/Dune_Part_Two_poster.jpeg",
+      "source": "Wikipedia",
+      "description": "Official Dune: Part Two movie poster"
+    }
+  ],
+  "local_images": []
+}

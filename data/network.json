@@ -1,0 +1,664 @@
+{
+  "nodes": [
+    {
+      "id": "dune_2021",
+      "label": "Dune (듄)",
+      "title": "드니 빌뇌브 감독의 2021년 SF 영화, 프랭크 허버트의 소설을 원작으로 한 대작",
+      "color": "hsla(217, 92%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "영화"
+    },
+    {
+      "id": "dune_part_two_2024",
+      "label": "Dune: Part Two (듄: 파트 2)",
+      "title": "2024년 개봉한 듄의 속편, 폴 아트레이데스의 복수와 예언된 자로서의 운명을 다룬 작품",
+      "color": "hsla(217, 92%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "영화"
+    },
+    {
+      "id": "timothee_chalamet",
+      "label": "Timothée Chalamet (티모시 샬라메)",
+      "title": "미국-프랑스 이중 국적의 배우, '콜 미 바이 유어 네임'과 '듄' 시리즈로 유명",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "rebecca_ferguson",
+      "label": "Rebecca Ferguson (레베카 페르구손)",
+      "title": "스웨덴 출신의 배우, '미션 임파서블' 시리즈와 '듄' 시리즈로 유명",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "denis_villeneuve",
+      "label": "Denis Villeneuve (드니 빌뇌브)",
+      "title": "캐나다 출신 영화감독, '컨택트', '블레이드 러너 2049', '듄' 시리즈로 유명",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 25,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "christopher_nolan",
+      "label": "Christopher Nolan (크리스토퍼 놀란)",
+      "title": "영국계 미국인 영화감독, 제작자, 시나리오 작가",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 35,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "inception",
+      "label": "Inception (인셉션)",
+      "title": "꿈 공유 기술을 통해 기업 기밀을 훔치는 도둑의 이야기",
+      "color": "hsla(217, 92%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "영화"
+    },
+    {
+      "id": "interstellar",
+      "label": "Interstellar (인터스텔라)",
+      "title": "우주의 웜홀을 통해 여행하는 탐험가들의 이야기",
+      "color": "hsla(217, 92%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "영화"
+    },
+    {
+      "id": "the_dark_knight",
+      "label": "The Dark Knight (다크 나이트)",
+      "title": "고담시에서 조커와 맞서는 배트맨의 이야기",
+      "color": "hsla(217, 92%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "영화"
+    },
+    {
+      "id": "batman_begins",
+      "label": "Batman Begins (배트맨 비긴즈)",
+      "title": "배트맨의 기원 이야기",
+      "color": "hsla(217, 92%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "영화"
+    },
+    {
+      "id": "hans_zimmer",
+      "label": "Hans Zimmer (한스 짐머)",
+      "title": "독일 영화음악 작곡가이자 음악 프로듀서",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "zero_dark_thirty",
+      "label": "Zero Dark Thirty (제로 다크 써티)",
+      "title": "알카에다 테러리스트 지도자 오사마 빈 라덴을 10년간 추적한 연대기",
+      "color": "hsla(217, 92%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "영화"
+    },
+    {
+      "id": "jessica_chastain",
+      "label": "Jessica Chastain (제시카 차스테인)",
+      "title": "미국 배우이자 영화 제작자",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "the_whale",
+      "label": "The Whale (더 웨일)",
+      "title": "은둔하는 영어 교사가 소원해진 십대 딸과의 관계를 회복하려는 이야기",
+      "color": "hsla(217, 92%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "영화"
+    },
+    {
+      "id": "brendan_fraser",
+      "label": "Brendan Fraser (브렌던 프레이저)",
+      "title": "미국-캐나다 배우",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "sadie_sink",
+      "label": "Sadie Sink (세이디 싱크)",
+      "title": "스트레인저 씨즈와 더 웨일로 유명한 미국 배우",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "kathryn_bigelow",
+      "label": "Kathryn Bigelow (캐스린 비글로)",
+      "title": "미국 영화감독, 제작자, 시나리오 작가",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "darren_aronofsky",
+      "label": "Darren Aronofsky (대런 애러노프스키)",
+      "title": "미국 영화감독, 제작자, 시나리오 작가",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "homeland",
+      "label": "Homeland (홈랜드)",
+      "title": "CIA 요원 캐리 매니슨에 관한 미국 스파이 스릴러 텔레비전 시리즈",
+      "color": "hsla(210, 11%, 45%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "TV시리즈"
+    },
+    {
+      "id": "claire_danes",
+      "label": "Claire Danes (클레어 데인즈)",
+      "title": "마이 소-콜드 라이프와 홈럜드로 유명한 미국 배우",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "zhang_jingyi",
+      "label": "张婧仪 (장정의)",
+      "title": "중국의 신세대 여배우, 베이징전영학원 출신",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "zhou_ye",
+      "label": "周也 (저우예)",
+      "title": "베이징영화학원 출신의 중국 여배우, '소년시절의 너' 출연으로 주목받음",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "xiang_hanzhi",
+      "label": "向涵之 (상함지)",
+      "title": "중국계 미국인 배우, 중국 드라마계에서 활동",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "liu_haocun",
+      "label": "刘浩存 (류호존)",
+      "title": "베이징무용학원 출신, 장이머우 감독 작품 '일초'로 데뷔한 중국 여배우",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 35,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "bai_lu",
+      "label": "白鹿 (백록)",
+      "title": "중국의 인기 여배우, 다수의 로맨스 드라마 출연",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "zhang_miaoyi",
+      "label": "张淼怡 (장묘이)",
+      "title": "상하이시각예술학원 출신, '당나를 향해 날아갈 때' 주연으로 주목받은 중국 여배우",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "zhang_ruonan",
+      "label": "章若楠 (장약남)",
+      "title": "중국의 여배우 겸 가수, 광선전매 소속",
+      "color": "hsla(356, 100%, 73%, 0.9)",
+      "shape": "dot",
+      "size": 35,
+      "font": {
+        "size": 14
+      },
+      "type": "인물"
+    },
+    {
+      "id": "legend_of_the_female_general",
+      "label": "锦月如歌 (금월여가)",
+      "title": "2023년 방영된 중국 고장 로맨스 드라마.",
+      "color": "hsla(210, 11%, 45%, 0.9)",
+      "shape": "dot",
+      "size": 30,
+      "font": {
+        "size": 14
+      },
+      "type": "TV시리즈"
+    },
+    {
+      "id": "blossoms_in_adversity",
+      "label": "惜花芷 (석화지: 역경 속의 꽃)",
+      "title": "2024년 방영된 중국 고장 로맨스 드라마, 몰락한 가문의 딸과 왕세자의 사랑 이야기",
+      "color": "hsla(210, 11%, 45%, 0.9)",
+      "shape": "dot",
+      "size": 25,
+      "font": {
+        "size": 14
+      },
+      "type": "TV시리즈"
+    }
+  ],
+  "edges": [
+    {
+      "from": "timothee_chalamet",
+      "to": "dune_2021",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "timothee_chalamet",
+      "to": "dune_part_two_2024",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "rebecca_ferguson",
+      "to": "dune_2021",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "rebecca_ferguson",
+      "to": "dune_part_two_2024",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "denis_villeneuve",
+      "to": "dune_2021",
+      "label": "directed",
+      "color": "hsla(328, 78%, 64%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "denis_villeneuve",
+      "to": "dune_part_two_2024",
+      "label": "directed",
+      "color": "hsla(328, 78%, 64%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "dune_2021",
+      "to": "dune_part_two_2024",
+      "label": "sequel",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "timothee_chalamet",
+      "to": "call_me_by_your_name",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "rebecca_ferguson",
+      "to": "mission_impossible_series",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "christopher_nolan",
+      "to": "inception",
+      "label": "directed",
+      "color": "hsla(328, 78%, 64%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "christopher_nolan",
+      "to": "interstellar",
+      "label": "directed",
+      "color": "hsla(328, 78%, 64%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "christopher_nolan",
+      "to": "the_dark_knight",
+      "label": "directed",
+      "color": "hsla(328, 78%, 64%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "christopher_nolan",
+      "to": "batman_begins",
+      "label": "directed",
+      "color": "hsla(328, 78%, 64%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "hans_zimmer",
+      "to": "inception",
+      "label": "composed",
+      "color": "hsla(178, 100%, 40%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "hans_zimmer",
+      "to": "interstellar",
+      "label": "composed",
+      "color": "hsla(178, 100%, 40%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "hans_zimmer",
+      "to": "the_dark_knight",
+      "label": "composed",
+      "color": "hsla(178, 100%, 40%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "hans_zimmer",
+      "to": "batman_begins",
+      "label": "composed",
+      "color": "hsla(178, 100%, 40%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "kathryn_bigelow",
+      "to": "zero_dark_thirty",
+      "label": "directed",
+      "color": "hsla(328, 78%, 64%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "jessica_chastain",
+      "to": "zero_dark_thirty",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "darren_aronofsky",
+      "to": "the_whale",
+      "label": "directed",
+      "color": "hsla(328, 78%, 64%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "brendan_fraser",
+      "to": "the_whale",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "sadie_sink",
+      "to": "the_whale",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "claire_danes",
+      "to": "homeland",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "zhang_jingyi",
+      "to": "blossoms_in_adversity",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "zhang_miaoyi",
+      "to": "legend_of_the_female_general",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "zhou_ye",
+      "to": "legend_of_the_female_general",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "zhou_ye",
+      "to": "better_days",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "liu_haocun",
+      "to": "one_second",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "bai_lu",
+      "to": "zhao_yao",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "zhang_miaoyi",
+      "to": "when_i_fly_towards_you",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    },
+    {
+      "from": "zhang_ruonan",
+      "to": "our_summer",
+      "label": "starred_in",
+      "color": "hsla(200, 9%, 41%, 1)",
+      "arrows": "to",
+      "font": {
+        "size": 12
+      }
+    }
+  ]
+}

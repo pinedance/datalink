@@ -1,0 +1,45 @@
+{
+  "id": "zhang_miaoyi",
+  "type": "인물",
+  "name": "张淼怡 (장묘이)",
+  "description": "상하이시각예술학원 출신, '당나를 향해 날아갈 때' 주연으로 주목받은 중국 여배우",
+  "properties": {
+    "출생년도": 1998,
+    "출생일": "9월 13일",
+    "출생지": "중국 저장성 핑후시",
+    "국적": "중국",
+    "신장": "165cm",
+    "학력": "상하이시각예술학원 연기과",
+    "데뷔년도": 2018,
+    "직업": "배우",
+    "팬덤명": "水果糖 (Water Candy)"
+  },
+  "external_links": [
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/%EC%9E%A5%EB%AC%98%EC%9D%B4"
+    },
+    {
+      "name": "바이두 바이커",
+      "url": "https://baike.baidu.com/item/张淼怡"
+    }
+  ],
+  "image_links": [
+    {
+      "url": "https://bkimg.cdn.bcebos.com/pic/7acb0a46f21fbe096b6303295c391b338744ebf807ce",
+      "source": "바이두 바이커",
+      "description": "Zhang Miaoyi personal photo album cover"
+    },
+    {
+      "url": "https://bkimg.cdn.bcebos.com/pic/3801213fb80e7bec54e79402eb77ae389b504ec23d84",
+      "source": "바이두 바이커",
+      "description": "Zhang Miaoyi from Red Chamber film"
+    },
+    {
+      "url": "https://bkimg.cdn.bcebos.com/pic/3bf33a87e950352ac65c92f0971aecf2b21192131d8b",
+      "source": "바이두 바이커",
+      "description": "Zhang Miaoyi from When I Sprint Towards You"
+    }
+  ],
+  "local_images": []
+}

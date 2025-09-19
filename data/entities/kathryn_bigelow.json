@@ -1,0 +1,22 @@
+{
+  "id": "kathryn_bigelow",
+  "type": "인물",
+  "name": "Kathryn Bigelow (캐스린 비글로)",
+  "description": "미국 영화감독, 제작자, 시나리오 작가",
+  "properties": {
+    "출생년도": 1951,
+    "국적": "미국",
+    "직업": "감독, 제작자, 시나리오 작가"
+  },
+  "external_links": [
+    {
+      "name": "IMDb",
+      "url": "https://www.imdb.com/name/nm0000941/"
+    },
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/캐스린%20비글로"
+    }
+  ],
+  "local_images": []
+}

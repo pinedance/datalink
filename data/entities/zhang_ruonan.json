@@ -1,0 +1,42 @@
+{
+  "id": "zhang_ruonan",
+  "type": "인물",
+  "name": "章若楠 (장약남)",
+  "description": "중국의 여배우 겸 가수, 광선전매 소속",
+  "properties": {
+    "출생년도": 1996,
+    "출생일": "11월 14일",
+    "출생지": "중국 저장성 원저우시",
+    "국적": "중국",
+    "직업": "배우, 가수",
+    "소속사": "광선전매",
+    "팬덤명": "小印章 (작은 도장)"
+  },
+  "external_links": [
+    {
+      "name": "나무위키",
+      "url": "https://namu.wiki/w/%EC%9E%A5%EC%95%BD%EB%82%A8"
+    },
+    {
+      "name": "바이두 바이커",
+      "url": "https://baike.baidu.com/item/章若楠"
+    },
+    {
+      "name": "바이두 바이커 포토앨범",
+      "url": "https://baike.baidu.com/pic/%E7%AB%A0%E8%8B%A5%E6%A5%A0/22729850"
+    }
+  ],
+  "image_links": [
+    {
+      "url": "https://bkimg.cdn.bcebos.com/pic/dc54564e9258d109b3de41117e01dbbf6c81800ae744",
+      "source": "바이두 바이커",
+      "description": "Zhang Ruonan abstract album photo"
+    },
+    {
+      "url": "https://bkimg.cdn.bcebos.com/pic/faedab64034f78f0f7364f1084681d55b319eac4b684",
+      "source": "바이두 바이커",
+      "description": "Zhang Ruonan promotional photo"
+    }
+  ],
+  "local_images": []
+}
