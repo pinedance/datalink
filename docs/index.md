@@ -14,6 +14,8 @@ hide:
     <div id="network-graph"></div>
 </div>
 
+<script src="javascripts/vis-network.min.js"></script>
+<script src="javascripts/network.js"></script>
 <script>
 // Network data will be loaded via AJAX in network.js
 let networkData = null;

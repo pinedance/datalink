@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             },
             barnesHut: {
                 gravitationalConstant: -8000,
-                centralGravity: 0.3,
+                centralGravity: 1.5,
                 springLength: 120,
                 springConstant: 0.04,
                 damping: 0.4,

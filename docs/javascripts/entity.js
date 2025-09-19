@@ -259,9 +259,13 @@ document.addEventListener('DOMContentLoaded', async function() {
     // Use existing gallery functionality from gallery.js
     window.initializeGalleryForEntity = function() {
         // Check if ImageGallery class is available
-        if (typeof ImageGallery !== 'undefined') {
-            // Reinitialize gallery for new content
-            new ImageGallery();
+        if (typeof ImageGallery !== 'undefined' && window.gallery) {
+            // Update existing gallery instance for new content
+            window.gallery.setupLazyLoading();
+            window.gallery.updateImages();
+        } else if (typeof ImageGallery !== 'undefined') {
+            // Create new gallery instance if none exists
+            window.gallery = new ImageGallery();
         }
     };
 

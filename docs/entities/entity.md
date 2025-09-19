@@ -77,6 +77,9 @@ hide:
     </div>
 </div>
 
+<script src="../javascripts/entity.js"></script>
+<script src="../javascripts/gallery.js"></script>
+
 <script>
 // Entity data and relationships will be loaded dynamically
 let entityData = null;

@@ -64,11 +64,7 @@ extra_css:
   - stylesheets/network.css
   - stylesheets/gallery.css
 
-extra_javascript:
-  - javascripts/vis-network.min.js
-  - javascripts/network.js
-  - javascripts/gallery.js
-  - javascripts/entity.js
+# extra_javascript:
 
 extra:
   generator: false

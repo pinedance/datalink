@@ -33,7 +33,7 @@ class ImageGallery {
             rootMargin: '50px',
             threshold: 0.1
         };
-        
+
         this.observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -41,11 +41,12 @@ class ImageGallery {
                 }
             });
         }, options);
-        
-        // Observe all gallery items
-        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        // Observe all gallery items (including dynamically added ones)
+        const galleryItems = document.querySelectorAll('.gallery-item:not([data-observer-added])');
         galleryItems.forEach(item => {
             this.observer.observe(item);
+            item.setAttribute('data-observer-added', 'true');
         });
     }
     
@@ -83,7 +84,12 @@ class ImageGallery {
     setupLightbox() {
         this.lightbox = document.getElementById('lightbox-modal');
         if (!this.lightbox) return;
-        
+
+        // Update images array dynamically when needed
+        this.updateImages();
+    }
+
+    updateImages() {
         // Collect all images for lightbox navigation
         const galleryItems = document.querySelectorAll('.gallery-item');
         this.images = Array.from(galleryItems).map(item => {
@@ -95,33 +101,54 @@ class ImageGallery {
                 element: item
             };
         });
-        
+
         // Update counter total
-        const totalCounter = this.lightbox.querySelector('.lightbox-total');
-        if (totalCounter) {
-            totalCounter.textContent = this.images.length;
+        if (this.lightbox) {
+            const totalCounter = this.lightbox.querySelector('.lightbox-total');
+            if (totalCounter) {
+                totalCounter.textContent = this.images.length;
+            }
         }
     }
     
     bindEvents() {
-        // Gallery item click events
-        document.querySelectorAll('.gallery-item').forEach((item, index) => {
-            item.addEventListener('click', (e) => {
+        // Gallery item click events (using event delegation for dynamic content)
+        document.addEventListener('click', (e) => {
+            const galleryItem = e.target.closest('.gallery-item');
+            if (galleryItem && !galleryItem.hasAttribute('data-click-bound')) {
                 e.preventDefault();
+                const galleryItems = document.querySelectorAll('.gallery-item');
+                const index = Array.from(galleryItems).indexOf(galleryItem);
                 this.openLightbox(index);
-            });
-            
-            // Keyboard navigation for accessibility
-            item.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    this.openLightbox(index);
-                }
-            });
-            
-            // Make items focusable
-            item.setAttribute('tabindex', '0');
+            }
         });
+
+        // Keyboard navigation for accessibility
+        document.addEventListener('keydown', (e) => {
+            const galleryItem = e.target.closest('.gallery-item');
+            if (galleryItem && (e.key === 'Enter' || e.key === ' ')) {
+                e.preventDefault();
+                const galleryItems = document.querySelectorAll('.gallery-item');
+                const index = Array.from(galleryItems).indexOf(galleryItem);
+                this.openLightbox(index);
+            }
+        });
+
+        // Make items focusable
+        const observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                mutation.addedNodes.forEach((node) => {
+                    if (node.nodeType === 1 && node.classList.contains('gallery-item')) {
+                        node.setAttribute('tabindex', '0');
+                    } else if (node.nodeType === 1) {
+                        const galleryItems = node.querySelectorAll('.gallery-item');
+                        galleryItems.forEach(item => item.setAttribute('tabindex', '0'));
+                    }
+                });
+            });
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
         
         // Lightbox controls
         if (this.lightbox) {
@@ -203,13 +230,19 @@ class ImageGallery {
     }
     
     openLightbox(index) {
-        if (!this.lightbox || !this.images.length) return;
-        
+        if (!this.lightbox) return;
+
+        // Update images array before opening lightbox
+        this.updateImages();
+
+        if (!this.images.length) return;
+
         this.currentImageIndex = index;
         this.updateLightboxImage();
+        this.lightbox.classList.remove('hidden');
         this.lightbox.classList.add('active');
         document.body.style.overflow = 'hidden'; // Prevent background scrolling
-        
+
         // Focus the lightbox for keyboard navigation
         this.lightbox.focus();
     }
@@ -274,5 +307,5 @@ class ImageGallery {
     }
 }
 
-// Initialize gallery when script loads
-const gallery = new ImageGallery();
+// Initialize gallery when script loads and make it globally accessible
+window.gallery = new ImageGallery();
