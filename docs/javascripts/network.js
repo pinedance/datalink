@@ -1,10 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Check if network data is available
-    if (typeof networkData === 'undefined') {
-        console.error('Network data not found');
-        return;
-    }
-
+document.addEventListener('DOMContentLoaded', async function() {
     // Get the container element
     const container = document.getElementById('network-graph');
     if (!container) {
@@ -12,8 +6,21 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
-    // Remove loading message
-    container.classList.add('loaded');
+    // Show loading message
+    container.innerHTML = '<div class="loading">Loading network data...</div>';
+
+    try {
+        // Load network data via AJAX
+        const response = await fetch('data/network.json');
+        if (!response.ok) {
+            throw new Error(`Failed to load network data: ${response.status}`);
+        }
+
+        const networkData = await response.json();
+
+        // Clear loading message and prepare container
+        container.innerHTML = '';
+        container.classList.add('loaded');
 
     // Configure vis-network options
     const options = {
@@ -94,53 +101,58 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
-    // Create network
-    const network = new vis.Network(container, networkData, options);
+        // Create network
+        const network = new vis.Network(container, networkData, options);
 
-    // Add event listeners
-    network.on('click', function(params) {
-        if (params.nodes.length > 0) {
-            const nodeId = params.nodes[0];
-            // Navigate to entity detail page
-            window.location.href = `entities/${nodeId}.html`;
-        }
-    });
+        // Add event listeners
+        network.on('click', function(params) {
+            if (params.nodes.length > 0) {
+                const nodeId = params.nodes[0];
+                // Navigate to entity viewer page
+                window.location.href = `entities/entity.html#${nodeId}`;
+            }
+        });
 
-    // Hover effects - simplified to avoid constant redrawing
-    network.on('hoverNode', function(params) {
-        container.style.cursor = 'pointer';
-    });
+        // Hover effects - simplified to avoid constant redrawing
+        network.on('hoverNode', function(params) {
+            container.style.cursor = 'pointer';
+        });
 
-    network.on('blurNode', function(params) {
-        container.style.cursor = 'default';
-    });
+        network.on('blurNode', function(params) {
+            container.style.cursor = 'default';
+        });
 
-    // Add loading indicator
-    network.on('stabilizationProgress', function(params) {
-        const maxWidth = 496;
-        const minWidth = 20;
-        const widthFactor = params.iterations / params.total;
-        const width = Math.max(minWidth, maxWidth * widthFactor);
-        
-        // You can add a progress bar here if needed
-        console.log(`Stabilization progress: ${Math.round(widthFactor * 100)}%`);
-    });
+        // Add loading indicator
+        network.on('stabilizationProgress', function(params) {
+            const maxWidth = 496;
+            const minWidth = 20;
+            const widthFactor = params.iterations / params.total;
+            const width = Math.max(minWidth, maxWidth * widthFactor);
 
-    network.on('stabilizationIterationsDone', function() {
-        console.log('Network stabilization complete');
-    });
+            // You can add a progress bar here if needed
+            console.log(`Stabilization progress: ${Math.round(widthFactor * 100)}%`);
+        });
 
-    // Fit network to container on window resize
-    let resizeTimeout;
-    window.addEventListener('resize', function() {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(function() {
+        network.on('stabilizationIterationsDone', function() {
+            console.log('Network stabilization complete');
+        });
+
+        // Fit network to container on window resize
+        let resizeTimeout;
+        window.addEventListener('resize', function() {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(function() {
+                network.fit();
+            }, 250);
+        });
+
+        // Initial fit
+        setTimeout(function() {
             network.fit();
-        }, 250);
-    });
+        }, 500);
 
-    // Initial fit
-    setTimeout(function() {
-        network.fit();
-    }, 500);
+    } catch (error) {
+        console.error('Error loading network data:', error);
+        container.innerHTML = '<div class="error">Failed to load network data. Please try refreshing the page.</div>';
+    }
 });

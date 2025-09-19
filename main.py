@@ -12,65 +12,6 @@ def define_env(env):
         from core_datalink import load_datalink as core_load_datalink
         return core_load_datalink()
     
-    @env.macro
-    def generate_network_data():
-        """Generate network data for vis-network.js"""
-        data = load_datalink()
-        
-        # Create nodes
-        nodes = []
-        entity_colors = {
-            "인물": "hsla(356, 100%, 73%, 0.9)",      # 빨간색 계열 (person)
-            "영화": "hsla(217, 92%, 73%, 0.9)",       # 파란색 계열 (movie)
-            "장르": "hsla(162, 73%, 46%, 0.9)",       # 초록색 계열 (genre)
-            "도서": "hsla(45, 93%, 70%, 0.9)",        # 노란색 계열 (book)
-            "음악": "hsla(250, 85%, 75%, 0.9)",       # 보라색 계열 (music)
-            "TV시리즈": "hsla(210, 11%, 45%, 0.9)",   # 회색 계열 (tv_series)
-            # 영어 키 호환성 유지 (기존 데이터 지원)
-            "person": "hsla(356, 100%, 73%, 0.9)",
-            "movie": "hsla(217, 92%, 73%, 0.9)",
-            "genre": "hsla(162, 73%, 46%, 0.9)",
-            "book": "hsla(45, 93%, 70%, 0.9)",
-            "music": "hsla(250, 85%, 75%, 0.9)",
-            "tv_series": "hsla(210, 11%, 45%, 0.9)"
-        }
-        
-        for entity in data.get("entities", []):
-            nodes.append({
-                "id": entity["id"],
-                "label": entity["name"],
-                "title": entity.get("description", ""),
-                "color": entity_colors.get(entity["type"], "#636e72"),
-                "shape": "dot",
-                "size": 20 + len(entity.get("external_links", [])) * 5,
-                "font": {"size": 14},
-                "type": entity["type"]
-            })
-        
-        # Create edges
-        edges = []
-        edge_colors = {
-            "directed": "#e84393",
-            "composed": "#00cec9",
-            "belongs_to": "#6c5ce7",
-            "related_to": "#fd79a8",
-            "starred_in": "#636e72"
-        }
-        
-        for rel in data.get("relationships", []):
-            edges.append({
-                "from": rel["from"],
-                "to": rel["to"],
-                "label": rel["type"],
-                "color": edge_colors.get(rel["type"], "#636e72"),
-                "arrows": "to",
-                "font": {"size": 12}
-            })
-        
-        return {
-            "nodes": nodes,
-            "edges": edges
-        }
     
     @env.macro
     def get_entity_by_id(entity_id):

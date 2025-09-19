@@ -15,6 +15,6 @@ hide:
 </div>
 
 <script>
-// 네트워크 데이터를 JavaScript로 전달
-const networkData = {{ generate_network_data() | tojson }};
+// Network data will be loaded via AJAX in network.js
+let networkData = null;
 </script>
