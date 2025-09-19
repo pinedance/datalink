@@ -37,6 +37,30 @@ document.addEventListener('DOMContentLoaded', async function() {
         container.innerHTML = '';
         container.classList.add('loaded');
 
+        // Function to get current theme-aware colors
+        function getThemeColors() {
+            const isDarkMode = document.body.getAttribute('data-md-color-scheme') === 'slate';
+
+            if (isDarkMode) {
+                return {
+                    nodeText: 'hsla(0, 0%, 85%, 1)',
+                    nodeShadow: 'hsla(0, 0%, 0%, 0.4)',
+                    edgeText: 'hsla(0, 0%, 75%, 1)',
+                    edgeStroke: 'hsla(0, 0%, 15%, 0.8)'
+                };
+            } else {
+                return {
+                    nodeText: 'hsla(0, 0%, 20%, 1)',
+                    nodeShadow: 'hsla(0, 0%, 0%, 0.2)',
+                    edgeText: 'hsla(0, 0%, 40%, 1)',
+                    edgeStroke: 'hsla(0, 0%, 100%, 1)'
+                };
+            }
+        }
+
+        // Get theme colors
+        const themeColors = getThemeColors();
+
         // Configure vis-network options for optimal visualization
         const options = {
             // Node appearance and behavior settings
@@ -46,7 +70,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 chosen: true,             // Enable selection highlighting
                 font: {
                     size: 14,
-                    color: 'hsla(0, 0%, 20%, 1)'
+                    color: themeColors.nodeText
                 },
                 scaling: {
                     min: 10,             // Minimum node size
@@ -54,7 +78,7 @@ document.addEventListener('DOMContentLoaded', async function() {
                 },
                 shadow: {
                     enabled: true,
-                    color: 'hsla(0, 0%, 0%, 0.2)',
+                    color: themeColors.nodeShadow,
                     size: 6,
                     x: 2,
                     y: 2
@@ -73,9 +97,9 @@ document.addEventListener('DOMContentLoaded', async function() {
                 },
                 font: {
                     size: 11,
-                    color: 'hsla(0, 0%, 40%, 1)',
+                    color: themeColors.edgeText,
                     strokeWidth: 2,       // Text outline width
-                    strokeColor: 'hsla(0, 0%, 100%, 1)' // Text outline color for readability
+                    strokeColor: themeColors.edgeStroke
                 },
                 smooth: {
                     enabled: true,
@@ -119,6 +143,38 @@ document.addEventListener('DOMContentLoaded', async function() {
 
         // Create the vis-network instance with loaded data and options
         const network = new vis.Network(container, networkData, options);
+
+        // Function to update network colors when theme changes
+        function updateNetworkTheme() {
+            const newColors = getThemeColors();
+            const newOptions = {
+                nodes: {
+                    font: { color: newColors.nodeText },
+                    shadow: { color: newColors.nodeShadow }
+                },
+                edges: {
+                    font: {
+                        color: newColors.edgeText,
+                        strokeColor: newColors.edgeStroke
+                    }
+                }
+            };
+            network.setOptions(newOptions);
+        }
+
+        // Watch for theme changes
+        const themeObserver = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.type === 'attributes' && mutation.attributeName === 'data-md-color-scheme') {
+                    updateNetworkTheme();
+                }
+            });
+        });
+
+        themeObserver.observe(document.body, {
+            attributes: true,
+            attributeFilter: ['data-md-color-scheme']
+        });
 
         // Event Handlers
 
