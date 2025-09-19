@@ -1,0 +1,268 @@
+# Chinese Actresses and Related Entities
+
+entities:
+  - id: "zhang_jingyi"
+    type: "인물"
+    name: "张婧仪 (장정의)"
+    description: "중국의 신세대 여배우, 베이징전영학원 출신"
+    properties:
+      출생년도: 1999
+      출생일: "7월 10일"
+      출생지: "중국 후난성 사오양시"
+      국적: "중국"
+      학력: "베이징전영학원 연기과"
+      데뷔년도: 2020
+      직업: "배우"
+      소속사: "동신미래"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EC%9E%A5%EC%A0%95%EC%9D%98(1999)"
+      - name: "바이두 바이커"
+        url: "https://baike.baidu.com/item/张婧仪/22992855"
+    image_links:
+      - url: "https://bkimg.cdn.bcebos.com/pic/cefc1e178a82b901a4848cf1563ef79ed72aa05ba09a"
+        source: "바이두 바이커"
+        description: "Zhang Jingyi profile photo"
+      - url: "https://bkimg.cdn.bcebos.com/pic/8435e5dde71190ef76c6e7219c6b62e9f2d3572c889b"
+        source: "바이두 바이커"
+        description: "Zhang Jingyi headshot"
+      - url: "https://bkimg.cdn.bcebos.com/pic/91529822720e0cf3d7ca9010361ee51fbe096a63c39b"
+        source: "바이두 바이커"
+        description: "Zhang Jingyi promotional photo"
+
+  - id: "zhou_ye"
+    type: "인물"
+    name: "周也 (저우예)"
+    description: "베이징영화학원 출신의 중국 여배우, '소년시절의 너' 출연으로 주목받음"
+    properties:
+      출생년도: 1998
+      출생일: "5월 20일"
+      출생지: "중국 충칭"
+      국적: "중국"
+      학력: "베이징영화학원"
+      데뷔년도: 2019
+      직업: "배우"
+      별명: "椰子 (Coconut)"
+      MBTI: "ISTP"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EC%A0%80%EC%9A%B0%EC%98%88"
+      - name: "바이두 바이커"
+        url: "https://baike.baidu.com/item/周也/4291399"
+    image_links:
+      - url: "https://bkimg.cdn.bcebos.com/pic/e824b899a9014c08d8d0c69f3d6c67a17e8d3e065f09"
+        source: "바이두 바이커"
+        description: "Zhou Ye profile photo"
+      - url: "https://bkimg.cdn.bcebos.com/pic/b8014a90f603738da977d64dc7d60a9dd51b3e05189b"
+        source: "바이두 바이커"
+        description: "Zhou Ye headshot"
+      - url: "https://bkimg.cdn.bcebos.com/pic/f31fbe096b63f6246b6093e68e44ebf81a4ca3ec6d09"
+        source: "바이두 바이커"
+        description: "Zhou Ye from Better Days"
+
+  - id: "xiang_hanzhi"
+    type: "인물"
+    name: "向涵之 (상함지)"
+    description: "중국계 미국인 배우, 중국 드라마계에서 활동"
+    properties:
+      출생년도: 2002
+      출생일: "5월 4일"
+      국적: "미국"
+      민족: "한족"
+      직업: "배우"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EC%83%81%ED%95%A8%EC%A7%80"
+      - name: "바이두 바이커"
+        url: "https://baike.baidu.com/item/向涵之"
+    image_links:
+      - url: "https://bkimg.cdn.bcebos.com/pic/4610b912c8fcc3cec3fd666b851dc188d43f87948a69"
+        source: "바이두 바이커"
+        description: "Xiang Hanzhi concept album cover"
+      - url: "https://bkimg.cdn.bcebos.com/pic/8435e5dde71190ef76c6b8239c438a16fdfaae51ca8d"
+        source: "바이두 바이커"
+        description: "Xiang Hanzhi early career photo"
+      - url: "https://bkimg.cdn.bcebos.com/pic/d058ccbf6c81800a19d8c756a66d24fa828ba61ee969"
+        source: "바이두 바이커"
+        description: "Xiang Hanzhi headshot"
+
+  - id: "liu_haocun"
+    type: "인물"
+    name: "刘浩存 (류호존)"
+    description: "베이징무용학원 출신, 장이머우 감독 작품 '일초'로 데뷔한 중국 여배우"
+    properties:
+      출생년도: 2000
+      출생일: "5월 20일"
+      출생지: "중국 길림성 통화시"
+      국적: "중국"
+      신장: "165cm"
+      학력: "베이징무용학원"
+      데뷔년도: 2020
+      직업: "배우"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EB%A5%98%ED%98%B8%EC%A1%B4"
+      - name: "바이두 바이커"
+        url: "https://baike.baidu.com/item/刘浩存"
+    image_links:
+      - url: "https://bkimg.cdn.bcebos.com/pic/a044ad345982b2b7d0a2162e0df5dcef76094a362d9b"
+        source: "바이두 바이커"
+        description: "Liu Haocun BOBOSNAP magazine cover"
+      - url: "https://bkimg.cdn.bcebos.com/pic/91529822720e0cf3d7ca9010361ee51fbe096a637c9d"
+        source: "바이두 바이커"
+        description: "Liu Haocun GRAZIA magazine cover"
+      - url: "https://bkimg.cdn.bcebos.com/pic/d000baa1cd11728b4710c8cef4a4d4cec3fdfd03869d"
+        source: "바이두 바이커"
+        description: "Liu Haocun Glass Vision magazine cover"
+
+  - id: "bai_lu"
+    type: "인물"
+    name: "白鹿 (백록)"
+    description: "중국의 인기 여배우, 다수의 로맨스 드라마 출연"
+    properties:
+      출생년도: 1994
+      출생일: "9월 23일"
+      출생지: "중국 장쑤성 창저우시"
+      국적: "중국"
+      신장: "165cm"
+      데뷔년도: 2016
+      직업: "배우, 모델"
+      소속사: "환우엔터테인먼트"
+      팬덤명: "鹿茸 (Deer Antler)"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EB%B0%B1%EB%A1%9D"
+      - name: "바이두 바이커"
+        url: "https://baike.baidu.com/item/白鹿/19866592"
+    image_links:
+      - url: "https://bkimg.cdn.bcebos.com/pic/bd3eb13533fa828ba61e8de8a4c7a21e972b5a8a0b09"
+        source: "바이두 바이커"
+        description: "Bai Lu profile photo"
+      - url: "https://bkimg.cdn.bcebos.com/pic/7aec54e736d12f2eb9389ad0646c2d529822721e8b09"
+        source: "바이두 바이커"
+        description: "Bai Lu promotional photo"
+      - url: "https://bkimg.cdn.bcebos.com/pic/14ce36d3d539b600c338d2c4e050352ac65cb7508b09"
+        source: "바이두 바이커"
+        description: "Bai Lu headshot"
+
+  - id: "zhang_miaoyi"
+    type: "인물"
+    name: "张淼怡 (장묘이)"
+    description: "상하이시각예술학원 출신, '당나를 향해 날아갈 때' 주연으로 주목받은 중국 여배우"
+    properties:
+      출생년도: 1998
+      출생일: "9월 13일"
+      출생지: "중국 저장성 핑후시"
+      국적: "중국"
+      신장: "165cm"
+      학력: "상하이시각예술학원 연기과"
+      데뷔년도: 2018
+      직업: "배우"
+      팬덤명: "水果糖 (Water Candy)"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EC%9E%A5%EB%AC%98%EC%9D%B4"
+      - name: "바이두 바이커"
+        url: "https://baike.baidu.com/item/张淼怡"
+    image_links:
+      - url: "https://bkimg.cdn.bcebos.com/pic/7acb0a46f21fbe096b6303295c391b338744ebf807ce"
+        source: "바이두 바이커"
+        description: "Zhang Miaoyi personal photo album cover"
+      - url: "https://bkimg.cdn.bcebos.com/pic/3801213fb80e7bec54e79402eb77ae389b504ec23d84"
+        source: "바이두 바이커"
+        description: "Zhang Miaoyi from Red Chamber film"
+      - url: "https://bkimg.cdn.bcebos.com/pic/3bf33a87e950352ac65c92f0971aecf2b21192131d8b"
+        source: "바이두 바이커"
+        description: "Zhang Miaoyi from When I Sprint Towards You"
+
+  - id: "zhang_ruonan"
+    type: "인물"
+    name: "章若楠 (장약남)"
+    description: "중국의 여배우 겸 가수, 광선전매 소속"
+    properties:
+      출생년도: 1996
+      출생일: "11월 14일"
+      출생지: "중국 저장성 원저우시"
+      국적: "중국"
+      직업: "배우, 가수"
+      소속사: "광선전매"
+      팬덤명: "小印章 (작은 도장)"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EC%9E%A5%EC%95%BD%EB%82%A8"
+      - name: "바이두 바이커"
+        url: "https://baike.baidu.com/item/章若楠"
+    image_links:
+      - url: "https://bkimg.cdn.bcebos.com/pic/4d086e061d950a7b0208fa688d8b75d9f2d3572c635e"
+        source: "바이두 바이커"
+        description: "Zhang Ruonan abstract album photo"
+      - url: "https://bkimg.cdn.bcebos.com/pic/060828381f30e924b89972b86b5d79061d950b7b59a6"
+        source: "바이두 바이커"
+        description: "Zhang Ruonan promotional photo"
+      - url: "https://bkimg.cdn.bcebos.com/pic/f7246b600c338744ebf8331b5956cef9d72a60590a19"
+        source: "바이두 바이커"
+        description: "Zhang Ruonan photoshoot"
+
+  - id: "blossoms_in_adversity"
+    type: "TV시리즈"
+    name: "惜花芷 (석화지: 역경 속의 꽃)"
+    description: "2024년 방영된 중국 고장 로맨스 드라마, 몰락한 가문의 딸과 왕세자의 사랑 이야기"
+    properties:
+      방영년도: 2024
+      총회수: 40
+      장르: ["로맨스", "고장극", "사극"]
+      방송사: "유쿠"
+      제작국가: "중국"
+      원제: "惜花芷"
+      한국방송: "디원TV"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EC%84%9D%ED%99%94%EC%A7%80:%20%EC%97%AD%EA%B2%BD%20%EC%86%8D%EC%9D%98%20%EA%BD%83"
+    image_links:
+      - url: "https://image.tmdb.org/t/p/w500/eoGqBEJdKkCOkOLVLgIg9Vd02VD.jpg"
+        source: "TMDB"
+        description: "Official Blossoms in Adversity drama poster"
+      # Second image removed - not found
+
+relationships:
+  - from: "zhang_jingyi"
+    to: "blossoms_in_adversity"
+    type: "starred_in"
+    properties:
+      역할: "화지"
+      캐릭터설명: "몰락한 가문의 장녀"
+
+  - from: "zhou_ye"
+    to: "better_days"
+    type: "starred_in"
+    properties:
+      역할: "조소북"
+      캐릭터설명: "왕따당하는 고등학생"
+
+  - from: "liu_haocun"
+    to: "one_second"
+    type: "starred_in"
+    properties:
+      역할: "류한민"
+      데뷔작: true
+
+  - from: "bai_lu"
+    to: "zhao_yao"
+    type: "starred_in"
+    properties:
+      역할: "초요"
+      장르: "판타지 로맨스"
+
+  - from: "zhang_miaoyi"
+    to: "when_i_fly_towards_you"
+    type: "starred_in"
+    properties:
+      역할: "주연"
+      방영년도: 2023
+
+  - from: "zhang_ruonan"
+    to: "our_summer"
+    type: "starred_in"
+    properties:
+      역할: "주연"
+      방영년도: 2021

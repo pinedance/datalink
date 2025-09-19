@@ -3,7 +3,7 @@
 entities:
   - id: "zero_dark_thirty"
     type: "영화"
-    name: "Zero Dark Thirty"
+    name: "Zero Dark Thirty (제로 다크 써티)"
     description: "알카에다 테러리스트 지도자 오사마 빈 라덴을 10년간 추적한 연대기"
     properties:
       개봉년도: 2012
@@ -16,11 +16,16 @@ entities:
       - name: "나무위키"
         url: "https://namu.wiki/w/제로%20다크%20서티"
     image_links:
-      - "https://upload.wikimedia.org/wikipedia/en/6/61/Zero_Dark_Thirty_poster.jpg"
+      - url: "https://image.tmdb.org/t/p/w500/coeTvXKAYZlrcIfsCfYV5Hw1mN9.jpg"
+        source: "TMDB"
+        description: "Official Zero Dark Thirty movie poster"
+      - url: "https://upload.wikimedia.org/wikipedia/en/6/61/Zero_Dark_Thirty_poster.jpg"
+        source: "Wikipedia"
+        description: "Zero Dark Thirty theatrical poster"
 
   - id: "jessica_chastain"
     type: "인물"
-    name: "Jessica Chastain"
+    name: "Jessica Chastain (제시카 차스테인)"
     description: "미국 배우이자 영화 제작자"
     properties:
       출생년도: 1977
@@ -31,13 +36,11 @@ entities:
         url: "https://www.imdb.com/name/nm1567113/"
       - name: "나무위키"
         url: "https://namu.wiki/w/제시카%20차스테인"
-    image_links:
-      - "https://upload.wikimedia.org/wikipedia/commons/4/45/Jessica_Chastain_2013_%28cropped%29.jpg"
-      - "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Jessica_Chastain_by_Gage_Skidmore.jpg/800px-Jessica_Chastain_by_Gage_Skidmore.jpg"
+    # image_links: # Removed - images not found
 
   - id: "the_whale"
     type: "영화"
-    name: "The Whale"
+    name: "The Whale (더 웨일)"
     description: "은둔하는 영어 교사가 소원해진 십대 딸과의 관계를 회복하려는 이야기"
     properties:
       개봉년도: 2022
@@ -50,11 +53,16 @@ entities:
       - name: "나무위키"
         url: "https://namu.wiki/w/%EB%8D%94%20%EC%9B%A8%EC%9D%BC"
     image_links:
-      - "https://upload.wikimedia.org/wikipedia/en/9/9c/The_Whale_2022_poster.jpg"
+      - url: "https://image.tmdb.org/t/p/w500/jQ0gylJMxWSb6hJRyPfvBBSlQE7.jpg"
+        source: "TMDB"
+        description: "Official The Whale movie poster"
+      - url: "https://upload.wikimedia.org/wikipedia/en/9/9c/The_Whale_2022_poster.jpg"
+        source: "Wikipedia"
+        description: "The Whale theatrical poster"
 
   - id: "brendan_fraser"
     type: "인물"
-    name: "Brendan Fraser"
+    name: "Brendan Fraser (브렌던 프레이저)"
     description: "미국-캐나다 배우"
     properties:
       출생년도: 1968
@@ -65,13 +73,11 @@ entities:
         url: "https://www.imdb.com/name/nm0000409/"
       - name: "나무위키"
         url: "https://namu.wiki/w/브랜든%20프레이저"
-    image_links:
-      - "https://upload.wikimedia.org/wikipedia/commons/4/42/Brendan_Fraser_2018.jpg"
-      - "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Brendan_Fraser_2009.jpg/800px-Brendan_Fraser_2009.jpg"
+    # image_links: # Removed - images not found
 
   - id: "sadie_sink"
     type: "인물"
-    name: "Sadie Sink"
+    name: "Sadie Sink (세이디 싱크)"
     description: "스트레인저 씨즈와 더 웨일로 유명한 미국 배우"
     properties:
       출생년도: 2002
@@ -82,13 +88,11 @@ entities:
         url: "https://www.imdb.com/name/nm7039607/"
       - name: "나무위키"
         url: "https://namu.wiki/w/세이디%20싱크"
-    image_links:
-      - "https://upload.wikimedia.org/wikipedia/commons/3/38/Sadie_Sink_2017.jpg"
-      - "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Sadie_Sink_2019.jpg/800px-Sadie_Sink_2019.jpg"
+    # image_links: # Removed - images not found
 
   - id: "kathryn_bigelow"
     type: "인물"
-    name: "Kathryn Bigelow"
+    name: "Kathryn Bigelow (캐스린 비글로)"
     description: "미국 영화감독, 제작자, 시나리오 작가"
     properties:
       출생년도: 1951
@@ -99,13 +103,11 @@ entities:
         url: "https://www.imdb.com/name/nm0000941/"
       - name: "나무위키"
         url: "https://namu.wiki/w/캐스린%20비글로"
-    image_links:
-      - "https://upload.wikimedia.org/wikipedia/commons/8/8e/Kathryn_Bigelow_2010.jpg"
-      - "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Kathryn_Bigelow_2008.jpg/800px-Kathryn_Bigelow_2008.jpg"
+    # image_links: # Removed - images not found
 
   - id: "darren_aronofsky"
     type: "인물"
-    name: "Darren Aronofsky"
+    name: "Darren Aronofsky (대런 애러노프스키)"
     description: "미국 영화감독, 제작자, 시나리오 작가"
     properties:
       출생년도: 1969
@@ -116,9 +118,7 @@ entities:
         url: "https://www.imdb.com/name/nm0004716/"
       - name: "나무위키"
         url: "https://namu.wiki/w/대런%20애러노프스키"
-    image_links:
-      - "https://upload.wikimedia.org/wikipedia/commons/0/0a/Darren_Aronofsky_2010.jpg"
-      - "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Darren_Aronofsky_2017.jpg/800px-Darren_Aronofsky_2017.jpg"
+    # image_links: # Removed - images not found
 
 relationships:
   - from: "kathryn_bigelow"

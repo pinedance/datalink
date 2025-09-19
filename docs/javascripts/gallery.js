@@ -109,6 +109,8 @@ class ImageGallery {
             return {
                 src: placeholder.getAttribute('data-src'),
                 alt: img.getAttribute('alt') || 'Gallery image',
+                source: placeholder.getAttribute('data-source') || 'Unknown',
+                description: placeholder.getAttribute('data-description') || '',
                 element: item
             };
         });
@@ -281,27 +283,63 @@ class ImageGallery {
     
     updateLightboxImage() {
         if (!this.lightbox || !this.images.length) return;
-        
+
         const currentImage = this.images[this.currentImageIndex];
         const lightboxImg = this.lightbox.querySelector('.lightbox-image');
         const currentCounter = this.lightbox.querySelector('.lightbox-current');
         const prevBtn = this.lightbox.querySelector('.lightbox-prev');
         const nextBtn = this.lightbox.querySelector('.lightbox-next');
-        
+
         if (lightboxImg) {
             lightboxImg.src = currentImage.src;
             lightboxImg.alt = currentImage.alt;
         }
-        
+
         if (currentCounter) {
             currentCounter.textContent = this.currentImageIndex + 1;
         }
-        
+
+        // Update or create image attribution display (source only, positioned below image)
+        let attributionDisplay = this.lightbox.querySelector('.lightbox-attribution');
+        if (!attributionDisplay) {
+            attributionDisplay = document.createElement('div');
+            attributionDisplay.className = 'lightbox-attribution';
+            attributionDisplay.style.cssText = `
+                position: absolute;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: rgba(0, 0, 0, 0.7);
+                color: white;
+                padding: 6px 12px;
+                border-radius: 4px;
+                font-size: 11px;
+                text-align: center;
+                z-index: 1001;
+                pointer-events: none;
+            `;
+
+            const lightboxContent = this.lightbox.querySelector('.lightbox-content');
+            if (lightboxContent) {
+                lightboxContent.appendChild(attributionDisplay);
+            }
+        }
+
+        if (attributionDisplay) {
+            // Show only source information
+            if (currentImage.source && currentImage.source !== 'Unknown') {
+                attributionDisplay.textContent = `Source: ${currentImage.source}`;
+                attributionDisplay.style.display = 'block';
+            } else {
+                attributionDisplay.style.display = 'none';
+            }
+        }
+
         // Update button states
         if (prevBtn) {
             prevBtn.disabled = this.currentImageIndex === 0;
         }
-        
+
         if (nextBtn) {
             nextBtn.disabled = this.currentImageIndex === this.images.length - 1;
         }

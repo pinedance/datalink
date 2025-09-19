@@ -1,0 +1,161 @@
+# Dune Movies and Related Actors
+
+entities:
+  - id: "dune_2021"
+    type: "영화"
+    name: "Dune (듄)"
+    description: "드니 빌뇌브 감독의 2021년 SF 영화, 프랭크 허버트의 소설을 원작으로 한 대작"
+    properties:
+      개봉년도: 2021
+      감독: "드니 빌뇌브"
+      장르: ["SF", "액션", "어드벤처", "드라마", "판타지"]
+      원작: "프랭크 허버트 소설 '듄'"
+      제작국가: "미국"
+      상영시간: "155분"
+      속편: true
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EB%93%84(2021)"
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt1160419/"
+    image_links:
+      - url: "https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg"
+        source: "Wikipedia"
+        description: "Official Dune (2021) movie poster"
+
+  - id: "dune_part_two_2024"
+    type: "영화"
+    name: "Dune: Part Two (듄: 파트 2)"
+    description: "2024년 개봉한 듄의 속편, 폴 아트레이데스의 복수와 예언된 자로서의 운명을 다룬 작품"
+    properties:
+      개봉년도: 2024
+      감독: "드니 빌뇌브"
+      장르: ["SF", "액션", "어드벤처", "드라마", "판타지"]
+      전편: "Dune (2021)"
+      제작국가: "미국"
+      상영시간: "165분"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EB%93%84:%20%ED%8C%8C%ED%8A%B8%202"
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt15239678/"
+    image_links:
+      - url: "https://upload.wikimedia.org/wikipedia/en/5/52/Dune_Part_Two_poster.jpeg"
+        source: "Wikipedia"
+        description: "Official Dune: Part Two movie poster"
+
+  - id: "timothee_chalamet"
+    type: "인물"
+    name: "Timothée Chalamet (티모시 샬라메)"
+    description: "미국-프랑스 이중 국적의 배우, '콜 미 바이 유어 네임'과 '듄' 시리즈로 유명"
+    properties:
+      출생년도: 1995
+      출생일: "12월 27일"
+      출생지: "미국 뉴욕"
+      국적: "미국, 프랑스"
+      데뷔년도: 2008
+      직업: "배우"
+      학력: "컬럼비아대학교, 뉴욕대학교"
+      수상: "오스카 최우수남주연상 후보"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%ED%8B%B0%EB%AA%A8%EC%8B%9C%20%EC%83%AC%EB%9D%BC%EB%A9%94"
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm3154303/"
+    # image_links: # Removed - images not found
+
+  - id: "rebecca_ferguson"
+    type: "인물"
+    name: "Rebecca Ferguson (레베카 페르구손)"
+    description: "스웨덴 출신의 배우, '미션 임파서블' 시리즈와 '듄' 시리즈로 유명"
+    properties:
+      출생년도: 1983
+      출생일: "10월 19일"
+      출생지: "스웨덴 스톡홀름"
+      국적: "스웨덴"
+      데뷔년도: 1999
+      직업: "배우"
+      수상: "골든 글로브 후보"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EB%A0%88%EB%B2%A0%EC%B9%B4%20%ED%8E%98%EB%A5%B4%EA%B5%AC%EC%86%90"
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0272581/"
+    # image_links: # Removed - images not found
+
+  - id: "denis_villeneuve"
+    type: "인물"
+    name: "Denis Villeneuve (드니 빌뇌브)"
+    description: "캐나다 출신 영화감독, '컨택트', '블레이드 러너 2049', '듄' 시리즈로 유명"
+    properties:
+      출생년도: 1967
+      출생지: "캐나다 퀘벡"
+      국적: "캐나다"
+      직업: "영화감독, 시나리오 작가"
+      대표작: ["컨택트", "블레이드 러너 2049", "듄 시리즈"]
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0898288/"
+    # image_links: # Removed - images not found
+
+relationships:
+  - from: "timothee_chalamet"
+    to: "dune_2021"
+    type: "starred_in"
+    properties:
+      역할: "폴 아트레이데스"
+      캐릭터설명: "아트레이데스 가문의 후계자, 예언된 구원자"
+
+  - from: "timothee_chalamet"
+    to: "dune_part_two_2024"
+    type: "starred_in"
+    properties:
+      역할: "폴 아트레이데스"
+      캐릭터설명: "무아디브로 불리는 프레멘의 지도자"
+
+  - from: "rebecca_ferguson"
+    to: "dune_2021"
+    type: "starred_in"
+    properties:
+      역할: "레이디 제시카"
+      캐릭터설명: "베네 게세리트 자매회 출신, 폴의 어머니"
+
+  - from: "rebecca_ferguson"
+    to: "dune_part_two_2024"
+    type: "starred_in"
+    properties:
+      역할: "레이디 제시카"
+      캐릭터설명: "리버런드 마더가 된 제시카"
+
+  - from: "denis_villeneuve"
+    to: "dune_2021"
+    type: "directed"
+    properties:
+      역할: "감독"
+
+  - from: "denis_villeneuve"
+    to: "dune_part_two_2024"
+    type: "directed"
+    properties:
+      역할: "감독"
+
+  - from: "dune_2021"
+    to: "dune_part_two_2024"
+    type: "sequel"
+    properties:
+      관계: "전편-속편"
+      연속성: "직접적 연결"
+
+  - from: "timothee_chalamet"
+    to: "call_me_by_your_name"
+    type: "starred_in"
+    properties:
+      역할: "엘리오"
+      수상: "오스카 남우주연상 후보"
+
+  - from: "rebecca_ferguson"
+    to: "mission_impossible_series"
+    type: "starred_in"
+    properties:
+      역할: "일사 파우스트"
+      시리즈: "미션 임파서블"

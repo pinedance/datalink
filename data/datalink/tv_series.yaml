@@ -3,7 +3,7 @@
 entities:
   - id: "homeland"
     type: "TV시리즈"
-    name: "Homeland"
+    name: "Homeland (홈랜드)"
     description: "CIA 요원 캐리 매니슨에 관한 미국 스파이 스릴러 텔레비전 시리즈"
     properties:
       시작년도: 2011
@@ -17,11 +17,16 @@ entities:
       - name: "나무위키"
         url: "https://namu.wiki/w/홈랜드"
     image_links:
-      - "https://upload.wikimedia.org/wikipedia/en/3/34/Homeland_TV_series_logo.png"
+      - url: "https://image.tmdb.org/t/p/w500/lORmqpToHFAn58LjxPPy6JSXzlz.jpg"
+        source: "TMDB"
+        description: "Official Homeland TV series poster"
+      - url: "https://upload.wikimedia.org/wikipedia/en/3/34/Homeland_TV_series_logo.png"
+        source: "Wikipedia"
+        description: "Homeland series logo"
 
   - id: "claire_danes"
     type: "인물"
-    name: "Claire Danes"
+    name: "Claire Danes (클레어 데인즈)"
     description: "마이 소-콜드 라이프와 홈럜드로 유명한 미국 배우"
     properties:
       출생년도: 1979
@@ -32,9 +37,7 @@ entities:
         url: "https://www.imdb.com/name/nm0000132/"
       - name: "나무위키"
         url: "https://namu.wiki/w/클레어%20데인즈"
-    image_links:
-      - "https://upload.wikimedia.org/wikipedia/commons/2/28/Claire_Danes_2012.jpg"
-      - "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Claire_Danes_2015.jpg/800px-Claire_Danes_2015.jpg"
+    # image_links: # Removed - images not found
 
 relationships:
   - from: "claire_danes"

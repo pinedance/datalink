@@ -152,14 +152,28 @@ document.addEventListener('DOMContentLoaded', async function() {
         const galleryContainer = document.getElementById('image-gallery');
         const images = [];
 
-        // Collect external image links
+        // Collect external image links (support both old string format and new object format)
         if (entity.image_links) {
-            for (const imgUrl of entity.image_links) {
-                images.push({
-                    src: imgUrl,
-                    type: 'external',
-                    alt: `${entity.name} image`
-                });
+            for (const imgItem of entity.image_links) {
+                if (typeof imgItem === 'string') {
+                    // Old format: simple string URL
+                    images.push({
+                        src: imgItem,
+                        type: 'external',
+                        alt: `${entity.name} image`,
+                        source: 'Unknown',
+                        description: ''
+                    });
+                } else if (typeof imgItem === 'object' && imgItem.url) {
+                    // New format: object with url, source, description
+                    images.push({
+                        src: imgItem.url,
+                        type: 'external',
+                        alt: imgItem.alt || `${entity.name} image`,
+                        source: imgItem.source || 'Unknown',
+                        description: imgItem.description || ''
+                    });
+                }
             }
         }
 
@@ -169,7 +183,9 @@ document.addEventListener('DOMContentLoaded', async function() {
                 images.push({
                     src: img.path,
                     type: 'local',
-                    alt: img.alt
+                    alt: img.alt,
+                    source: 'Local',
+                    description: img.description || `Local image: ${img.filename}`
                 });
             }
         }
@@ -185,10 +201,16 @@ document.addEventListener('DOMContentLoaded', async function() {
         images.forEach((img, index) => {
             galleryHtml += `
                 <div class="gallery-item" data-index="${index}">
-                    <div class="gallery-placeholder" data-src="${img.src}">
+                    <div class="gallery-placeholder"
+                         data-src="${img.src}"
+                         data-source="${img.source || 'Unknown'}"
+                         data-description="${img.description || ''}">
                         <div class="placeholder-shimmer"></div>
                     </div>
-                    <img class="gallery-image hidden" data-src="${img.src}" alt="${img.alt}" loading="lazy">
+                    <img class="gallery-image hidden"
+                         data-src="${img.src}"
+                         alt="${img.alt}"
+                         loading="lazy">
                 </div>
             `;
         });
