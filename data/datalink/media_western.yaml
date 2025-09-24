@@ -198,15 +198,7 @@ entities:
       - url: "https://upload.wikimedia.org/wikipedia/en/3/34/Homeland_TV_series_logo.png"
         source: "Wikipedia"
         description: "Homeland series logo"
-
-relationships:
-  - from: "dune_2021"
-    to: "dune_part_two_2024"
-    type: "sequel"
-    properties:
-      관계: "전편-속편"
-      연속성: "직접적 연결"
-
+        
   - id: "stranger_things"
     type: "TV시리즈"
     name: "Stranger Things (기묘한 이야기)"
@@ -240,3 +232,11 @@ relationships:
     external_links:
       - name: "나무위키"
         url: "https://namu.wiki/w/%EC%B2%B4%EB%A5%B4%EB%85%B8%EB%B9%8C(%EB%93%9C%EB%9D%BC%EB%A7%88)"
+
+relationships:
+  - from: "dune_2021"
+    to: "dune_part_two_2024"
+    type: "sequel"
+    properties:
+      관계: "전편-속편"
+      연속성: "직접적 연결"

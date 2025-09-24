@@ -94,6 +94,45 @@ entities:
       - name: "나무위키"
         url: "https://namu.wiki/w/클레어%20데인즈"
 
+  - id: "ana_de_armas"
+    type: "인물"
+    name: "Ana de Armas (아나 데 아르마스)"
+    description: "쿠바 출신 배우, '블레이드 러너 2049', '나이브스 아웃', '블론드'로 유명"
+    properties:
+      출생년도: 1988
+      출생일: "4월 30일"
+      출생지: "쿠바 산타크루스델노르테"
+      국적: "쿠바, 스페인, 미국"
+      데뷔년도: 2006
+      직업: "배우"
+      신장: "168.3cm"
+      수상: "골든 글로브 후보, 오스카 후보"
+      학력: "쿠바 국립연극학교"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EC%95%84%EB%82%98%20%EB%8D%B0%20%EC%95%84%EB%A5%B4%EB%A7%88%EC%8A%A4"
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm1869101"
+      - name: "Wikipedia"
+        url: "https://en.wikipedia.org/wiki/Ana_de_Armas"
+
+  - id: "carey_mulligan"
+    type: "인물"
+    name: "Carey Mulligan (캐리 멀리건)"
+    description: "영국 출신 배우, '프로미싱 영 우먼', '드라이브', '그레이트 개츠비'로 유명"
+    properties:
+      출생년도: 1985
+      출생일: "5월 28일"
+      출생지: "영국 런던"
+      국적: "영국"
+      직업: "배우"
+      수상: "오스카 후보, BAFTA 수상"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm1659547/"
+      - name: "Wikipedia"
+        url: "https://en.wikipedia.org/wiki/Carey_Mulligan"
+
 relationships:
   - from: "timothee_chalamet"
     to: "dune_2021"
@@ -175,41 +214,3 @@ relationships:
       시즌: "1-8"
 
 
-  - id: "ana_de_armas"
-    type: "인물"
-    name: "Ana de Armas (아나 데 아르마스)"
-    description: "쿠바 출신 배우, '블레이드 러너 2049', '나이브스 아웃', '블론드'로 유명"
-    properties:
-      출생년도: 1988
-      출생일: "4월 30일"
-      출생지: "쿠바 산타크루스델노르테"
-      국적: "쿠바, 스페인, 미국"
-      데뷔년도: 2006
-      직업: "배우"
-      신장: "168.3cm"
-      수상: "골든 글로브 후보, 오스카 후보"
-      학력: "쿠바 국립연극학교"
-    external_links:
-      - name: "나무위키"
-        url: "https://namu.wiki/w/%EC%95%84%EB%82%98%20%EB%8D%B0%20%EC%95%84%EB%A5%B4%EB%A7%88%EC%8A%A4"
-      - name: "IMDb"
-        url: "https://www.imdb.com/name/nm1869101"
-      - name: "Wikipedia"
-        url: "https://en.wikipedia.org/wiki/Ana_de_Armas"
-
-  - id: "carey_mulligan"
-    type: "인물"
-    name: "Carey Mulligan (캐리 멀리건)"
-    description: "영국 출신 배우, '프로미싱 영 우먼', '드라이브', '그레이트 개츠비'로 유명"
-    properties:
-      출생년도: 1985
-      출생일: "5월 28일"
-      출생지: "영국 런던"
-      국적: "영국"
-      직업: "배우"
-      수상: "오스카 후보, BAFTA 수상"
-    external_links:
-      - name: "IMDb"
-        url: "https://www.imdb.com/name/nm1659547/"
-      - name: "Wikipedia"
-        url: "https://en.wikipedia.org/wiki/Carey_Mulligan"
