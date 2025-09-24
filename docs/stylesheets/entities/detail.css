@@ -1,8 +1,13 @@
 /* Entity detail page - extends entities/index.css */
 
-/* Override hero to use entity-card style from index.css */
+/* Main container matching index page */
+.entity-dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero section using entity-card style from index.css */
 .entity-hero {
-    /* Reuse entity-card styles from index.css */
     background: var(--md-default-bg-color);
     border: 1px solid var(--md-default-fg-color--lighter);
     border-radius: 8px;
@@ -16,6 +21,14 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     border-color: var(--md-primary-fg-color);
+}
+
+/* Content grid layout */
+.entity-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
 }
 
 /* Detail page specific styles */
@@ -37,15 +50,16 @@
 
 /* Properties section - also uses card style */
 .properties-section {
-    margin: 2rem 0;
+    margin: 0;
 }
 
 .properties-section h2 {
     font-size: 1.25rem;
     font-weight: 500;
-    color: var(--md-default-fg-color);
+    color: var(--md-primary-fg-color);
+    margin-top: 0;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    border-bottom: 2px solid var(--md-primary-fg-color--light);
     padding-bottom: 0.5rem;
 }
 
@@ -124,23 +138,27 @@
 
 /* Relationships section - card style */
 .relationships-section {
-    margin: 2rem 0;
+    margin: 0;
 }
 
-.relationships-section h2,
-.relationships-section h3 {
+.relationships-section h2 {
     font-size: 1.25rem;
     font-weight: 500;
-    color: var(--md-default-fg-color);
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    color: var(--md-primary-fg-color);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--md-primary-fg-color--light);
     padding-bottom: 0.5rem;
 }
 
 .relationships-section h3 {
     font-size: 1rem;
+    font-weight: 500;
+    color: var(--md-default-fg-color);
     margin-top: 2rem;
     margin-bottom: 0.75rem;
+    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    padding-bottom: 0.5rem;
 }
 
 .relationship-list {
@@ -198,15 +216,16 @@
 
 /* External links section - card style */
 .external-links-section {
-    margin: 2rem 0;
+    margin: 0;
 }
 
 .external-links-section h2 {
     font-size: 1.25rem;
     font-weight: 500;
-    color: var(--md-default-fg-color);
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    color: var(--md-primary-fg-color);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--md-primary-fg-color--light);
     padding-bottom: 0.5rem;
 }
 
@@ -257,15 +276,16 @@
 
 /* Images section - card style */
 .images-section {
-    margin: 2rem 0;
+    margin: 0;
 }
 
 .images-section h2 {
     font-size: 1.25rem;
     font-weight: 500;
-    color: var(--md-default-fg-color);
-    margin-bottom: 1rem;
-    border-bottom: 1px solid var(--md-default-fg-color--lightest);
+    color: var(--md-primary-fg-color);
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--md-primary-fg-color--light);
     padding-bottom: 0.5rem;
 }
 
@@ -288,10 +308,20 @@
     background: var(--md-default-fg-color--lightest);
 }
 
-/* Mobile responsive - only detail-specific */
+/* Mobile responsive - detail-specific */
 @media (max-width: 768px) {
+    .entity-dashboard {
+        padding: 0 1rem;
+    }
+
+    .entity-content-grid {
+        gap: 1.5rem;
+        margin: 1.5rem 0;
+    }
+
     .entity-hero {
         padding: 1.5rem 1rem;
+        margin: 1.5rem 0;
     }
 
     .properties-list {
@@ -315,5 +345,12 @@
 
     .relationship-item {
         padding: 0.75rem 1rem;
+    }
+
+    /* Navigation buttons */
+    .nav-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
     }
 }
