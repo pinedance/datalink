@@ -148,6 +148,124 @@ def export_json_data(data):
         with mkdocs_gen_files.open(f"data/entities/{entity_id}.json", "w") as f:
             json.dump(entity_detail, f, ensure_ascii=False, indent=2)
 
+def generate_entity_pages(data):
+    """
+    Generate individual static pages for each entity
+
+    Args:
+        data (dict): Combined DataLink data structure with entities and relationships
+    """
+    relationships = data.get("relationships", [])
+
+    for entity in data.get("entities", []):
+        entity_id = entity["id"]
+
+        # Create markdown content for the entity
+        content = f"# {entity['name']}\n\n"
+
+        # Add basic information
+        content += f"**유형**: {entity['type']}\n\n"
+        content += f"**설명**: {entity.get('description', 'N/A')}\n\n"
+
+        # Add properties section
+        properties = entity.get("properties", {})
+        if properties:
+            content += "## 상세 정보\n\n"
+            for key, value in properties.items():
+                if isinstance(value, list):
+                    if key == "태그":
+                        value_str = " ".join(f"`{tag}`" for tag in value)
+                    else:
+                        value_str = ", ".join(str(v) for v in value)
+                else:
+                    value_str = str(value)
+                content += f"- **{key}**: {value_str}\n"
+            content += "\n"
+
+        # Add relationships section
+        entity_relationships = [r for r in relationships if r["from"] == entity_id or r["to"] == entity_id]
+        if entity_relationships:
+            content += "## 관련 정보\n\n"
+
+            # Group relationships by type
+            rel_by_type = {}
+            for rel in entity_relationships:
+                rel_type = rel["type"]
+                if rel_type not in rel_by_type:
+                    rel_by_type[rel_type] = []
+                rel_by_type[rel_type].append(rel)
+
+            for rel_type, rels in rel_by_type.items():
+                type_names = {
+                    "starred_in": "출연",
+                    "directed": "감독",
+                    "composed": "작곡",
+                    "related_to": "관련",
+                    "sequel": "연관작품"
+                }
+                type_name = type_names.get(rel_type, rel_type)
+                content += f"### {type_name}\n\n"
+
+                for rel in rels:
+                    if rel["from"] == entity_id:
+                        # This entity is the subject
+                        target_id = rel["to"]
+                        target_entity = next((e for e in data["entities"] if e["id"] == target_id), None)
+                        if target_entity:
+                            content += f"- [{target_entity['name']}]({target_id}.md)"
+                            if rel.get("properties"):
+                                props_text = []
+                                for k, v in rel["properties"].items():
+                                    if k not in ["역할", "캐릭터", "캐릭터설명"]:
+                                        props_text.append(f"{k}: {v}")
+                                if props_text:
+                                    content += f" ({', '.join(props_text)})"
+                            content += "\n"
+                    else:
+                        # This entity is the object
+                        source_id = rel["from"]
+                        source_entity = next((e for e in data["entities"] if e["id"] == source_id), None)
+                        if source_entity:
+                            content += f"- [{source_entity['name']}]({source_id}.md)"
+                            if rel.get("properties"):
+                                role = rel["properties"].get("역할", "")
+                                if role:
+                                    content += f" (역할: {role})"
+                            content += "\n"
+                content += "\n"
+
+        # Add external links section
+        external_links = entity.get("external_links", [])
+        if external_links:
+            content += "## 외부 링크\n\n"
+            for link in external_links:
+                name = link.get('name', 'Link')
+                url = link.get('url', '#')
+                content += f"- [{name}]({url})\n"
+            content += "\n"
+
+        # Add local images section
+        images_dir = Path(f"docs/images/{entity_id}")
+        if images_dir.exists():
+            image_files = []
+            supported_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.webp'}
+            for img_file in images_dir.iterdir():
+                if img_file.is_file() and img_file.suffix.lower() in supported_extensions:
+                    image_files.append(img_file)
+
+            if image_files:
+                content += "## 이미지\n\n"
+                for img_file in image_files:
+                    content += f"![{entity['name']} - {img_file.stem}](../images/{entity_id}/{img_file.name})\n\n"
+
+        # Add navigation
+        content += "---\n\n"
+        content += "[← Entities 목록으로](index.md) | [🏠 홈으로](../index.md)\n"
+
+        # Write the entity page
+        with mkdocs_gen_files.open(f"entities/{entity_id}.md", "w") as f:
+            f.write(content)
+
 def main():
     """
     Main function to generate all entity pages and JSON data
@@ -155,7 +273,8 @@ def main():
     This function orchestrates the entire build process:
     1. Loads YAML data using core_datalink module
     2. Exports JSON files for client-side consumption
-    3. Generates the entity index page with navigation links
+    3. Generates individual static entity pages
+    4. Generates the entity index page with navigation links
 
     Called by mkdocs-gen-files plugin during MkDocs build
     """
@@ -165,35 +284,131 @@ def main():
     # Export JSON data for client-side usage (network, entities, relationships)
     export_json_data(data)
 
-    # Note: Individual entity pages replaced by single entity viewer system
-    # This significantly reduces build time and improves maintainability
+    # Generate individual entity pages
+    generate_entity_pages(data)
 
-    # Generate entities index page with links to the entity viewer
-    entities_index_content = """# Entities
-
-This section contains detailed pages for all entities in the DataLink system.
-
-## Available Entities
-
-"""
-
+    # Generate enhanced entities index page with dashboard + card layout
     # Group entities by type for organized display
     entities_by_type = {}
+    total_entities = len(data.get("entities", []))
+
     for entity in data.get("entities", []):
         entity_type = entity["type"]
         if entity_type not in entities_by_type:
             entities_by_type[entity_type] = []
         entities_by_type[entity_type].append(entity)
 
-    # Generate content organized by entity type
-    # Links now point to the single entity viewer with hash routing
-    for entity_type, entities in sorted(entities_by_type.items()):
-        entities_index_content += f"\n### {entity_type.title()}\n\n"
-        for entity in sorted(entities, key=lambda x: x["name"]):
-            # Use hash-based routing to the entity viewer
-            entities_index_content += f"- [{entity['name']}](entity.html#{entity['id']}) - {entity.get('description', '')}\n"
+    # Type icons mapping
+    type_icons = {
+        "영화": "🎬",
+        "TV시리즈": "📺",
+        "인물": "👤",
+        "작곡가": "🎵",
+        "감독": "🎭"
+    }
 
-    entities_index_content += f"\n---\n[← Back to Home](../index.md)\n"
+    # Load template from separate file
+    template_path = "templates/entities_index.html"
+    try:
+        with open(template_path, 'r', encoding='utf-8') as f:
+            template_content = f.read()
+    except FileNotFoundError:
+        print(f"Warning: Template file {template_path} not found. Using fallback template.")
+        template_content = """# 🌐 Entities
+<div class="entities-dashboard">
+<h2>📊 통계 요약</h2>
+<div class="stats-grid">
+{category_sections}
+</div>
+</div>"""
+
+    # Build category sections
+    category_sections = ""
+
+    # Add type-specific stats - first build stats cards
+    stats_cards = f"""<div class="stat-card">
+<strong>총 엔티티</strong><br>
+<strong>{total_entities}개</strong>
+</div>
+
+"""
+
+    for entity_type, entities in sorted(entities_by_type.items()):
+        count = len(entities)
+        icon = type_icons.get(entity_type, "📄")
+        stats_cards += f"""<div class="stat-card">
+<strong>{icon} {entity_type}</strong><br>
+<strong>{count}개</strong>
+</div>
+
+"""
+
+    # Generate card layout for each type
+    for entity_type, entities in sorted(entities_by_type.items()):
+        icon = type_icons.get(entity_type, "📄")
+        category_sections += f"""
+<h3>{icon} {entity_type}</h3>
+
+<div class="entity-cards">
+
+"""
+
+        # Sort entities by name and create cards
+        for entity in sorted(entities, key=lambda x: x["name"]):
+            # Truncate description if too long
+            description = entity.get('description', '')
+            if len(description) > 100:
+                description = description[:97] + "..."
+
+            # Extract some key properties for display
+            properties = entity.get('properties', {})
+            meta_info = []
+
+            if '출생년도' in properties:
+                meta_info.append(f"📅 {properties['출생년도']}")
+            elif '개봉년도' in properties:
+                meta_info.append(f"📅 {properties['개봉년도']}")
+            elif '방영년도' in properties:
+                meta_info.append(f"📅 {properties['방영년도']}")
+            elif '시작년도' in properties:
+                meta_info.append(f"📅 {properties['시작년도']}")
+
+            if '국적' in properties:
+                meta_info.append(f"🌍 {properties['국적']}")
+            elif '제작국가' in properties:
+                meta_info.append(f"🌍 {properties['제작국가']}")
+
+            if '장르' in properties and isinstance(properties['장르'], list):
+                genres = properties['장르'][:2]  # Show first 2 genres
+                meta_info.append(f"🎭 {', '.join(genres)}")
+
+            meta_text = " • ".join(meta_info) if meta_info else ""
+
+            category_sections += f"""
+<div class="entity-card">
+<strong><a href="{entity['id']}.html">{entity['name']}</a></strong>
+<p>{description}</p>
+{f"<small>{meta_text}</small>" if meta_text else ""}
+</div>
+"""
+
+        category_sections += """
+</div>
+"""
+
+    # Calculate stats for template replacement
+    tv_count = len(entities_by_type.get("TV시리즈", []))
+    movie_count = len(entities_by_type.get("영화", []))
+    person_count = len(entities_by_type.get("인물", []))
+
+    # Use template with replacements
+    entities_index_content = template_content.format(
+        total_count=total_entities,
+        tv_count=tv_count,
+        movie_count=movie_count,
+        person_count=person_count,
+        category_sections=category_sections
+    )
 
     # Write the entities index page
     with mkdocs_gen_files.open("entities/index.md", "w") as f:

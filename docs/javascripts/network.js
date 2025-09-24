@@ -182,8 +182,16 @@ document.addEventListener('DOMContentLoaded', async function() {
         network.on('click', function(params) {
             if (params.nodes.length > 0) {
                 const nodeId = params.nodes[0];
-                // Navigate to entity viewer page with hash-based routing
-                window.location.href = `entities/entity.html#${nodeId}`;
+                const url = `entities/${nodeId}.html`;
+
+                // Check if ctrl key is pressed for new tab
+                if (params.event.srcEvent.ctrlKey) {
+                    // Open in new tab
+                    window.open(url, '_blank');
+                } else {
+                    // Navigate in current window
+                    window.location.href = url;
+                }
             }
         });
 
