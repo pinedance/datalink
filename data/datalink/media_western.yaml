@@ -1,0 +1,208 @@
+# Western Movies and TV Series
+
+entities:
+  - id: "dune_2021"
+    type: "영화"
+    name: "Dune (듄)"
+    description: "드니 빌뇌브 감독의 2021년 SF 영화, 프랭크 허버트의 소설을 원작으로 한 대작"
+    properties:
+      개봉년도: 2021
+      감독: "드니 빌뇌브"
+      장르: ["SF", "액션", "어드벤처", "드라마", "판타지"]
+      원작: "프랭크 허버트 소설 '듄'"
+      제작국가: "미국"
+      상영시간: "155분"
+      속편: true
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EB%93%84(2021)"
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt1160419/"
+    image_links:
+      - url: "https://upload.wikimedia.org/wikipedia/en/8/8e/Dune_%282021_film%29.jpg"
+        source: "Wikipedia"
+        description: "Official Dune (2021) movie poster"
+
+  - id: "dune_part_two_2024"
+    type: "영화"
+    name: "Dune: Part Two (듄: 파트 2)"
+    description: "2024년 개봉한 듄의 속편, 폴 아트레이데스의 복수와 예언된 자로서의 운명을 다룬 작품"
+    properties:
+      개봉년도: 2024
+      감독: "드니 빌뇌브"
+      장르: ["SF", "액션", "어드벤처", "드라마", "판타지"]
+      전편: "Dune (2021)"
+      제작국가: "미국"
+      상영시간: "165분"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EB%93%84:%20%ED%8C%8C%ED%8A%B8%202"
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt15239678/"
+    image_links:
+      - url: "https://upload.wikimedia.org/wikipedia/en/5/52/Dune_Part_Two_poster.jpeg"
+        source: "Wikipedia"
+        description: "Official Dune: Part Two movie poster"
+
+  - id: "inception"
+    type: "영화"
+    name: "Inception (인셉션)"
+    description: "꿈 공유 기술을 통해 기업 기밀을 훔치는 도둑의 이야기"
+    properties:
+      개봉년도: 2010
+      장르: ["공상과학", "액션", "스릴러"]
+      상영시간: 148
+      평점: 8.8
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt1375666/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/인셉션"
+    image_links:
+      - url: "https://image.tmdb.org/t/p/w500/ljsZTbVsrQSqZgWeep2B1QiDKuh.jpg"
+        source: "TMDB"
+        description: "Official Inception movie poster"
+      - url: "https://upload.wikimedia.org/wikipedia/en/2/2e/Inception_%282010%29_theatrical_poster.jpg"
+        source: "Wikipedia"
+        description: "Inception theatrical poster"
+
+  - id: "interstellar"
+    type: "영화"
+    name: "Interstellar (인터스텔라)"
+    description: "우주의 웜홀을 통해 여행하는 탐험가들의 이야기"
+    properties:
+      개봉년도: 2014
+      장르: ["공상과학", "드라마", "모험"]
+      상영시간: 169
+      평점: 8.6
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt0816692/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/인터스텔라"
+    image_links:
+      - url: "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+        source: "TMDB"
+        description: "Official Interstellar movie poster"
+      - url: "https://upload.wikimedia.org/wikipedia/en/b/bc/Interstellar_film_poster.jpg"
+        source: "Wikipedia"
+        description: "Interstellar theatrical poster"
+
+  - id: "the_dark_knight"
+    type: "영화"
+    name: "The Dark Knight (다크 나이트)"
+    description: "고담시에서 조커와 맞서는 배트맨의 이야기"
+    properties:
+      개봉년도: 2008
+      장르: ["액션", "범죄", "드라마"]
+      상영시간: 152
+      평점: 9.0
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt0468569/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/다크%20나이트(영화)"
+    image_links:
+      - url: "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg"
+        source: "TMDB"
+        description: "Official The Dark Knight movie poster"
+      - url: "https://upload.wikimedia.org/wikipedia/en/1/1c/The_Dark_Knight_%282008_film%29.jpg"
+        source: "Wikipedia"
+        description: "The Dark Knight theatrical poster"
+
+  - id: "batman_begins"
+    type: "영화"
+    name: "Batman Begins (배트맨 비긴즈)"
+    description: "배트맨의 기원 이야기"
+    properties:
+      개봉년도: 2005
+      장르: ["액션", "모험"]
+      상영시간: 140
+      평점: 8.2
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt0372784/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/배트맨%20비긴즈"
+    image_links:
+      - url: "https://image.tmdb.org/t/p/w500/8RW2runSec34n2dAM8NWOzxtOTz.jpg"
+        source: "TMDB"
+        description: "Official Batman Begins movie poster"
+      - url: "https://upload.wikimedia.org/wikipedia/en/a/af/Batman_Begins_Poster.jpg"
+        source: "Wikipedia"
+        description: "Batman Begins theatrical poster"
+
+  - id: "zero_dark_thirty"
+    type: "영화"
+    name: "Zero Dark Thirty (제로 다크 써티)"
+    description: "알카에다 테러리스트 지도자 오사마 빈 라덴을 10년간 추적한 연대기"
+    properties:
+      개봉년도: 2012
+      장르: ["드라마", "역사", "스릴러"]
+      상영시간: 157
+      평점: 7.4
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt1790885/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/제로%20다크%20서티"
+    image_links:
+      - url: "https://image.tmdb.org/t/p/w500/coeTvXKAYZlrcIfsCfYV5Hw1mN9.jpg"
+        source: "TMDB"
+        description: "Official Zero Dark Thirty movie poster"
+      - url: "https://upload.wikimedia.org/wikipedia/en/6/61/Zero_Dark_Thirty_poster.jpg"
+        source: "Wikipedia"
+        description: "Zero Dark Thirty theatrical poster"
+
+  - id: "the_whale"
+    type: "영화"
+    name: "The Whale (더 웨일)"
+    description: "은둔하는 영어 교사가 소원해진 십대 딸과의 관계를 회복하려는 이야기"
+    properties:
+      개봉년도: 2022
+      장르: ["드라마"]
+      상영시간: 117
+      평점: 7.6
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt13833688/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EB%8D%94%20%EC%9B%A8%EC%9D%BC"
+    image_links:
+      - url: "https://image.tmdb.org/t/p/w500/jQ0gylJMxWSb6hJRyPfvBBSlQE7.jpg"
+        source: "TMDB"
+        description: "Official The Whale movie poster"
+      - url: "https://upload.wikimedia.org/wikipedia/en/9/9c/The_Whale_2022_poster.jpg"
+        source: "Wikipedia"
+        description: "The Whale theatrical poster"
+
+  - id: "homeland"
+    type: "TV시리즈"
+    name: "Homeland (홈랜드)"
+    description: "CIA 요원 캐리 매니슨에 관한 미국 스파이 스릴러 텔레비전 시리즈"
+    properties:
+      시작년도: 2011
+      종료년도: 2020
+      시즌수: 8
+      장르: ["드라마", "스릴러", "스파이"]
+      방송사: "Showtime"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/title/tt1796960/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/홈랜드"
+    image_links:
+      - url: "https://image.tmdb.org/t/p/w500/lORmqpToHFAn58LjxPPy6JSXzlz.jpg"
+        source: "TMDB"
+        description: "Official Homeland TV series poster"
+      - url: "https://upload.wikimedia.org/wikipedia/en/3/34/Homeland_TV_series_logo.png"
+        source: "Wikipedia"
+        description: "Homeland series logo"
+
+relationships:
+  - from: "dune_2021"
+    to: "dune_part_two_2024"
+    type: "sequel"
+    properties:
+      관계: "전편-속편"
+      연속성: "직접적 연결"

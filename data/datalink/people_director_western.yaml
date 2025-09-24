@@ -1,0 +1,116 @@
+# Western Directors
+
+entities:
+  - id: "christopher_nolan"
+    type: "인물"
+    name: "Christopher Nolan (크리스토퍼 놀란)"
+    description: "영국계 미국인 영화감독, 제작자, 시나리오 작가"
+    properties:
+      출생년도: 1970
+      국적: "영국계 미국인"
+      직업: "감독, 제작자, 시나리오 작가"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0634240/"
+      - name: "Wikipedia"
+        url: "https://en.wikipedia.org/wiki/Christopher_Nolan"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/크리스토퍼%20놀란"
+    image_links:
+      - url: "https://upload.wikimedia.org/wikipedia/commons/9/95/Christopher_Nolan_Cannes_2018.jpg"
+        source: "Wikimedia Commons"
+        description: "Christopher Nolan at Cannes (2018)"
+      - url: "https://upload.wikimedia.org/wikipedia/commons/7/71/Christopher_Nolan_by_Gage_Skidmore.jpg"
+        source: "Wikimedia Commons"
+        description: "Christopher Nolan by Gage Skidmore"
+
+  - id: "denis_villeneuve"
+    type: "인물"
+    name: "Denis Villeneuve (드니 빌뇌브)"
+    description: "캐나다 출신 영화감독, '컨택트', '블레이드 러너 2049', '듄' 시리즈로 유명"
+    properties:
+      출생년도: 1967
+      출생지: "캐나다 퀘벡"
+      국적: "캐나다"
+      직업: "영화감독, 시나리오 작가"
+      대표작: ["컨택트", "블레이드 러너 2049", "듄 시리즈"]
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0898288/"
+
+  - id: "kathryn_bigelow"
+    type: "인물"
+    name: "Kathryn Bigelow (캐스린 비글로)"
+    description: "미국 영화감독, 제작자, 시나리오 작가"
+    properties:
+      출생년도: 1951
+      국적: "미국"
+      직업: "감독, 제작자, 시나리오 작가"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0000941/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/캐스린%20비글로"
+
+  - id: "darren_aronofsky"
+    type: "인물"
+    name: "Darren Aronofsky (대런 애러노프스키)"
+    description: "미국 영화감독, 제작자, 시나리오 작가"
+    properties:
+      출생년도: 1969
+      국적: "미국"
+      직업: "감독, 제작자, 시나리오 작가"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0004716/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/대런%20애러노프스키"
+
+relationships:
+  - from: "christopher_nolan"
+    to: "inception"
+    type: "directed"
+    properties:
+      년도: 2010
+
+  - from: "christopher_nolan"
+    to: "interstellar"
+    type: "directed"
+    properties:
+      년도: 2014
+
+  - from: "christopher_nolan"
+    to: "the_dark_knight"
+    type: "directed"
+    properties:
+      년도: 2008
+
+  - from: "christopher_nolan"
+    to: "batman_begins"
+    type: "directed"
+    properties:
+      년도: 2005
+
+  - from: "denis_villeneuve"
+    to: "dune_2021"
+    type: "directed"
+    properties:
+      역할: "감독"
+
+  - from: "denis_villeneuve"
+    to: "dune_part_two_2024"
+    type: "directed"
+    properties:
+      역할: "감독"
+
+  - from: "kathryn_bigelow"
+    to: "zero_dark_thirty"
+    type: "directed"
+    properties:
+      년도: 2012
+
+  - from: "darren_aronofsky"
+    to: "the_whale"
+    type: "directed"
+    properties:
+      년도: 2022

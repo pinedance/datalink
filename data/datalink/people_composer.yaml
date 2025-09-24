@@ -1,0 +1,41 @@
+# Composers
+
+entities:
+  - id: "hans_zimmer"
+    type: "인물"
+    name: "Hans Zimmer (한스 짐머)"
+    description: "독일 영화음악 작곡가이자 음악 프로듀서"
+    properties:
+      출생년도: 1957
+      국적: "독일"
+      직업: "작곡가, 음악 프로듀서"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0001877/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/한스%20짐머"
+
+relationships:
+  - from: "hans_zimmer"
+    to: "inception"
+    type: "composed"
+    properties:
+      역할: "영화 음악"
+
+  - from: "hans_zimmer"
+    to: "interstellar"
+    type: "composed"
+    properties:
+      역할: "영화 음악"
+
+  - from: "hans_zimmer"
+    to: "the_dark_knight"
+    type: "composed"
+    properties:
+      역할: "영화 음악"
+
+  - from: "hans_zimmer"
+    to: "batman_begins"
+    type: "composed"
+    properties:
+      역할: "영화 음악"

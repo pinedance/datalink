@@ -1,4 +1,4 @@
-# Chinese Actresses and Related Entities
+# Chinese Actresses
 
 entities:
   - id: "zhang_jingyi"
@@ -70,16 +70,6 @@ entities:
         url: "https://namu.wiki/w/%EC%83%81%ED%95%A8%EC%A7%80"
       - name: "바이두 바이커"
         url: "https://baike.baidu.com/item/向涵之"
-    # image_links:
-    #   - url: "https://bkimg.cdn.bcebos.com/pic/4610b912c8fcc3cec3fd666b851dc188d43f87948a69"
-    #     source: "바이두 바이커"
-    #     description: "Xiang Hanzhi concept album cover"
-    #   - url: "https://bkimg.cdn.bcebos.com/pic/8435e5dde71190ef76c6b8239c438a16fdfaae51ca8d"
-    #     source: "바이두 바이커"
-    #     description: "Xiang Hanzhi early career photo"
-    #   - url: "https://bkimg.cdn.bcebos.com/pic/d058ccbf6c81800a19d8c756a66d24fa828ba61ee969"
-    #     source: "바이두 바이커"
-    #     description: "Xiang Hanzhi headshot"
 
   - id: "liu_haocun"
     type: "인물"
@@ -192,45 +182,6 @@ entities:
       - url: "https://bkimg.cdn.bcebos.com/pic/faedab64034f78f0f7364f1084681d55b319eac4b684"
         source: "바이두 바이커"
         description: "Zhang Ruonan promotional photo"
-
-  - id: "legend_of_the_female_general"
-    type: "TV시리즈"
-    name: "锦月如歌 (금월여가)"
-    description: "2023년 방영된 중국 고장 로맨스 드라마."
-    properties:
-      방영년도: 2023
-      총회수: 36
-      장르: ["로맨스", "고장극", "사극"]
-    external_links:
-      - name: "나무위키"
-        url: "https://namu.wiki/w/%EA%B8%88%EC%9B%94%EC%97%AC%EA%B0%80"
-      - name: "바이두 바이커"
-        url: "https://baike.baidu.com/item/%E9%94%A6%E6%9C%88%E5%A6%82%E6%AD%8C"
-    image_links:
-      - url: "https://bkimg.cdn.bcebos.com/pic/500fd9f9d72a6059252dc6590d6f239b033b5bb50c67"
-        source: "바이두 바이커"
-        description: "Official Drama Poster"
-
-  - id: "blossoms_in_adversity"
-    type: "TV시리즈"
-    name: "惜花芷 (석화지: 역경 속의 꽃)"
-    description: "2024년 방영된 중국 고장 로맨스 드라마, 몰락한 가문의 딸과 왕세자의 사랑 이야기"
-    properties:
-      방영년도: 2024
-      총회수: 40
-      장르: ["로맨스", "고장극", "사극"]
-      방송사: "유쿠"
-      제작국가: "중국"
-      원제: "惜花芷"
-      한국방송: "디원TV"
-    external_links:
-      - name: "나무위키"
-        url: "https://namu.wiki/w/%EC%84%9D%ED%99%94%EC%A7%80:%20%EC%97%AD%EA%B2%BD%20%EC%86%8D%EC%9D%98%20%EA%BD%83"
-    image_links:
-      - url: "https://image.tmdb.org/t/p/w500/eoGqBEJdKkCOkOLVLgIg9Vd02VD.jpg"
-        source: "TMDB"
-        description: "Official Blossoms in Adversity drama poster"
-      # Second image removed - not found
 
 relationships:
   - from: "zhang_jingyi"

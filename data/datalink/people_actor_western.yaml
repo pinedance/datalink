@@ -1,0 +1,167 @@
+# Western Actors
+
+entities:
+  - id: "timothee_chalamet"
+    type: "인물"
+    name: "Timothée Chalamet (티모시 샬라메)"
+    description: "미국-프랑스 이중 국적의 배우, '콜 미 바이 유어 네임'과 '듄' 시리즈로 유명"
+    properties:
+      출생년도: 1995
+      출생일: "12월 27일"
+      출생지: "미국 뉴욕"
+      국적: "미국, 프랑스"
+      데뷔년도: 2008
+      직업: "배우"
+      학력: "컬럼비아대학교, 뉴욕대학교"
+      수상: "오스카 최우수남주연상 후보"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%ED%8B%B0%EB%AA%A8%EC%8B%9C%20%EC%83%AC%EB%9D%BC%EB%A9%94"
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm3154303/"
+
+  - id: "rebecca_ferguson"
+    type: "인물"
+    name: "Rebecca Ferguson (레베카 페르구손)"
+    description: "스웨덴 출신의 배우, '미션 임파서블' 시리즈와 '듄' 시리즈로 유명"
+    properties:
+      출생년도: 1983
+      출생일: "10월 19일"
+      출생지: "스웨덴 스톡홀름"
+      국적: "스웨덴"
+      데뷔년도: 1999
+      직업: "배우"
+      수상: "골든 글로브 후보"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EB%A0%88%EB%B2%A0%EC%B9%B4%20%ED%8E%98%EB%A5%B4%EA%B5%AC%EC%86%90"
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0272581/"
+
+  - id: "jessica_chastain"
+    type: "인물"
+    name: "Jessica Chastain (제시카 차스테인)"
+    description: "미국 배우이자 영화 제작자"
+    properties:
+      출생년도: 1977
+      국적: "미국"
+      직업: "배우, 제작자"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm1567113/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/제시카%20차스테인"
+
+  - id: "brendan_fraser"
+    type: "인물"
+    name: "Brendan Fraser (브렌던 프레이저)"
+    description: "미국-캐나다 배우"
+    properties:
+      출생년도: 1968
+      국적: "미국-캐나다"
+      직업: "배우"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0000409/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/브랜든%20프레이저"
+
+  - id: "sadie_sink"
+    type: "인물"
+    name: "Sadie Sink (세이디 싱크)"
+    description: "스트레인저 씨즈와 더 웨일로 유명한 미국 배우"
+    properties:
+      출생년도: 2002
+      국적: "미국"
+      직업: "배우"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm7039607/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/세이디%20싱크"
+
+  - id: "claire_danes"
+    type: "인물"
+    name: "Claire Danes (클레어 데인즈)"
+    description: "마이 소-콜드 라이프와 홈랜드로 유명한 미국 배우"
+    properties:
+      출생년도: 1979
+      국적: "미국"
+      직업: "배우"
+    external_links:
+      - name: "IMDb"
+        url: "https://www.imdb.com/name/nm0000132/"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/클레어%20데인즈"
+
+relationships:
+  - from: "timothee_chalamet"
+    to: "dune_2021"
+    type: "starred_in"
+    properties:
+      역할: "폴 아트레이데스"
+      캐릭터설명: "아트레이데스 가문의 후계자, 예언된 구원자"
+
+  - from: "timothee_chalamet"
+    to: "dune_part_two_2024"
+    type: "starred_in"
+    properties:
+      역할: "폴 아트레이데스"
+      캐릭터설명: "무아디브로 불리는 프레멘의 지도자"
+
+  - from: "rebecca_ferguson"
+    to: "dune_2021"
+    type: "starred_in"
+    properties:
+      역할: "레이디 제시카"
+      캐릭터설명: "베네 게세리트 자매회 출신, 폴의 어머니"
+
+  - from: "rebecca_ferguson"
+    to: "dune_part_two_2024"
+    type: "starred_in"
+    properties:
+      역할: "레이디 제시카"
+      캐릭터설명: "리버런드 마더가 된 제시카"
+
+  - from: "timothee_chalamet"
+    to: "call_me_by_your_name"
+    type: "starred_in"
+    properties:
+      역할: "엘리오"
+      수상: "오스카 남우주연상 후보"
+
+  - from: "rebecca_ferguson"
+    to: "mission_impossible_series"
+    type: "starred_in"
+    properties:
+      역할: "일사 파우스트"
+      시리즈: "미션 임파서블"
+
+  - from: "jessica_chastain"
+    to: "zero_dark_thirty"
+    type: "starred_in"
+    properties:
+      역할: "Maya"
+      캐릭터: "CIA 분석관"
+
+  - from: "brendan_fraser"
+    to: "the_whale"
+    type: "starred_in"
+    properties:
+      역할: "Charlie"
+      캐릭터: "영어 교사"
+
+  - from: "sadie_sink"
+    to: "the_whale"
+    type: "starred_in"
+    properties:
+      역할: "Ellie"
+      캐릭터: "Charlie의 딸"
+
+  - from: "claire_danes"
+    to: "homeland"
+    type: "starred_in"
+    properties:
+      역할: "Carrie Mathison"
+      캐릭터: "CIA 요원"
+      시즌: "1-8"
