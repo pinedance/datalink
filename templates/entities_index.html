@@ -1,0 +1,161 @@
+# 🌐 Entities
+
+<div class="entities-dashboard">
+<h2>📊 통계 요약</h2>
+
+<div class="stats-grid">
+<div class="stat-card">
+<strong>총 엔티티</strong><br>
+<strong>{total_count}개</strong>
+</div>
+
+<div class="stat-card">
+<strong>📺 TV시리즈</strong><br>
+<strong>{tv_count}개</strong>
+</div>
+
+<div class="stat-card">
+<strong>🎬 영화</strong><br>
+<strong>{movie_count}개</strong>
+</div>
+
+<div class="stat-card">
+<strong>👤 인물</strong><br>
+<strong>{person_count}개</strong>
+</div>
+</div>
+
+<hr>
+
+<h2>🗂️ 엔티티 목록</h2>
+
+{category_sections}
+
+<hr>
+
+<div class="navigation-section">
+<div class="nav-buttons">
+<a href="../index.html" class="md-button md-button--primary">🌐 네트워크 보기</a>
+<a href="../index.html" class="md-button">🏠 홈으로</a>
+</div>
+</div>
+
+</div>
+
+<style>
+.entities-dashboard {{
+    max-width: 1200px;
+    margin: 0 auto;
+}}
+
+.stats-grid {{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}}
+
+.stat-card {{
+    background: var(--md-default-fg-color--lightest);
+    border: 1px solid var(--md-default-fg-color--lighter);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s;
+}}
+
+.stat-card:hover {{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}}
+
+.entity-cards {{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}}
+
+.entity-card {{
+    background: var(--md-default-bg-color);
+    border: 1px solid var(--md-default-fg-color--lighter);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: all 0.2s;
+    min-height: 120px;
+}}
+
+.entity-card:hover {{
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-color: var(--md-primary-fg-color);
+}}
+
+.entity-card strong a {{
+    color: var(--md-primary-fg-color);
+    text-decoration: none;
+}}
+
+.entity-card strong a:hover {{
+    color: var(--md-accent-fg-color);
+}}
+
+.entity-card p {{
+    margin: 0.5rem 0;
+    line-height: 1.4;
+    color: var(--md-default-fg-color--light);
+}}
+
+.entity-card small {{
+    color: var(--md-default-fg-color--lighter);
+    display: block;
+    margin-top: 0.5rem;
+}}
+
+h3 {{
+    color: var(--md-primary-fg-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--md-primary-fg-color--light);
+    padding-bottom: 0.5rem;
+}}
+
+.navigation-section {{
+    text-align: center;
+    margin: 3rem 0;
+}}
+
+.nav-buttons {{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}}
+
+[data-md-color-scheme="slate"] .stat-card {{
+    background: var(--md-code-bg-color);
+    border-color: var(--md-default-fg-color--lightest);
+}}
+
+[data-md-color-scheme="slate"] .entity-card {{
+    background: var(--md-code-bg-color);
+    border-color: var(--md-default-fg-color--lightest);
+}}
+
+@media (max-width: 768px) {{
+    .stats-grid {{
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 0.5rem;
+    }}
+
+    .entity-cards {{
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }}
+
+    .nav-buttons {{
+        flex-direction: column;
+        align-items: center;
+    }}
+}}
+</style>
