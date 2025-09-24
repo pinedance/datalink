@@ -1,3 +1,7 @@
+import sys
+sys.path.append('.')
+from core_datalink import load_datalink as core_load_datalink
+
 def define_env(env):
     """
     MkDocs Macros Plugin Hook
@@ -24,7 +28,6 @@ def define_env(env):
         Usage in Markdown:
             {{ load_datalink() }}
         """
-        from core_datalink import load_datalink as core_load_datalink
         return core_load_datalink()
 
 def main():

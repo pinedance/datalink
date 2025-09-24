@@ -127,3 +127,63 @@ def get_entity_relationships(data, entity_id):
             relationships.append(rel)
 
     return relationships
+
+
+def create_entity_lookup(entities):
+    """
+    Create a dictionary for fast entity lookup by ID
+
+    Args:
+        entities (list): List of entity objects
+
+    Returns:
+        dict: Dictionary mapping entity IDs to entity objects
+    """
+    return {entity["id"]: entity for entity in entities}
+
+
+def get_entity_images(entity_id, entity_name, image_links=None, base_path="docs"):
+    """
+    Collect all images (local and external) for an entity
+
+    Args:
+        entity_id (str): Entity identifier
+        entity_name (str): Entity name for alt text
+        image_links (list): List of external image links from YAML
+        base_path (str): Base path for image directory
+
+    Returns:
+        list: Combined list of image data
+    """
+    from pathlib import Path
+
+    all_images = []
+    supported_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.webp'}
+
+    # 1. Collect local images
+    images_dir = Path(f"{base_path}/images/{entity_id}")
+    if images_dir.exists():
+        for img_file in images_dir.iterdir():
+            if img_file.is_file() and img_file.suffix.lower() in supported_extensions:
+                all_images.append({
+                    "type": "local",
+                    "src": f"../images/{entity_id}/{img_file.name}",
+                    "alt": f"{entity_name} - {img_file.stem}",
+                    "description": img_file.stem.replace('_', ' ').title(),
+                    "filename": img_file.name,
+                    "path": f"/images/{entity_id}/{img_file.name}"
+                })
+
+    # 2. Collect external images
+    if image_links:
+        for img_link in image_links:
+            if img_link.get("url"):
+                all_images.append({
+                    "type": "linked",
+                    "src": img_link["url"],
+                    "alt": f"{entity_name} - {img_link.get('description', 'Image')}",
+                    "description": img_link.get('description', 'External image'),
+                    "source": img_link.get('source', 'External')
+                })
+
+    return all_images
