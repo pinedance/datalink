@@ -206,3 +206,37 @@ relationships:
     properties:
       관계: "전편-속편"
       연속성: "직접적 연결"
+
+  - id: "stranger_things"
+    type: "TV시리즈"
+    name: "Stranger Things (기묘한 이야기)"
+    description: "1980년대 인디애나를 배경으로 한 SF/공포 드라마, 정부 실험으로 인한 초자연적 사건들을 다룬 넷플릭스 오리지널"
+    properties:
+      시작년도: 2016
+      예상종료년도: 2025
+      시즌수: 5
+      장르: ["SF", "스릴러", "공포", "다크 판타지", "미스터리"]
+      방송사: "Netflix"
+      제작국가: "미국"
+      배경년대: "1980년대"
+      감독: ["더퍼 브라더스", "숀 레비"]
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EA%B8%B0%EB%AC%98%ED%95%9C%20%EC%9D%B4%EC%95%BC%EA%B8%B0(%EB%AF%B8%EA%B5%AD%20%EB%93%9C%EB%9D%BC%EB%A7%88)"
+
+  - id: "chernobyl"
+    type: "TV시리즈"
+    name: "Chernobyl (체르노빌)"
+    description: "1986년 체르노빌 원전 사고를 다룬 HBO 미니시리즈, 거짓말의 대가와 진실을 위한 희생을 그린 역사적 드라마"
+    properties:
+      방영년도: 2019
+      총화수: 5
+      장르: ["재난", "역사", "정치", "스릴러"]
+      방송사: "HBO"
+      제작국가: "미국"
+      감독: "요한 렌크"
+      작가: "크레이그 메이진"
+      수상: "다수 에미상 수상"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EC%B2%B4%EB%A5%B4%EB%85%B8%EB%B9%8C(%EB%93%9C%EB%9D%BC%EB%A7%88)"

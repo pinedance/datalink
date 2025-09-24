@@ -1,0 +1,29 @@
+# Japanese Actors
+
+entities:
+  - id: "ishihara_satomi"
+    type: "인물"
+    name: "石原さとみ (이시하라 사토미)"
+    description: "일본의 인기 여배우, '언내추럴', '5시부터 9시까지' 등으로 유명"
+    properties:
+      출생년도: 1986
+      출생일: "12월 24일"
+      출생지: "일본 도쿄"
+      국적: "일본"
+      데뷔년도: 2002
+      직업: "배우"
+      신장: "157cm"
+      혈액형: "A형"
+      결혼여부: "기혼 (2020년)"
+      자녀: "2명"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EC%9D%B4%EC%8B%9C%ED%95%98%EB%9D%BC%20%EC%82%AC%ED%86%A0%EB%AF%B8"
+
+relationships:
+  - from: "ishihara_satomi"
+    to: "unnatural"
+    type: "starred_in"
+    properties:
+      역할: "미사 미코토"
+      캐릭터: "UDI 법의학자"

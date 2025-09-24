@@ -1,0 +1,20 @@
+# Japanese TV Series and Movies
+
+entities:
+  - id: "unnatural"
+    type: "TV시리즈"
+    name: "アンナチュラル (언내추럴)"
+    description: "2018년 방영된 일본 의료 미스터리 드라마, 부자연사 조사기관을 배경으로 한 추리극"
+    properties:
+      방영년도: 2018
+      총회수: 10
+      장르: ["미스터리", "의료", "수사"]
+      방송사: "TBS"
+      제작국가: "일본"
+      원제: "アンナチュラル"
+      방영기간: "2018년 1월-3월"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EC%96%B8%EB%82%B4%EC%B6%94%EB%9F%B4"
+
+relationships: []

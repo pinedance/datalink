@@ -239,3 +239,36 @@ relationships:
     properties:
       역할: "주연"
       방영년도: 2021
+
+  - from: "bai_lu"
+    to: "ning_an_ru_meng"
+    type: "starred_in"
+    properties:
+      역할: "강설영"
+      캐릭터설명: "황후가 되기 위해 애썼던 여성"
+
+  - from: "zhuang_da_fei"
+    to: "mo_yu_yun_jian"
+    type: "starred_in"
+    properties:
+      역할: "조연"
+      방영년도: 2024
+
+  - id: "zhuang_da_fei"
+    type: "인물"
+    name: "庄达菲 (장달비)"
+    description: "중국의 신세대 여배우 겸 가수, 베이징전영학원 출신"
+    properties:
+      출생년도: 2001
+      출생일: "2월 28일"
+      출생지: "중국 랴오닝성 선양시"
+      국적: "중국"
+      학력: "베이징전영학원 연기과"
+      직업: "배우, 가수"
+      특기: "다국어 구사, 다양한 악기 연주"
+      수상: "부산국제영화제 신인상, 골든본 네트워크 TV 어워즈 신인상"
+    external_links:
+      - name: "바이두 바이커"
+        url: "https://baike.baidu.com/item/%E5%BA%84%E8%BE%BE%E8%8F%B2"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EC%9E%A5%EB%8B%AC%EB%B9%84"

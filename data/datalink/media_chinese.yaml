@@ -39,4 +39,56 @@ entities:
         source: "TMDB"
         description: "Official Blossoms in Adversity drama poster"
 
+  - id: "ning_an_ru_meng"
+    type: "TV시리즈"
+    name: "宁安如梦 (영안여몽: 다시 쓰는 꿈)"
+    description: "2023년 방영된 중국 고장 로맨스 드라마, 권력에서 벗어나 자신의 삶을 찾아가는 여성의 이야기"
+    properties:
+      방영년도: 2023
+      총회수: 38
+      장르: ["로맨스", "고장극", "사극", "타임슬립"]
+      방송사: "아이치이"
+      제작국가: "중국"
+      원제: "宁安如梦"
+      한국방송: "2024년 1월-2월"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EC%98%81%EC%95%88%EC%97%AC%EB%AA%BD:%20%EB%8B%A4%EC%8B%9C%20%EC%93%B0%EB%8A%94%20%EA%BF%88"
+      - name: "바이두 바이커"
+        url: "https://baike.baidu.com/item/%E5%AE%81%E5%AE%89%E5%A6%82%E6%A2%A6"
+
+  - id: "mo_yu_yun_jian"
+    type: "TV시리즈"
+    name: "墨雨云间 (묵우운간)"
+    description: "2024년 방영된 중국 고장 로맨스 드라마, 배신당한 여성이 새로운 정체성으로 복수하는 이야기"
+    properties:
+      방영년도: 2024
+      총회수: 40
+      장르: ["로맨스", "고장극", "사극", "복수극"]
+      방송사: "유쿠"
+      제작국가: "중국"
+      원제: "墨雨云间"
+      방영일: "2024년 6월 2일"
+    external_links:
+      - name: "바이두 바이커"
+        url: "https://baike.baidu.com/item/%E5%A2%A8%E9%9B%A8%E4%BA%91%E9%97%B4/62985038"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EB%AC%B5%EC%9A%B0%EC%9A%B4%EA%B0%84"
+
+  - id: "yan_hui_shi"
+    type: "TV시리즈"
+    name: "雁回时 (귀녀)"
+    description: "2025년 방영 예정 중국 고장 로맨스 드라마, 버려진 딸이 권력에 맞서 자신의 행복을 찾아가는 이야기"
+    properties:
+      방영년도: 2025
+      총회수: 30
+      장르: ["로맨스", "고장극", "사극", "성장드라마"]
+      제작국가: "중국"
+      원제: "雁回时"
+      한국제목: "귀녀"
+    external_links:
+      - name: "바이두 바이커"
+        url: "https://baike.baidu.com/item/%E9%9B%81%E5%9B%9E%E6%97%B6/65501185"
+
+
 relationships: []

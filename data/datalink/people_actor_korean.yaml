@@ -1,0 +1,76 @@
+# Korean Actors
+
+entities:
+  - id: "kim_soo_hyun"
+    type: "인물"
+    name: "김수현 (Kim Soo-hyun)"
+    description: "한국의 대표적인 남자배우, '별에서 온 그대', '사이코지만 괜찮아' 등으로 유명"
+    properties:
+      출생년도: 1988
+      출생일: "2월 16일"
+      출생지: "서울특별시 강남구 일원동"
+      국적: "대한민국"
+      학력: "중앙대학교 연극학과"
+      데뷔년도: 2007
+      직업: "배우"
+      소속사: "골드메달리스트"
+      병역: "2017-2019 육군 복무"
+      태그: ["목소리가 좋은 배우"]
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EA%B9%80%EC%88%98%ED%98%84"
+
+  - id: "lee_byung_hun"
+    type: "인물"
+    name: "이병헌 (Lee Byung-hun)"
+    description: "한국의 국민 배우, '아이리스', '미스터 션샤인', '오징어 게임' 등으로 유명"
+    properties:
+      출생년도: 1970
+      출생일: "7월 12일"
+      출생지: "경기도 성남시"
+      국적: "대한민국"
+      데뷔년도: 1991
+      직업: "배우"
+      특기: "영어 능통"
+      태그: ["목소리가 좋은 배우"]
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EC%9D%B4%EB%B3%91%ED%97%8C"
+
+  - id: "yoo_in_na"
+    type: "인물"
+    name: "유인나 (Yoo In-na)"
+    description: "한국의 여배우, '도깨비', '진심이 닿다' 등으로 유명"
+    properties:
+      출생년도: 1982
+      출생일: "6월 5일"
+      출생지: "경기도 성남시"
+      국적: "대한민국"
+      데뷔년도: 2009
+      직업: "배우"
+      소속사: "초록뱀미디어"
+      MBTI: "ESFJ"
+      태그: ["목소리가 좋은 배우"]
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EC%9C%A0%EC%9D%B8%EB%82%98"
+
+  - id: "kim_chang_wan"
+    type: "인물"
+    name: "김창완 (Kim Chang-wan)"
+    description: "산울림의 리더이자 한국 록의 아버지, 다양한 방송 활동으로도 유명"
+    properties:
+      출생년도: 1954
+      출생일: "2월 22일"
+      출생지: "서울특별시 영등포구 흑석동"
+      국적: "대한민국"
+      학력: "서울대학교 농과대학"
+      데뷔년도: 1977
+      직업: "가수, 작곡가, 배우, 방송인"
+      밴드: "산울림"
+      태그: ["목소리가 좋은 배우"]
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EA%B9%80%EC%B0%BD%EC%99%84"
+
+relationships: []
