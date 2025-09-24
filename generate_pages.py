@@ -148,45 +148,125 @@ def export_json_data(data):
         with mkdocs_gen_files.open(f"data/entities/{entity_id}.json", "w") as f:
             json.dump(entity_detail, f, ensure_ascii=False, indent=2)
 
+def load_template(template_path):
+    """
+    Load template content from templates directory
+
+    Args:
+        template_path (str): Path to the template file (e.g., "entities/index" or "entities/sections/properties")
+
+    Returns:
+        str: Template content
+    """
+    full_path = f"templates/{template_path}.html"
+    try:
+        with open(full_path, 'r', encoding='utf-8') as f:
+            return f.read()
+    except FileNotFoundError:
+        print(f"Warning: Template file {full_path} not found.")
+        return ""
+
 def generate_entity_pages(data):
     """
-    Generate individual static pages for each entity
+    Generate individual static pages for each entity using templates
 
     Args:
         data (dict): Combined DataLink data structure with entities and relationships
     """
     relationships = data.get("relationships", [])
 
+    # Load templates
+    tpl_entities_entity = load_template("entities/entity")
+    tpl_entities_sections_properties = load_template("entities/sections/properties")
+    tpl_entities_sections_property_item = load_template("entities/sections/property_item")
+    tpl_entities_sections_relationships = load_template("entities/sections/relationships")
+    tpl_entities_sections_relationship_type = load_template("entities/sections/relationship_type")
+    tpl_entities_sections_external_links = load_template("entities/sections/external_links")
+    tpl_entities_sections_local_images = load_template("entities/sections/local_images")
+
     for entity in data.get("entities", []):
         entity_id = entity["id"]
+        entity_name = entity["name"]
+        entity_type = entity['type']
+        description = entity.get('description', 'N/A')
 
-        # Create markdown content for the entity
-        content = f"# {entity['name']}\n\n"
+        # Create frontmatter for tags
+        tags = entity.get("tags", [])
+        if tags:
+            frontmatter = "---\n"
+            frontmatter += "tags:\n"
+            for tag in tags:
+                frontmatter += f"  - {tag}\n"
+            frontmatter += "---\n\n"
+        else:
+            frontmatter = ""
 
-        # Add basic information
-        content += f"**유형**: {entity['type']}\n\n"
-        content += f"**설명**: {entity.get('description', 'N/A')}\n\n"
+        # Add type icon based on entity type
+        type_icons = {
+            "인물": "👤",
+            "영화": "🎬",
+            "TV시리즈": "📺",
+            "음악": "🎵",
+            "도서": "📚"
+        }
+        type_icon = type_icons.get(entity_type, "📄")
 
-        # Add properties section
+        # Generate properties section
+        properties_section = ""
         properties = entity.get("properties", {})
         if properties:
-            content += "## 상세 정보\n\n"
+            property_items = ""
+
+            # Add icons for common properties
+            property_icons = {
+                "출생년도": "📅",
+                "개봉년도": "📅",
+                "방영년도": "📅",
+                "국적": "🌍",
+                "제작국가": "🌍",
+                "출생지": "📍",
+                "직업": "💼",
+                "장르": "🎭",
+                "감독": "🎬",
+                "학력": "🎓",
+                "수상": "🏆",
+                "신장": "📏",
+                "언어": "🗣️",
+                "대표작": "⭐",
+                "특기": "✨",
+                "소속사": "🏢",
+                "상영시간": "⏱️",
+                "총회수": "📺",
+                "방송사": "📡"
+            }
+
             for key, value in properties.items():
+                icon = property_icons.get(key, "ℹ️")
+
                 if isinstance(value, list):
                     if key == "태그":
-                        value_str = " ".join(f"`{tag}`" for tag in value)
+                        value_str = '<div class="property-tags">' + "".join(f'<span class="property-tag">{tag}</span>' for tag in value) + '</div>'
+                    elif key in ["대표작", "수상", "언어", "특기"]:
+                        value_str = '<div class="property-list-items">' + "".join(f'<span class="property-list-item">{v}</span>' for v in value) + '</div>'
                     else:
                         value_str = ", ".join(str(v) for v in value)
                 else:
                     value_str = str(value)
-                content += f"- **{key}**: {value_str}\n"
-            content += "\n"
 
-        # Add relationships section
+                property_items += tpl_entities_sections_property_item.format(
+                    icon=icon,
+                    key=key,
+                    value=value_str
+                )
+
+            properties_section = tpl_entities_sections_properties.format(
+                property_items=property_items
+            )
+
+        # Generate relationships section
+        relationships_section = ""
         entity_relationships = [r for r in relationships if r["from"] == entity_id or r["to"] == entity_id]
         if entity_relationships:
-            content += "## 관련 정보\n\n"
-
             # Group relationships by type
             rel_by_type = {}
             for rel in entity_relationships:
@@ -195,72 +275,139 @@ def generate_entity_pages(data):
                     rel_by_type[rel_type] = []
                 rel_by_type[rel_type].append(rel)
 
+            relationship_types = ""
             for rel_type, rels in rel_by_type.items():
                 type_names = {
-                    "starred_in": "출연",
-                    "directed": "감독",
-                    "composed": "작곡",
-                    "related_to": "관련",
-                    "sequel": "연관작품"
+                    "starred_in": "🎬 출연",
+                    "directed": "🎭 감독",
+                    "composed": "🎵 작곡",
+                    "related_to": "🔗 관련",
+                    "sequel": "📝 연관작품"
                 }
-                type_name = type_names.get(rel_type, rel_type)
-                content += f"### {type_name}\n\n"
+                type_name = type_names.get(rel_type, f"📄 {rel_type}")
 
+                relationship_items = ""
                 for rel in rels:
                     if rel["from"] == entity_id:
                         # This entity is the subject
                         target_id = rel["to"]
                         target_entity = next((e for e in data["entities"] if e["id"] == target_id), None)
                         if target_entity:
-                            content += f"- [{target_entity['name']}]({target_id}.md)"
+                            meta_info = ""
                             if rel.get("properties"):
                                 props_text = []
                                 for k, v in rel["properties"].items():
                                     if k not in ["역할", "캐릭터", "캐릭터설명"]:
                                         props_text.append(f"{k}: {v}")
                                 if props_text:
-                                    content += f" ({', '.join(props_text)})"
-                            content += "\n"
+                                    meta_info = f'<span class="relationship-meta">{", ".join(props_text)}</span>'
+
+                            relationship_items += f'<li class="relationship-item"><a href="{target_id}.html">{target_entity["name"]}</a>{meta_info}</li>\n'
                     else:
                         # This entity is the object
                         source_id = rel["from"]
                         source_entity = next((e for e in data["entities"] if e["id"] == source_id), None)
                         if source_entity:
-                            content += f"- [{source_entity['name']}]({source_id}.md)"
+                            meta_info = ""
                             if rel.get("properties"):
                                 role = rel["properties"].get("역할", "")
                                 if role:
-                                    content += f" (역할: {role})"
-                            content += "\n"
-                content += "\n"
+                                    meta_info = f'<span class="relationship-meta">역할: {role}</span>'
 
-        # Add external links section
+                            relationship_items += f'<li class="relationship-item"><a href="{source_id}.html">{source_entity["name"]}</a>{meta_info}</li>\n'
+
+                relationship_types += tpl_entities_sections_relationship_type.format(
+                    type_name=type_name,
+                    relationship_items=relationship_items
+                )
+
+            relationships_section = tpl_entities_sections_relationships.format(
+                relationship_types=relationship_types
+            )
+
+        # Generate external links section
+        external_links_section = ""
         external_links = entity.get("external_links", [])
         if external_links:
-            content += "## 외부 링크\n\n"
+            external_link_items = ""
             for link in external_links:
                 name = link.get('name', 'Link')
                 url = link.get('url', '#')
-                content += f"- [{name}]({url})\n"
-            content += "\n"
+                external_link_items += f'<li class="external-link-item"><a href="{url}" target="_blank" rel="noopener">{name}</a></li>\n'
 
-        # Add local images section
+            external_links_section = tpl_entities_sections_external_links.format(
+                external_link_items=external_link_items
+            )
+
+        # Generate images section (both local and linked images)
+        local_images_section = ""
+        all_images = []
+
+        # 1. Collect local images
         images_dir = Path(f"docs/images/{entity_id}")
         if images_dir.exists():
-            image_files = []
             supported_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.webp'}
             for img_file in images_dir.iterdir():
                 if img_file.is_file() and img_file.suffix.lower() in supported_extensions:
-                    image_files.append(img_file)
+                    all_images.append({
+                        "type": "local",
+                        "src": f"../images/{entity_id}/{img_file.name}",
+                        "alt": f"{entity['name']} - {img_file.stem}",
+                        "description": img_file.stem.replace('_', ' ').title()
+                    })
 
-            if image_files:
-                content += "## 이미지\n\n"
-                for img_file in image_files:
-                    content += f"![{entity['name']} - {img_file.stem}](../images/{entity_id}/{img_file.name})\n\n"
+        # 2. Collect image links from YAML
+        image_links = entity.get("image_links", [])
+        for img_link in image_links:
+            if img_link.get("url"):
+                all_images.append({
+                    "type": "linked",
+                    "src": img_link["url"],
+                    "alt": f"{entity['name']} - {img_link.get('description', 'Image')}",
+                    "description": img_link.get('description', 'External image'),
+                    "source": img_link.get('source', 'External')
+                })
 
-        # Add navigation
-        content += "---\n\n"
-        content += "[← Entities 목록으로](index.md) | [🏠 홈으로](../index.md)\n"
+        # 3. Generate gallery HTML
+        if all_images:
+            image_items = ""
+            for idx, img in enumerate(all_images):
+                source_badge = ""
+                if img["type"] == "linked":
+                    source_badge = f'<span class="image-source">{img["source"]}</span>'
+
+                image_items += f'''<div class="gallery-item" data-src="{img["src"]}" data-type="{img["type"]}">
+    <img class="gallery-image" src="{img["src"]}" alt="{img["alt"]}" loading="lazy">
+    {source_badge}
+</div>
+'''
+
+            local_images_section = tpl_entities_sections_local_images.format(
+                image_items=image_items
+            )
+        else:
+            # No images available - show message
+            no_images_message = '''<div class="no-images-message">
+    <div class="no-images-icon">🖼️</div>
+    <p>이 엔티티에는 현재 이미지가 없습니다.</p>
+</div>'''
+
+            local_images_section = tpl_entities_sections_local_images.format(
+                image_items=no_images_message
+            )
+
+        # Generate final content using main template
+        content = tpl_entities_entity.format(
+            frontmatter=frontmatter,
+            entity_name=entity_name,
+            type_icon=type_icon,
+            entity_type=entity_type,
+            description=description,
+            properties_section=properties_section,
+            relationships_section=relationships_section,
+            external_links_section=external_links_section,
+            local_images_section=local_images_section
+        )
 
         # Write the entity page
         with mkdocs_gen_files.open(f"entities/{entity_id}.md", "w") as f:
@@ -308,13 +455,10 @@ def main():
     }
 
     # Load template from separate file
-    template_path = "templates/entities_index.html"
-    try:
-        with open(template_path, 'r', encoding='utf-8') as f:
-            template_content = f.read()
-    except FileNotFoundError:
-        print(f"Warning: Template file {template_path} not found. Using fallback template.")
-        template_content = """# 🌐 Entities
+    tpl_entities_index = load_template("entities/index")
+    if not tpl_entities_index:
+        print("Using fallback template for entities index.")
+        tpl_entities_index = """# 🌐 Entities
 <div class="entities-dashboard">
 <h2>📊 통계 요약</h2>
 <div class="stats-grid">
@@ -402,7 +546,7 @@ def main():
     person_count = len(entities_by_type.get("인물", []))
 
     # Use template with replacements
-    entities_index_content = template_content.format(
+    entities_index_content = tpl_entities_index.format(
         total_count=total_entities,
         tv_count=tv_count,
         movie_count=movie_count,

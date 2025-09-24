@@ -6,6 +6,28 @@
     margin: 1.5rem 0;
 }
 
+/* No images message */
+.no-images-message {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--md-default-fg-color--light);
+    background: var(--md-default-fg-color--lightest);
+    border: 1px solid var(--md-default-fg-color--lighter);
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.no-images-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.no-images-message p {
+    margin: 0;
+    font-size: 1rem;
+}
+
 .gallery-item {
     position: relative;
     aspect-ratio: 1/1;
@@ -15,6 +37,30 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: var(--md-default-bg-color--light, hsla(210, 17%, 98%, 1));
     box-shadow: 0 2px 8px hsla(0, 0%, 0%, 0.1);
+}
+
+/* Image source badge */
+.image-source {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    z-index: 2;
+    backdrop-filter: blur(4px);
+}
+
+/* Different colors for different image types */
+.gallery-item[data-type="local"] .image-source {
+    background: rgba(76, 175, 80, 0.8); /* Green for local */
+}
+
+.gallery-item[data-type="linked"] .image-source {
+    background: rgba(33, 150, 243, 0.8); /* Blue for linked */
 }
 
 .gallery-item:hover {
@@ -60,14 +106,8 @@
     object-fit: cover;
     object-position: center;
     transition: opacity 0.3s ease;
-}
-
-.gallery-image.hidden {
-    opacity: 0;
-}
-
-.gallery-image.loaded {
     opacity: 1;
+    display: block;
 }
 
 /* Lightbox Modal Styles */
@@ -200,6 +240,12 @@
 
 [data-md-color-scheme="slate"] .gallery-item {
     background: var(--md-code-bg-color, hsla(215, 25%, 27%, 1));
+}
+
+[data-md-color-scheme="slate"] .no-images-message {
+    background: var(--md-code-bg-color);
+    border-color: var(--md-default-fg-color--lightest);
+    color: var(--md-default-fg-color--light);
 }
 
 /* Responsive Design */

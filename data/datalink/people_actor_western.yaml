@@ -5,15 +5,20 @@ entities:
     type: "인물"
     name: "Timothée Chalamet (티모시 샬라메)"
     description: "미국-프랑스 이중 국적의 배우, '콜 미 바이 유어 네임'과 '듄' 시리즈로 유명"
+    tags: [프랑스계미국인, 패션아이콘, 젠더리스패션]
     properties:
       출생년도: 1995
       출생일: "12월 27일"
-      출생지: "미국 뉴욕"
+      출생지: "미국 뉴욕주 맨해튼 헬스키친"
       국적: "미국, 프랑스"
       데뷔년도: 2008
       직업: "배우"
-      학력: "컬럼비아대학교, 뉴욕대학교"
-      수상: "오스카 최우수남주연상 후보"
+      신장: "178cm"
+      학력: "라과디아 예술고등학교, 컬럼비아대학교(중퇴), 뉴욕대학교(중퇴)"
+      수상: ["오스카 남우주연상 후보", "루실 로텔 어워드 남우주연상"]
+      특기: ["태권도", "랩"]
+      언어: ["영어", "프랑스어"]
+      대표작: ["콜 미 바이 유어 네임", "듄", "웡카", "작은 아씨들"]
     external_links:
       - name: "나무위키"
         url: "https://namu.wiki/w/%ED%8B%B0%EB%AA%A8%EC%8B%9C%20%EC%83%AC%EB%9D%BC%EB%A9%94"
@@ -24,6 +29,7 @@ entities:
     type: "인물"
     name: "Rebecca Ferguson (레베카 페르구손)"
     description: "스웨덴 출신의 배우, '미션 임파서블' 시리즈와 '듄' 시리즈로 유명"
+    tags: [북유럽출신, 액션배우]
     properties:
       출생년도: 1983
       출생일: "10월 19일"
@@ -31,7 +37,12 @@ entities:
       국적: "스웨덴"
       데뷔년도: 1999
       직업: "배우"
-      수상: "골든 글로브 후보"
+      신장: "165cm"
+      학력: "아돌프 프레드릭 음악학교"
+      수상: ["골든 글로브 후보"]
+      언어: ["영어", "스웨덴어"]
+      대표작: ["미션 임파서블 시리즈", "듄", "화이트 퀸", "위대한 쇼맨"]
+      특성: ["밀실공포증", "사생활중시"]
     external_links:
       - name: "나무위키"
         url: "https://namu.wiki/w/%EB%A0%88%EB%B2%A0%EC%B9%B4%20%ED%8E%98%EB%A5%B4%EA%B5%AC%EC%86%90"
@@ -42,6 +53,7 @@ entities:
     type: "인물"
     name: "Jessica Chastain (제시카 차스테인)"
     description: "미국 배우이자 영화 제작자"
+    tags: [제작자]
     properties:
       출생년도: 1977
       국적: "미국"
@@ -56,6 +68,7 @@ entities:
     type: "인물"
     name: "Brendan Fraser (브렌던 프레이저)"
     description: "미국-캐나다 배우"
+    tags: [컴백배우]
     properties:
       출생년도: 1968
       국적: "미국-캐나다"
@@ -70,6 +83,7 @@ entities:
     type: "인물"
     name: "Sadie Sink (세이디 싱크)"
     description: "스트레인저 씨즈와 더 웨일로 유명한 미국 배우"
+    tags: [젊은배우]
     properties:
       출생년도: 2002
       국적: "미국"
@@ -84,6 +98,7 @@ entities:
     type: "인물"
     name: "Claire Danes (클레어 데인즈)"
     description: "마이 소-콜드 라이프와 홈랜드로 유명한 미국 배우"
+    tags: [드라마전문배우]
     properties:
       출생년도: 1979
       국적: "미국"
@@ -98,6 +113,7 @@ entities:
     type: "인물"
     name: "Ana de Armas (아나 데 아르마스)"
     description: "쿠바 출신 배우, '블레이드 러너 2049', '나이브스 아웃', '블론드'로 유명"
+    tags: [라틴계]
     properties:
       출생년도: 1988
       출생일: "4월 30일"
@@ -120,6 +136,7 @@ entities:
     type: "인물"
     name: "Carey Mulligan (캐리 멀리건)"
     description: "영국 출신 배우, '프로미싱 영 우먼', '드라이브', '그레이트 개츠비'로 유명"
+    tags: [영국출신, 인디영화배우]
     properties:
       출생년도: 1985
       출생일: "5월 28일"

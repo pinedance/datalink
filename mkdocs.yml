@@ -35,6 +35,7 @@ theme:
 
 plugins:
   - search
+  - tags
   - gen-files:
       scripts:
         - generate_pages.py
@@ -62,7 +63,9 @@ markdown_extensions:
 extra_css:
   - stylesheets/page.css
   - stylesheets/network.css
-  - stylesheets/gallery.css
+  - stylesheets/entities/index.css
+  - stylesheets/entities/detail.css
+  - stylesheets/entities/gallery.css
 
 # extra_javascript:
 #   - javascripts/gallery.js

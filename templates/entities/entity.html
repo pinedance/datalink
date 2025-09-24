@@ -1,0 +1,123 @@
+{frontmatter}# {entity_name}
+
+<div class="entity-hero">
+  <div class="entity-type">{type_icon} {entity_type}</div>
+  <div class="entity-description">{description}</div>
+</div>
+
+{properties_section}
+
+{relationships_section}
+
+{external_links_section}
+
+{local_images_section}
+
+---
+
+[← Entities 목록으로](index.md) | [🏠 홈으로](../index.md)
+
+<!-- Lightbox Modal -->
+<div id="lightbox-modal" class="lightbox-modal hidden">
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-content">
+        <button class="lightbox-close">&times;</button>
+        <button class="lightbox-prev">&lt;</button>
+        <button class="lightbox-next">&gt;</button>
+        <img class="lightbox-image" src="" alt="">
+        <div class="lightbox-counter">
+            <span class="lightbox-current">1</span> / <span class="lightbox-total">1</span>
+        </div>
+    </div>
+</div>
+
+<script>
+// Simple gallery click handler for lightbox
+document.addEventListener('DOMContentLoaded', function() {{
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    if (!galleryItems.length) return;
+
+    const lightbox = document.getElementById('lightbox-modal');
+    const lightboxImg = lightbox.querySelector('.lightbox-image');
+    const lightboxCurrent = lightbox.querySelector('.lightbox-current');
+    const lightboxTotal = lightbox.querySelector('.lightbox-total');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+    const prevBtn = lightbox.querySelector('.lightbox-prev');
+    const nextBtn = lightbox.querySelector('.lightbox-next');
+    const overlay = lightbox.querySelector('.lightbox-overlay');
+
+    let currentIndex = 0;
+    const images = Array.from(galleryItems).map(item => {{
+        const img = item.querySelector('.gallery-image');
+        return {{
+            src: img.src,
+            alt: img.alt
+        }};
+    }});
+
+    lightboxTotal.textContent = images.length;
+
+    // Open lightbox
+    galleryItems.forEach((item, index) => {{
+        item.style.cursor = 'pointer';
+        item.addEventListener('click', () => {{
+            currentIndex = index;
+            showImage();
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }});
+    }});
+
+    // Show current image
+    function showImage() {{
+        const img = images[currentIndex];
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCurrent.textContent = currentIndex + 1;
+
+        prevBtn.disabled = currentIndex === 0;
+        nextBtn.disabled = currentIndex === images.length - 1;
+    }}
+
+    // Close lightbox
+    function closeLightbox() {{
+        lightbox.classList.remove('active');
+        lightbox.classList.add('hidden');
+        document.body.style.overflow = '';
+    }}
+
+    closeBtn.addEventListener('click', closeLightbox);
+    overlay.addEventListener('click', closeLightbox);
+
+    // Navigation
+    prevBtn.addEventListener('click', () => {{
+        if (currentIndex > 0) {{
+            currentIndex--;
+            showImage();
+        }}
+    }});
+
+    nextBtn.addEventListener('click', () => {{
+        if (currentIndex < images.length - 1) {{
+            currentIndex++;
+            showImage();
+        }}
+    }});
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {{
+        if (!lightbox.classList.contains('active')) return;
+
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft' && currentIndex > 0) {{
+            currentIndex--;
+            showImage();
+        }}
+        if (e.key === 'ArrowRight' && currentIndex < images.length - 1) {{
+            currentIndex++;
+            showImage();
+        }}
+    }});
+}});
+</script>
