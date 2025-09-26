@@ -1,6 +1,6 @@
 site_name: DataLink
 site_description: Linked Data Visualization and Management
-site_url: https://yourdomain.com/
+site_url: https://datalink.pinedance.click
 use_directory_urls: false
 
 theme:
