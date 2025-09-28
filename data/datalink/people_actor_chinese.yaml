@@ -207,6 +207,42 @@ entities:
       - name: "나무위키"
         url: "https://namu.wiki/w/%EC%9E%A5%EB%8B%AC%EB%B9%84"
 
+  - id: "wu_jinyan"
+    type: "인물"
+    name: "吴谨言 (오근언)"
+    description: "중국의 인기 여배우, 베이징영화학원 출신, 사극 장르로 유명"
+    properties:
+      출생년도: 1990
+      출생일: "8월 16일"
+      출생지: "중국 사천성 성도시 도강현"
+      국적: "중국"
+      학력: "베이징영화학원"
+      직업: "배우"
+      대표작: ["연희공략", "호로전", "정청춘", "묵우운간"]
+      수상: "제24회 화정상 중국 고대 주제 TV드라마 최우수 여배우상"
+    external_links:
+      - name: "바이두 바이커"
+        url: "https://baike.baidu.com/item/%E5%90%B4%E8%B0%A8%E8%A8%80"
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EC%98%A4%EA%B7%BC%EC%96%B8"
+
+  - id: "chen_duling"
+    type: "인물"
+    name: "陈都灵 (진두령)"
+    description: "중국의 신세대 여배우, 남경항공항천대학 출신, 2013년 전국 대학생 미인 대회 우승"
+    properties:
+      출생년도: 1993
+      출생일: "10월 18일"
+      출생지: "중국 복건성 하문시"
+      국적: "중국"
+      학력: "남경항공항천대학 비행기 제조공학"
+      직업: "배우"
+      대표작: ["왼쪽 귀", "장월진명", "꽃천골", "귀녀"]
+      수상: "2013년 전국 대학생 미인 대회 우승"
+    external_links:
+      - name: "바이두 바이커"
+        url: "https://baike.baidu.com/item/%E9%99%88%E9%83%BD%E7%81%B5"
+
 relationships:
   - from: "zhang_jingyi"
     to: "blossoms_in_adversity"
@@ -283,6 +319,20 @@ relationships:
     type: "starred_in"
     properties:
       역할: "종사조"
+      방영년도: 2025
+
+  - from: "wu_jinyan"
+    to: "mo_yu_yun_jian"
+    type: "starred_in"
+    properties:
+      역할: "설방비"
+      방영년도: 2024
+
+  - from: "chen_duling"
+    to: "yan_hui_shi"
+    type: "starred_in"
+    properties:
+      역할: "장한안"
       방영년도: 2025
 
 

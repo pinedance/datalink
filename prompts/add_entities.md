@@ -27,7 +27,7 @@ TodoWrite: [
 ### 3단계: 적절한 YAML 파일 확인
 **Glob 도구 사용:**
 ```
-Glob pattern: "**/*.yaml"
+Glob pattern: "data/datalink/*.yaml"
 ```
 
 **파일명 규칙:**
@@ -41,7 +41,7 @@ Glob pattern: "**/*.yaml"
 **4-1. 인물 추가 시 - 출연 작품 검색:**
 ```
 Grep pattern: "{인물의 다양한 이름 패턴}"
-glob: "**/*.yaml"
+glob: "data/datalink/*.yaml"
 output_mode: "content"
 -i: true
 ```
@@ -102,7 +102,7 @@ Grep pattern: "{영어이름}|{한국어이름}"
 
 ### 예시 1: "난홍" 드라마 추가
 1. `WebFetch("https://namu.wiki/w/난홍")` - 기본 정보 수집
-2. `Glob("**/*chinese*.yaml")` - 중국 미디어 파일 찾기
+2. `Glob("data/datalink/*chinese*.yaml")` - 중국 미디어 파일 찾기
 3. `Read("media_chinese.yaml")` - 기존 구조 확인
 4. `Edit()` - 난홍 entity 추가
 5. `Grep("백경정|白敬亭|장약남|章若楠", "**/*.yaml")` - 출연진 검색
