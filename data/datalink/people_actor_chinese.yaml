@@ -271,4 +271,18 @@ relationships:
       역할: "강설영"
       캐릭터설명: "황후가 되기 위해 애썼던 여성"
 
+  - from: "zhang_ruonan"
+    to: "nan_hong"
+    type: "starred_in"
+    properties:
+      역할: "여주인공"
+      방영년도: 2025
+
+  - from: "zhang_miaoyi"
+    to: "nan_hong"
+    type: "starred_in"
+    properties:
+      역할: "종사조"
+      방영년도: 2025
+
 

@@ -90,5 +90,23 @@ entities:
       - name: "바이두 바이커"
         url: "https://baike.baidu.com/item/%E9%9B%81%E5%9B%9E%E6%97%B6/65501185"
 
+  - id: "nan_hong"
+    type: "TV시리즈"
+    name: "难哄 (난홍)"
+    description: "2025년 방영된 중국 현대 로맨스 드라마, 투투장부주의 스핀오프 작품"
+    properties:
+      방영년도: 2025
+      총회수: 32
+      장르: ["로맨스", "현대드라마"]
+      방송사: "유쿠"
+      제작국가: "중국"
+      원제: "难哄"
+      방영일: "2025년 2월 18일 ~ 3월 17일"
+      한국방영: "2025년 3월 4일 ~ 4월 8일"
+      특이사항: "투투장부주 스핀오프"
+    external_links:
+      - name: "나무위키"
+        url: "https://namu.wiki/w/%EB%82%9C%ED%99%8D"
+
 
 relationships: []
