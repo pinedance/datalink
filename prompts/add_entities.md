@@ -1,73 +1,135 @@
-# Entity 추가 가이드라인
+# Entity 추가 실전 가이드
 
-## 작업 순서
+## 핵심 작업 흐름
 
-1. 키워드로부터 추가 정보를 web search
-2. 외부 URL이 주어졌다면 이를 확인
-3. 적절한 YAML 파일에 entity 추가
-4. 기존 entities와의 relationship 확인 및 생성
-5. 데이터 일관성 검증
+### 1단계: TodoWrite 도구로 작업 계획 수립
+```
+TodoWrite: [
+  "키워드 '{키워드}'에 대한 정보 수집",
+  "적절한 YAML 파일 찾기 및 entity 추가",
+  "기존 entities와의 relationship 확인 및 추가",
+  "데이터 일관성 검증"
+]
+```
 
-## 파일 구조 예시
+### 2단계: WebFetch로 정보 수집
+**국가별 URL 패턴:**
+- 한국: `https://namu.wiki/w/{이름}`
+- 중국: `https://namu.wiki/w/{한국어이름}` 또는 `https://baike.baidu.com/item/{중국어이름}`
+- 일본: `https://namu.wiki/w/{일본이름}`
+- 서양: `https://www.imdb.com/name/{id}/` 또는 `https://en.wikipedia.org/wiki/{이름}`
 
-yaml file 명명 규칙:
-* [entity 대분류: people, media 등  종류별로 구분된 이름] + [entity 소분류: actor, director 등 성격] + [entity 성격: 국가/언어별 구분] + `.yaml`
+**WebFetch 프롬프트 예시:**
+```
+"{키워드}에 대한 기본 정보를 추출해주세요. 이름, 국적, 생년월일, 주요 작품, 배우인지 감독인지 등의 정보를 포함해서 정리해주세요."
+```
 
-예시:
-- `@data/datalink/people_actor_western.yaml` - 서양 배우
-- `@data/datalink/people_actor_chinese.yaml` - 중국 배우
-- `@data/datalink/people_actor_korean.yaml` - 한국 배우
-- `@data/datalink/people_actor_japanese.yaml` - 일본 배우
-- `@data/datalink/people_director_western.yaml` - 서양 감독
-- `@data/datalink/people_composer.yaml` - 작곡가
-- `@data/datalink/media_western.yaml` - 서양 영화/드라마
-- `@data/datalink/media_chinese.yaml` - 중국 드라마
-- `@data/datalink/media_japanese.yaml` - 일본 드라마
+### 3단계: 적절한 YAML 파일 확인
+**Glob 도구 사용:**
+```
+Glob pattern: "**/*.yaml"
+```
 
-기존 파일이 없다면 위 규칙에 따라 새로 생성
+**파일명 규칙:**
+- `people_actor_{country}.yaml` - 배우
+- `people_director_{country}.yaml` - 감독
+- `people_composer.yaml` - 작곡가
+- `media_{country}.yaml` - 영화/드라마
 
-## 주요 External URL Sources
+### 4단계: 기존 데이터와 relationship 확인 (중요!)
 
-국가별로 주요 외부 URL 소스는 다음과 같다.
+**4-1. 인물 추가 시 - 출연 작품 검색:**
+```
+Grep pattern: "{인물의 다양한 이름 패턴}"
+glob: "**/*.yaml"
+output_mode: "content"
+-i: true
+```
 
-한국
-- 나무위키: `https://namu.wiki/w/[이름]`
+**4-2. 작품 추가 시 - 출연진/제작진 검색:**
+작품 정보 수집 후 주연/조연 배우들을 검색:
+```
+WebFetch prompt: "{작품명}의 전체 출연진 리스트를 추출해주세요. 주연뿐만 아니라 조연, 특별출연 등 모든 배우들의 이름을 정리해주세요."
+```
 
-중국
-- 바이두 바이커: `https://baike.baidu.com/item/[중국어이름]`
-- 나무위키: `https://namu.wiki/w/[한국어이름]` (있는 경우)
+그 후 각 배우명으로 기존 데이터 검색:
+```
+Grep pattern: "{배우1}|{배우2}|{배우3}"
+glob: "data/datalink/*.yaml"
+```
 
-일본
-- 나무위키: `https://namu.wiki/w/[일본이름]`
-- 기본적으로 나무위키 우선
+### 5단계: Entity 추가
+**Read 도구로 기존 파일 구조 확인 후 Edit/MultiEdit 사용**
 
-서양
-- IMDb: `https://www.imdb.com/name/[id]/` (배우/감독)
-- IMDb: `https://www.imdb.com/title/[id]/` (영화/드라마)
-- Wikipedia: `https://en.wikipedia.org/wiki/[이름]`
-- 나무위키: `https://namu.wiki/w/[한국어이름]` (있는 경우)
+**ID 명명 규칙:**
+- 영어 소문자 + 언더스코어
+- 예: `zhang_ruonan`, `nan_hong`, `christopher_nolan`
 
-## 중요 규칙
+**필수 필드:**
+- `id`: 고유 식별자
+- `type`: "인물" 또는 "TV시리즈" 등
+- `name`: 원어명 (한국어명)
+- `description`: 간단한 설명
+- `properties`: 상세 정보
+- `external_links`: 참고 URL
 
-1. **External URL 수집**: 주어진 키워드로 적절한 소스에서 정보 수집
-2. **ID 명명**: 영어 소문자 + 언더스코어 사용
-3. **Relationship 검증**: 참조하는 entity가 존재하는지 확인
-4. **태그 활용**: 특별한 속성은 tags 배열에 추가 (예: ["목소리가 좋은 배우"])
-5. **일관성 유지**: 기존 데이터 구조와 동일한 형식 사용
-6. **적절한 파일 선택**: 국가/언어별로 올바른 파일에 추가
+### 6단계: Relationship 추가
+**단방향 관계만 생성:**
+- 배우 → 작품: `from: actor_id, to: media_id, type: starred_in`
+- 감독 → 작품: `from: director_id, to: media_id, type: directed`
+- 작곡가 → 작품: `from: composer_id, to: media_id, type: composed`
 
-## Relationship 확인 방법
+**배우 파일에만 추가** (미디어 파일에는 중복 추가하지 않음)
 
-기존 entities와의 relationship 확인 및 생성:
-1. **인물 entity 추가 시**: 해당 인물이 출연한 작품이 기존 데이터에 있는지 검색
-2. **작품 entity 추가 시**: 출연진/제작진이 기존 데이터에 있는지 검색
-3. **Relationship 생성**: 발견된 연결점에 대해 relationship 추가
-   - 배우 → 작품: `from: actor_id, to: media_id, type: starred_in`
-   - 감독 → 작품: `from: director_id, to: media_id, type: directed`
+## 검색 패턴 예시
 
-## 작업 후 검증
+### 중국 배우/작품 검색:
+```
+Grep pattern: "{한국어이름}|{중국어이름}|{영어이름}"
+```
 
-- 모든 relationship이 유효한 entity를 참조하는지 확인
-- 동일 인물/작품이 여러 파일에 중복되지 않았는지 확인
-- External links가 접근 가능한지 확인
-- 추가된 relationship이 올바른 entity ID를 참조하는지 확인
+### 일본 배우/작품 검색:
+```
+Grep pattern: "{일본어이름}|{한국어이름}|{로마자이름}"
+```
+
+### 서양 배우/작품 검색:
+```
+Grep pattern: "{영어이름}|{한국어이름}"
+```
+
+## 실제 작업 예시
+
+### 예시 1: "난홍" 드라마 추가
+1. `WebFetch("https://namu.wiki/w/난홍")` - 기본 정보 수집
+2. `Glob("**/*chinese*.yaml")` - 중국 미디어 파일 찾기
+3. `Read("media_chinese.yaml")` - 기존 구조 확인
+4. `Edit()` - 난홍 entity 추가
+5. `Grep("백경정|白敬亭|장약남|章若楠", "**/*.yaml")` - 출연진 검색
+6. `Edit()` - 발견된 relationship 추가
+
+### 예시 2: 조연진 relationship 확인
+1. `WebFetch()` - 추가 출연진 정보 수집
+2. `Grep("장묘이|张淼怡|진호삼|陈虎三", "**/*.yaml")` - 다중 검색
+3. `Edit()` - 매칭된 배우들의 relationship 추가
+
+## 자주하는 실수 방지
+
+❌ **하지 말아야 할 것:**
+- 미디어 파일에 relationship 중복 추가 (linked data 일관성 위배)
+- 검색 없이 바로 entity 추가
+- 단일 이름으로만 검색 (다양한 이름 패턴 고려 안함)
+
+✅ **해야 할 것:**
+- 항상 다양한 이름 패턴으로 검색 (원어명, 한국어명, 영어명)
+- 배우 파일에만 relationship 추가
+- 작업 전 TodoWrite로 계획 수립
+
+## 검증 체크리스트
+
+- [ ] 모든 relationship이 존재하는 entity를 참조하는가?
+- [ ] 중복된 entity가 없는가?
+- [ ] External links가 접근 가능한가?
+- [ ] ID 명명 규칙을 따랐는가?
+- [ ] 단방향 relationship인가? (배우→작품만)
+
