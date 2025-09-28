@@ -118,12 +118,12 @@ document.addEventListener('DOMContentLoaded', async function() {
                     updateInterval: 50    // Update frequency during stabilization
                 },
                 barnesHut: {             // Force-directed layout algorithm
-                    gravitationalConstant: -8000,
-                    centralGravity: 1.5,
-                    springLength: 120,    // Preferred edge length
-                    springConstant: 0.04, // Edge stiffness
-                    damping: 0.4,         // Movement damping
-                    avoidOverlap: 0.2     // Node overlap prevention
+                    gravitationalConstant: -2500,
+                    centralGravity: 0.8,
+                    // springLength: 120,    // Preferred edge length
+                    // springConstant: 0.04, // Edge stiffness
+                    // damping: 0.4,         // Movement damping
+                    // avoidOverlap: 0.8     // Node overlap prevention
                 }
             },
             // Layout configuration
